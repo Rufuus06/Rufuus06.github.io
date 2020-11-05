@@ -1,0 +1,20 @@
+.img-footer
+{
+    width: 40px;
+    height: 40px;
+    float:left;
+    margin-right: 20px;
+}
+
+.footer-fixed
+{
+    width: 100%;
+    bottom: 0;
+    /* position: absolute; */
+    margin: 3em 0;
+}
+
+#p-footer
+{
+    clear: left;
+}
