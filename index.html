@@ -73,14 +73,18 @@
 
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                  <a class="nav-link active" id="estr-tab" data-toggle="tab" href="#estr" role="tab" aria-controls="estr" aria-selected="false">Estructuras</a>
+                    <a class="nav-link active" id="estr-tab" data-toggle="tab" href="#estr" role="tab" aria-controls="estr" aria-selected="false">Estructuras</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <a class="nav-link" id="funcion-tab" data-toggle="tab" href="#funcion" role="tab" aria-controls="funcion" aria-selected="false">Funciones</a>
+                    <a class="nav-link" id="funcion-tab" data-toggle="tab" href="#funcion" role="tab" aria-controls="funcion" aria-selected="false">Funciones</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <a class="nav-link" id="num-tab" data-toggle="tab" href="#num" role="tab" aria-controls="num" aria-selected="false">Numerales</a>
+                    <a class="nav-link" id="num-tab" data-toggle="tab" href="#num" role="tab" aria-controls="num" aria-selected="false">Numerales</a>
                 </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="text-tab" data-toggle="tab" href="#text" role="tab" aria-controls="text" aria-selected="false">Cadenas de texto</a>
+                </li>
+
             </ul>
 
             <div class="tab-content" id="myTabContent">
@@ -230,6 +234,41 @@
                         </div>
                     </div>
 
+                </div>
+
+                <!-- TEXTO -->
+                <div class="tab-pane fade" id="text" role="tabpanel" aria-labelledby="text-tab">
+                    <div class="accordion" id="accordionExample4">
+                        
+                        <div class="card">
+                            <div class="card-header" id="headingtexto1">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#texto1" aria-expanded="true" aria-controls="texto1">
+                                replace()
+                                </button>
+                            </h2>
+                            </div>
+                    
+                            <div id="texto1" class="collapse" aria-labelledby="headingtexto1" data-parent="#accordionExample4">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/esxy2ac9/34/embedded/js,html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingtexto2">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#texto2" aria-expanded="true" aria-controls="texto2">
+                                toUpperCase()
+                                </button>
+                            </h2>
+                            </div>
+                    
+                            <div id="texto2" class="collapse" aria-labelledby="headingtexto2" data-parent="#accordionExample4">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/esxy2ac9/44/embedded/js,html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             
             </div>
