@@ -71,93 +71,89 @@
 
             <p>Listado de todas las estructuras con las que he trabajado a lo largo de este curso.</p>
 
-            <div class="accordion" id="accordionExample">
-                <div class="card">
-                  <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        Estructura de Datos Simples
-                      </button>
-                    </h2>
-                  </div>
-              
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/vwu3jzfq/3/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="estr-tab" data-toggle="tab" href="#estr" role="tab" aria-controls="estr" aria-selected="false">Estructuras</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="funcion-tab" data-toggle="tab" href="#funcion" role="tab" aria-controls="funcion" aria-selected="false">Funciones</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="metodos-tab" data-toggle="tab" href="#metodos" role="tab" aria-controls="metodos" aria-selected="false">Metodos</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+
+                <div class="tab-pane fade show active" id="estr" role="tabpanel" aria-labelledby="estr-tab">
+                    <div class="accordion" id="accordionExample">
+                        
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Estructura de Datos Simples
+                                </button>
+                            </h2>
+                            </div>
+                        
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/vwu3jzfq/3/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    
+
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Estructura de Datos Complejos
+                                </button>
+                            </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/cLm235ru/2/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>                   
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
 
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Estructura de Datos Complejos
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/cLm235ru/2/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>                   </div>
-                  </div>
+                <div class="tab-pane fade" id="funcion" role="tabpanel" aria-labelledby="funcion-tab">
+                        
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Funciones Anónimas
+                            </button>
+                        </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/hzcyn8Ls/1/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Funciones Callback
+                            </button>
+                        </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/gd4L635f/1/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>    
+                        </div>
+                    </div>
+
                 </div>
+                    
+                <div class="tab-pane fade" id="metodos" role="tabpanel" aria-labelledby="metodos-tab">
 
-                <div class="card">
-                  <div class="card-header" id="headingThree">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Funciones Anónimas
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/hzcyn8Ls/1/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
-                    </div>
-                  </div>
+
                 </div>
-
-                <div class="card">
-                    <div class="card-header" id="headingFour">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                          Funciones Callback
-                        </button>
-                      </h2>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                      <div class="card-body">
-                        <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/gd4L635f/1/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>    
-                    </div>
-                    </div>
-                  </div>
-
-              </div>
-
-            <!-- <div class="list-group" id="list-tab" role="tablist">
             
-                <a class="list-group-item list-group-item-action bg-secondary text-black-50" id="simple" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Estructura de Datos Simples</a>
-                <div id="prueba" style= "display: none;">
-                    <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/vwu3jzfq/3/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
-                </div>
-
-                <a class="list-group-item list-group-item-action bg-secondary text-black-50" id="complex" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Estructura de Datos Complejos</a>
-                <div id="prueba2" style= "display: none;">
-                    <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/cLm235ru/2/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
-                </div>
-
-                <a class="list-group-item list-group-item-action bg-secondary text-black-50" id="anon" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Funciones anónimas</a>
-                <div id="prueba3" style= "display: none;">
-                    <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/hzcyn8Ls/1/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
-                </div>
-                
-                <a class="list-group-item list-group-item-action bg-secondary text-black-50" id="callback" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Funciones Callback</a>
-                <div id="prueba4" style= "display: none;">
-                    <iframe width="100%" height="300" src="//jsfiddle.net/Rufuus06/gd4L635f/1/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>    
-                </div>
-
-            </div> -->
-
+            </div>
         </div>
 
         <hr id="conoc">
