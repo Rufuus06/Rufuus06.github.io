@@ -1,0 +1,343 @@
+body
+{
+  background-color: #2d2d30;
+}
+
+.theBox
+{
+  width: 80px;
+  height: 140px;
+  position: absolute;
+  z-index: -1;
+}
+
+.red
+{
+  background: url(../imagenes/pg/pg_stand_r.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.box
+{
+  position: absolute;
+  background: url(../imagenes/mueble_cocina.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 110px;
+  height: 80px;
+  z-index: -1;
+}
+
+.ingredients
+{
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.game
+{
+  position: relative;
+  height: 650px;
+  width: 100% ;
+  text-align: center; 
+  background: url(../imagenes/fondococina2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.map
+{
+  position: relative;
+  height: 600px;
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.shadow
+{
+  -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+.estante
+{
+  position: absolute;
+  background: url(../imagenes/estanteria.png);
+  background-size: contain;
+  width: 110px;
+  height: 80px;
+  z-index: -1;
+}
+
+.scoreboard
+{
+  position: absolute;
+  /* background: url(imagenes/score.png); */
+  background: url(../imagenes/score2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 50px;
+}
+
+.timer
+{
+  position: absolute;
+  /* background: url(imagenes/time.png); */
+  background: url(../imagenes/time2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 122px;
+  height: 40px;
+}
+
+.contador
+{
+  position: absolute;
+  width: 130px;
+  height: 30px;
+}
+
+.puntuacion
+{
+  position: absolute;
+  width: 120px;
+  height: 30px;
+}
+
+.numeros
+{
+  width: 29px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.dospuntos
+{
+  width: 10px;
+  height: 30px;
+  background: url(../imagenes/time/dospuntos.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.blur
+{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  /* width: 100%; */
+  /* height: 100%; */
+  /* background-color: #ccc; */
+}
+
+.press
+{
+  position: absolute;
+  background: url(../imagenes/presstostart.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 34%;
+  width: 300px;
+  height: 250px;  
+}
+
+.gameover
+{
+  position: absolute;
+  background: url(../imagenes/GameOver.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 275px;
+  left: 350px;
+  top: 200px;
+}
+
+.fire
+{
+  position: absolute;
+  background: url(../imagenes/fire.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 460px;
+  left: 0px;
+  top: 140px;
+}
+
+.contenedor
+{
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  left: 140px;
+  background: url(../imagenes/time/numeros/+10.png);
+}
+
+.sumador
+{
+  width: 50px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.menu
+{
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  /* left: 8%;
+  top: 7%; */
+
+  left: 78px;
+  top: 45px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.blackScreen
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+}
+
+.inst
+{
+  width: 290px;
+  height: 70px;
+
+  left: 36%;
+  top: 83%;
+
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contIngredientes
+{
+  position: absolute;
+  left: 14%;
+  top: 40%;
+}
+
+.contIngredientes2
+{
+  position: absolute;
+  left: 46%;
+  top: 60%;
+}
+
+.itemIngr
+{
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: left;
+  margin-right: 70px
+}
+
+.plusScore
+{
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.volumen
+{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 70%;
+  top: 8%;
+  z-index: 1;
+}
+
+.gameover
+{
+  width: 267px;
+  height: 150px;
+  top: 10%;
+  left: 36%;
+  background: url(../imagenes/GameOver.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.scorefinal
+{
+  width: 200px;
+  height: 50px;
+  top: 65%;
+  left: 15%;
+  background: url(../imagenes/score2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.timeFinal
+{
+  width: 161px;
+  height: 50px;
+  top: 50%;
+  left: 15%;
+  background: url(../imagenes/time2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.dospuntosBox
+{
+  width: 17px;
+  height: 51px;
+  
+  background: url(../imagenes/time/dospuntos2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.numerosMenu
+{
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+
+}
+
+.reload
+{
+  width: 85px;
+  height: 85px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
