@@ -28,7 +28,7 @@ function sumarY ( y, box, vel )
 
 function restarY ( y, box )
 {
-    y -= 10;
+    y -= 5;
     y *= GRAVEDAD;
     box.style.bottom = y + "px";
 }
