@@ -289,14 +289,14 @@ function final()
     document.getElementById('menu').appendChild(unoB);
     
     reload.style.display = "block";
-    volumen.style.left = "70%";
-    volumen.style.top = "8%";
+    volumen.style.left = "1100px";
+    volumen.style.top = "80px";
 }
 
 var reload = document.createElement('div');
 reload.className = "reload";
-reload.style.top = "49%";
-reload.style.left = "47.5%";
+reload.style.top = "480px";
+reload.style.left = "680px";
 reload.style.backgroundImage = "url(imagenes/time/reload.png)";
 reload.style.display = "none";
 document.body.appendChild(reload);
@@ -320,8 +320,8 @@ function contraer( open )
     instrucciones.parentNode.removeChild(instrucciones);
     press.remove();
 
-    volumen.style.left = "75%";
-    volumen.style.top = "9%";
+    volumen.style.left = "1200px";
+    volumen.style.top = "90px";
     
     temp = setInterval ( function(){
 
