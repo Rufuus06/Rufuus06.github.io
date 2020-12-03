@@ -1,5 +1,3 @@
-const SUELO = 0;
-const VELOCIDAD = 10;
 const NIVEL1 = 0 + "px";
 const NIVEL2 = 80 + "px";
 const NIVEL3 = 160 + "px";

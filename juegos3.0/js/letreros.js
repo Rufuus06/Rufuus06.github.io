@@ -1,22 +1,3 @@
-// BANNERS LATERALES
-
-var bannerI = document.createElement('div');
-bannerI.style.position = "absolute";
-bannerI.style.height = "650px";
-bannerI.style.width = "300px";
-bannerI.style.left = "-300px";
-bannerI.style.bottom = "0px";
-bannerI.style.backgroundColor = "#2d2d30";
-document.getElementById("game").appendChild(bannerI);
-
-var bannerD = document.createElement('div');
-bannerD.style.position = "absolute";
-bannerD.style.height = "650px";
-bannerD.style.width = "250px";
-bannerD.style.left = "1110px";
-bannerD.style.bottom = "0px";
-bannerD.style.backgroundColor = "#2d2d30";
-document.getElementById("game").appendChild(bannerD);
 
 var fire = document.createElement('div');
 fire.className = "fire";
@@ -254,6 +235,7 @@ function getPuntuacion()
 var y = 0, yinicial = 0;
 var velocidadY = 1;
 var showScoreAnimation;
+
 
 function showScore( ingr ) // SE BUGEA CUANDO HAY MAS DE DOS INGR A LA VEZ
 {

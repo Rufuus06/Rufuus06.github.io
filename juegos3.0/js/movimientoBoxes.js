@@ -1,10 +1,10 @@
 var boxes = getArrayBoxes();
 var estanterias = getEstantes();
-var ingredientes = getArrayIngredientes();
+// var ingredientes = getArrayIngredientes();
 
-const DISTBORRADO = -110;
+var DISTBORRADO = -110;
 
-var sumTiempo = 10; // 20
+var sumTiempo = 1; // 20
 var velocidadBoxes = 1; // 2 
 var x = 0;
 var timeMover;
@@ -19,30 +19,30 @@ function startMoving()
         // {
         //     //velocidadBoxes += 0.1;
         // }
-        if ( sumTiempo > 0 )
+        if ( velocidadBoxes < 5 )
         {
-            sumTiempo-= 2;
+            velocidadBoxes += 1;
         } 
         else
         {
             clearInterval(incrementarTiempo);
 
-            var incrementarVelocidad = setInterval( function()
-            {
-                if ( velocidadBoxes < 3 )
-                {
-                    velocidadBoxes++;
-                }
-                else
-                {
-                    clearInterval(incrementarVelocidad)
-                }
-                cambiarIntervalo(sumTiempo);
-            }, 20000)
+            // var incrementarVelocidad = setInterval( function()
+            // {
+            //     if ( velocidadBoxes < 3 )
+            //     {
+            //         velocidadBoxes++;
+            //     }
+            //     else
+            //     {
+            //         clearInterval(incrementarVelocidad)
+            //     }
+            //     cambiarIntervalo(sumTiempo);
+            // }, 20000)
         }
         cambiarIntervalo(sumTiempo);
 
-    }, 3000);
+    }, 30000);
 
 
 
@@ -117,82 +117,70 @@ function startMoving()
             }
         });
 
-        // PERSONAJE
+        // // PERSONAJE
 
         x = parseInt(pg.style.left);
-        var chocaBordes = false;
-        var choca2 = false;
 
-        if ( parseInt(pg.style.bottom) != SUELO && isCollideBottom )
+        if ( parseInt(pg.style.bottom) != SUELO && hasBottom )
         {
-            chocaBordes = collisionBorder ( pg, bannerI, -velocidadBoxes );
-            if ( chocaBordes )
+            if ( x <= 0 )
             {
-                choca2 = true;
+                clearInterval(incrementarTiempo);
+                clearInterval(time);
+                clearInterval(timeMover);
+                
+                stopGame();
             }
-
-            if ( !choca2 )
+            else
             {
                 x -= velocidadBoxes;
                 pg.style.left = x + "px";
             }
-            else
-            {
-                clearInterval(incrementarTiempo);
-                clearInterval(time);
-                clearInterval(timeMover);
-                
-                stopGame();
-            }
-
-            choca2 = false;
+            
         }
         else
         {
+            choca = false;
 
-            chocaBordes = collisionBorder ( pg, bannerI, -velocidadBoxes );
-            if ( chocaBordes )
+            boxes.forEach( function(box)
             {
-                choca2 = true;
-            }
-
-            if ( !choca2 )
-            {
-                boxes.forEach( function(box)
+                isCollade = collision( pg, box , velocidadBoxes, 0 );
+                
+                if ( isCollade  )
                 {
-                    chocaBordes = collision( pg, box , velocidadBoxes, 0 );
-                    if ( chocaBordes )
-                    {
-                        choca2 = true;
-                    }
-                });             
+                    choca = true;
+                }
+            });             
 
-                if (choca2)
+            if (choca)
+            {
+                if ( x <= 0 )
+                {
+                    clearInterval(incrementarTiempo);
+                    clearInterval(time);
+                    clearInterval(timeMover);
+
+                    stopGame();
+                }
+                else
                 {
                     x -= velocidadBoxes;
                     pg.style.left = x + "px";
                 }
-            }
-            else
-            {
-                clearInterval(incrementarTiempo);
-                clearInterval(time);
-                clearInterval(timeMover);
-                
-                stopGame();
-            }
 
-            choca2 = false;
+            }
+            
         }
     }
 }
+
+var died
 
 function stopGame()
 {
     
     startGame = false;
-    died = true;
+     died = true;
     desenfocar();
     final();
-    // crearStartEndScreen( "gameover" );
 }
