@@ -236,43 +236,65 @@ var y = 0, yinicial = 0;
 var velocidadY = 1;
 var showScoreAnimation;
 
+var variables = {};
+var prefijoCont = "contenedor";
+var prefijoSum = "sumador";
+var i = 0;
+
 
 function showScore( ingr ) // SE BUGEA CUANDO HAY MAS DE DOS INGR A LA VEZ
 {
-    var contenedor = document.createElement('div');
-    contenedor.className = "contenedor";
-    contenedor.id = "contenedor";
-    contenedor.style.top = "60px";
-    document.getElementById("map").appendChild(contenedor);
+    variables[prefijoCont + i] = document.createElement('div');
+    variables[prefijoCont + i].className = "contenedor";
+    variables[prefijoCont + i].id = "contenedor";
+    variables[prefijoCont + i].style.top = "60px";
+    document.getElementById("map").appendChild(variables[prefijoCont + i]);
+    
+    // var contenedor = document.createElement('div');
+    // contenedor.className = "contenedor";
+    // contenedor.id = "contenedor";
+    // contenedor.style.top = "60px";
+    // document.getElementById("map").appendChild(contenedor);
 
-    var sumador = document.createElement('div');
-    sumador.className = "sumador";
-    document.getElementById("contenedor").appendChild(sumador);
+    variables[prefijoSum + i] = document.createElement('div');
+    variables[prefijoSum + i].className = "sumador";
+    document.getElementById("contenedor").appendChild(variables[prefijoSum + i]);
 
-    yinicial = parseInt(contenedor.style.top);
-    y = parseInt(contenedor.style.top);
+    // var sumador = document.createElement('div');
+    // sumador.className = "sumador";
+    // document.getElementById("contenedor").appendChild(sumador);
+
+    moverBox( variables[prefijoCont + i], variables[prefijoSum + i], ingr );
+
+    i++;
+}
+
+function moverBox( cont, box, ingr )
+{
+    yinicial = parseInt(cont.style.top);
+    y = parseInt(cont.style.top);
 
     showScoreAnimation = setInterval(function()
     {
         if ( ingr.puntosI > 0 )
         {
-            sumador.style.backgroundImage = "url(imagenes/time/numeros/+" + ingr.puntosI + ".png)";
+            box.style.backgroundImage = "url(imagenes/time/numeros/+" + ingr.puntosI + ".png)";
         }
         else
         {
-            sumador.style.backgroundImage = "url(imagenes/time/numeros/" + ingr.puntosI + ".png)";
+            box.style.backgroundImage = "url(imagenes/time/numeros/" + ingr.puntosI + ".png)";
         }
 
         y -= velocidadY;
-        contenedor.style.top = y + "px";
+        cont.style.top = y + "px";
 
         if ( y == (yinicial - 10) )
         {            
-            contenedor.remove();
-            sumador.remove();
+            cont.remove();
+            box.remove();
+
             clearInterval(showScoreAnimation);       
         }
 
     }, 20);
-    
 }

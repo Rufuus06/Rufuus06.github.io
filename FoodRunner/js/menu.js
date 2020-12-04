@@ -1,17 +1,19 @@
-var contMenu  = document.createElement('div');
-contMenu.className = "contMenu";
-contMenu.id = "contMenu";
-document.getElementById('game').appendChild(contMenu);
+// var contMenu  = document.createElement('div');
+// contMenu.className = "contMenu";
+// contMenu.id = "contMenu";
+// document.getElementById('game').appendChild(contMenu);
 
 var menu = document.createElement('div');
-menu.style.backgroundImage = "url(imagenes/marco2.png)";
+// menu.style.backgroundImage = "url(imagenes/marco2.png)";
+
 menu.className = "menu";
 menu.id = "menu";
 // menu.style.background = "#fff";
-document.getElementById('contMenu').appendChild(menu);
+document.getElementById('map').appendChild(menu);
 
 var backgroundMenu = document.createElement('div');
-backgroundMenu.style.backgroundImage = "url(imagenes/blackScreen.png)";
+// backgroundMenu.style.backgroundImage = "url(imagenes/blackScreen.png)";
+backgroundMenu.style.backgroundColor = "#000";
 backgroundMenu.className = "blackScreen";
 backgroundMenu.id = "blackScreen";
 document.getElementById('menu').appendChild(backgroundMenu);
@@ -107,7 +109,7 @@ document.getElementById('menu').appendChild(contIngredientes2);
 var veneno = document.createElement('div');
 veneno.className = "itemIngr";
 veneno.id = "veneno";
-veneno.style.marginLeft = "44%";
+veneno.style.marginLeft = "46%";
 veneno.style.backgroundImage = "url(imagenes/ingredients/venom.gif";
 document.getElementById('contIngredientes2').appendChild(veneno);
 
@@ -120,14 +122,8 @@ document.getElementById('menu').appendChild(contPuntos2);
 var menos20 = document.createElement('div');
 menos20.className = "plusScore";
 menos20.style.backgroundImage = "url(imagenes/time/numeros/-20.png";
-menos20.style.marginLeft = "50.1%"
+menos20.style.marginLeft = "51%"
 document.getElementById('contPuntos2').appendChild(menos20);
-
-// PRESS
-var press = document.createElement('div');
-press.className = "press";
-press.id = "press";
-document.getElementById("menu").appendChild(press);
 
 var imagenesVolumen = 
 [
@@ -136,92 +132,123 @@ var imagenesVolumen =
 ];
 
 // VOLUMEN
-var volumen = document.createElement('div');
-volumen.id = "volumen";
-volumen.className = "volumen";
-volumen.style.backgroundImage = "url(" + imagenesVolumen[0] + ")";
-document.getElementById('game').appendChild(volumen);
 
-var clicked = false;
-var song = Math.floor(Math.random() * listaMusica.length);
-var myMusic = new sound( listaMusica[song] );
-myMusic.volume = 0.001;
+// var contVolumen = document.createElement('div');
+// contVolumen.className = "contVolumen";
+// contVolumen.id = "contVolumen";
+// document.getElementById('map').appendChild(contVolumen); // sin body no funciona
 
-volumen.addEventListener ( "click", function()
-{
-    var itemMusica = document.getElementById( listaMusica[song]);
+// var volumen = document.createElement('div');
+// volumen.id = "volumen";
+// volumen.className = "volumen";
+// volumen.style.backgroundImage = "url(" + imagenesVolumen[0] + ")";
+// document.getElementById('contVolumen').appendChild(volumen);
 
-    if ( !clicked )
-    {
-        volumen.style.backgroundImage = "url(" + imagenesVolumen[1] + ")";
-        volumen.style.backgroundSize = 'contain';
+// var clicked = false;
+// var song = Math.floor(Math.random() * listaMusica.length);
+// var myMusic = new sound( listaMusica[song] );
+// myMusic.volume = 0.001;
 
-        itemMusica.muted = false;
-        myMusic.play();
+// volumen.addEventListener ( "click", function()
+// {
+//     var itemMusica = document.getElementById( listaMusica[song]);
 
-        clicked = true;
-    }
-    else
-    {
-        volumen.style.backgroundImage = "url(" + imagenesVolumen[0] + ")";
-        volumen.style.backgroundSize = 'contain';
+//     if ( !clicked )
+//     {
+//         volumen.style.backgroundImage = "url(" + imagenesVolumen[1] + ")";
+//         volumen.style.backgroundSize = 'contain';
+
+//         itemMusica.muted = false;
+//         myMusic.play();
+
+//         clicked = true;
+//     }
+//     else
+//     {
+//         volumen.style.backgroundImage = "url(" + imagenesVolumen[0] + ")";
+//         volumen.style.backgroundSize = 'contain';
 
         
-        itemMusica.muted = true;
+//         itemMusica.muted = true;
 
-        clicked = false;
-    }
-})
+//         clicked = false;
+//     }
+// })
+
+// PRESS
+
+var contPress = document.createElement('div');
+contPress.className = "contPress";
+contPress.id = "contPress";
+document.getElementById("menu").appendChild(contPress);
+ 
+var press = document.createElement('div');
+press.className = "press";
+press.id = "press";
+document.getElementById("contPress").appendChild(press);
 
 function final()
 {
-    var contMenu  = document.createElement('div');
-    contMenu.className = "contMenu";
-    contMenu.id = "contMenu";
-    document.getElementById('map').appendChild(contMenu);    
+    // var contMenu  = document.createElement('div');
+    // contMenu.className = "contMenu";
+    // contMenu.id = "contMenu";
+    // document.getElementById('map').appendChild(contMenu);    
 
     var menu = document.createElement('div');
-    menu.style.backgroundImage = "url(imagenes/marco2.png)";
+    // menu.style.backgroundImage = "url(imagenes/marco2.png)";
     menu.className = "menu";
     menu.id = "menu";
     // menu.style.background = "#fff";
-    document.getElementById('contMenu').appendChild(menu);
+    document.getElementById('map').appendChild(menu);
 
     var backgroundMenu = document.createElement('div');
-    backgroundMenu.style.backgroundImage = "url(imagenes/blackScreen.png)";
+    // backgroundMenu.style.backgroundImage = "url(imagenes/blackScreen.png)";
+    backgroundMenu.style.backgroundColor = "#000";
     backgroundMenu.className = "blackScreen";
     backgroundMenu.id = "blackScreen";
     document.getElementById('menu').appendChild(backgroundMenu);
 
     // GAME OVER
+
+    var contGameOver = document.createElement('div');
+    contGameOver.className = "contGameOver";
+    contGameOver.id = "contGameOver";
+    document.getElementById('menu').appendChild(contGameOver);
+
     var gameover = document.createElement('div');
     gameover.className = "gameover";
     gameover.id = "gameover";
-    document.getElementById('menu').appendChild(gameover);
+    document.getElementById('contGameOver').appendChild(gameover);
 
-    var scoreFinal = document.createElement('div');
-    scoreFinal.className = "scorefinal";
-    scoreFinal.id = "scoreFinal";
-    document.getElementById('menu').appendChild(scoreFinal);
-
-    var dospuntosBox = document.createElement('div');
-    dospuntosBox.className = "dospuntosBox";
-    dospuntosBox.id = "dospuntosBox";
-    dospuntosBox.style.top = "46%";
-    dospuntosBox.style.left = "27.8%";
-    document.getElementById('menu').appendChild(dospuntosBox);
+    var contTimeFinal = document.createElement('div');
+    contTimeFinal.className = "contTimeFinal";
+    contTimeFinal.id = "contTimeFinal";
+    document.getElementById('menu').appendChild(contTimeFinal);
 
     var timeFinal = document.createElement('div');
     timeFinal.className = "timeFinal";
     timeFinal.id = "timeFinal";
-    document.getElementById('menu').appendChild(timeFinal);
+    document.getElementById('contTimeFinal').appendChild(timeFinal);
+
+    var dospuntosBox = document.createElement('div');
+    dospuntosBox.className = "dospuntosBox";
+    dospuntosBox.id = "dospuntosBox";
+    document.getElementById('contTimeFinal').appendChild(dospuntosBox);
+
+    var contScoreFinal = document.createElement('div');
+    contScoreFinal.className = "contScoreFinal";
+    contScoreFinal.id = "contScoreFinal";
+    document.getElementById('menu').appendChild(contScoreFinal);
+
+    var scoreFinal = document.createElement('div');
+    scoreFinal.className = "scorefinal";
+    scoreFinal.id = "scoreFinal";
+    document.getElementById('contScoreFinal').appendChild(scoreFinal);
 
     var dospuntosBox2 = document.createElement('div');
     dospuntosBox2.className = "dospuntosBox";
     dospuntosBox2.id = "dospuntosBox";
-    dospuntosBox2.style.top = "61%";
-    dospuntosBox2.style.left = "30%";
-    document.getElementById('menu').appendChild(dospuntosBox2);
+    document.getElementById('contScoreFinal').appendChild(dospuntosBox2);    
 
     // NUMEROS
     // TIMER
@@ -230,37 +257,28 @@ function final()
     var decMinuto = document.createElement('div');
     decMinuto.className = "numerosMenu";
     decMinuto.style.backgroundImage = listaNumeros[0];
-    decMinuto.style.left = "43%";
-    decMinuto.style.top = "45%";
-    document.getElementById('menu').appendChild(decMinuto);
+    decMinuto.style.marginLeft = "26%";
+    document.getElementById('contTimeFinal').appendChild(decMinuto);
 
     var minutoN = document.createElement('div');
     minutoN.className = "numerosMenu";
     minutoN.style.backgroundImage = listaNumeros[1];
-    minutoN.style.left = "47%";
-    minutoN.style.top = "45%";
-    document.getElementById('menu').appendChild(minutoN);
+    document.getElementById('contTimeFinal').appendChild(minutoN);
 
     var dospuntosBox3 = document.createElement('div');
     dospuntosBox3.className = "dospuntosBox";
     dospuntosBox3.id = "dospuntosBox";
-    dospuntosBox3.style.top = "46%";
-    dospuntosBox3.style.left = "51%";
-    document.getElementById('menu').appendChild(dospuntosBox3);
+    document.getElementById('contTimeFinal').appendChild(dospuntosBox3);
 
     var decN = document.createElement('div');
     decN.className = "numerosMenu";
     decN.style.backgroundImage = listaNumeros[2];
-    decN.style.left = "51.8%";
-    decN.style.top = "45%";
-    document.getElementById('menu').appendChild(decN);
+    document.getElementById('contTimeFinal').appendChild(decN);
 
     var sec = document.createElement('div');
     sec.className = "numerosMenu";
     sec.style.backgroundImage = listaNumeros[3];
-    sec.style.top = "45%";
-    sec.style.left = "56%";
-    document.getElementById('menu').appendChild(sec);
+    document.getElementById('contTimeFinal').appendChild(sec);
 
     // SCORE
 
@@ -269,42 +287,37 @@ function final()
     var milB = document.createElement('div');
     milB.className = "numerosMenu";
     milB.style.backgroundImage = listaNumeros[0];
-    milB.style.top = "60%";
-    milB.style.left = "44%";
-    document.getElementById('menu').appendChild(milB);
+    milB.style.marginLeft = "23%";
+    document.getElementById('contScoreFinal').appendChild(milB);
 
     var cienB = document.createElement('div');
     cienB.className = "numerosMenu";
     cienB.style.backgroundImage = listaNumeros[1];
-    cienB.style.top = "60%";
-    cienB.style.left = "48%";
-    document.getElementById('menu').appendChild(cienB);
+    document.getElementById('contScoreFinal').appendChild(cienB);
 
     var diezB = document.createElement('div');
     diezB.className = "numerosMenu";
     diezB.style.backgroundImage = listaNumeros[2];
-    diezB.style.top = "60%";
-    diezB.style.left = "52%";
-    document.getElementById('menu').appendChild(diezB);
+    document.getElementById('contScoreFinal').appendChild(diezB);
 
     var unoB = document.createElement('div');
     unoB.className = "numerosMenu";
     unoB.style.backgroundImage = listaNumeros[3];
-    unoB.style.top = "60%";
-    unoB.style.left = "56%";
-    document.getElementById('menu').appendChild(unoB);
+    document.getElementById('contScoreFinal').appendChild(unoB);
     
     reload.style.display = "block";
-    volumen.style.left = "68%";
-    volumen.style.top = "23%";
+    reload.style.zIndex = 2;
+    // volumen.style.left = "68%";
+    // volumen.style.top = "23%";
 }
 
 var reload = document.createElement('div');
 reload.className = "reload";
 reload.style.top = "60%";
-reload.style.left = "48.5%";
+reload.style.left = "49%";
 reload.style.backgroundImage = "url(imagenes/time/reload.png)";
 reload.style.display = "none";
+reload.style.zIndex = 1;
 document.body.appendChild(reload);
 
 reload.addEventListener ( "click", function()
@@ -315,13 +328,12 @@ reload.addEventListener ( "click", function()
 
 function contraer( open )
 {
-    var restaWidth = menu.offsetWidth;
-    var restaHeight = menu.offsetHeight;
-    var sumaX = parseInt(menu.style.left);
-    var sumaY = parseInt(menu.style.top);
-    var temp;
+    // var restaWidth = menu.offsetWidth;
+    // var restaHeight = menu.offsetHeight;
+    // var sumaX = parseInt(menu.style.left);
+    // var sumaY = parseInt(menu.style.top);
+    // var temp;
 
-    contMenu.parentNode.removeChild(contMenu);
     contPuntos.parentNode.removeChild(contPuntos);
     contPuntos2.parentNode.removeChild(contPuntos2);
     contInstrucciones.parentNode.removeChild(contInstrucciones);
@@ -330,8 +342,8 @@ function contraer( open )
     instrucciones.parentNode.removeChild(instrucciones);
     press.remove();
 
-    volumen.style.left = "1453px";
-    volumen.style.top = "190px";
+    // volumen.style.left = "1453px";
+    // volumen.style.top = "190px";
 
     menu.remove();
     

@@ -527,6 +527,9 @@ var keys;
 var isPressed = false;
 var started = false;
 var lookingRight = true;
+var song = Math.floor(Math.random() * listaMusica.length);
+var myMusic = new sound( listaMusica[song] );
+myMusic.volume = 0.001;
 
 checkKeys = setInterval ( function()
 {
@@ -543,6 +546,7 @@ checkKeys = setInterval ( function()
             init();
             startMoving();  
             started = true;
+            myMusic.play();
         }
 
         if ( !died )
@@ -568,6 +572,7 @@ checkKeys = setInterval ( function()
             init();            
             startMoving();  
             started = true;
+            myMusic.play();
         }
 
         if ( !died )
@@ -593,6 +598,7 @@ checkKeys = setInterval ( function()
             init();
             startMoving();  
             started = true;
+            myMusic.play();
         }
 
         if ( !died )
