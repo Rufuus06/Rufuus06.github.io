@@ -314,7 +314,7 @@ function final()
 var reload = document.createElement('div');
 reload.className = "reload";
 reload.style.top = "60%";
-reload.style.left = "49%";
+reload.style.left = "48%";
 reload.style.backgroundImage = "url(../../../media/games/FoodRunner/time/reload.png)";
 reload.style.display = "none";
 reload.style.zIndex = 1;

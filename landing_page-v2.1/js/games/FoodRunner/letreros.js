@@ -244,27 +244,44 @@ var i = 0;
 
 function showScore( ingr ) // SE BUGEA CUANDO HAY MAS DE DOS INGR A LA VEZ
 {
-    variables[prefijoCont + i] = document.createElement('div');
-    variables[prefijoCont + i].className = "contenedor";
-    variables[prefijoCont + i].id = "contenedor";
-    variables[prefijoCont + i].style.top = "60px";
-    document.getElementById("map").appendChild(variables[prefijoCont + i]);
+    // variables[prefijoCont + i] = document.createElement('div');
+    // variables[prefijoCont + i].className = "contenedor";
+    // variables[prefijoCont + i].id = "contenedor";
+    // variables[prefijoCont + i].style.top = "60px";
+    // document.getElementById("map").appendChild(variables[prefijoCont + i]);
     
-    // var contenedor = document.createElement('div');
-    // contenedor.className = "contenedor";
-    // contenedor.id = "contenedor";
-    // contenedor.style.top = "60px";
-    // document.getElementById("map").appendChild(contenedor);
+    var contenedor = document.createElement('div');
+    contenedor.className = "contenedor";
+    contenedor.id = "contenedor";
+    contenedor.style.top = "60px";
+    document.getElementById("map").appendChild(contenedor);
 
-    variables[prefijoSum + i] = document.createElement('div');
-    variables[prefijoSum + i].className = "sumador";
-    document.getElementById("contenedor").appendChild(variables[prefijoSum + i]);
+    // variables[prefijoSum + i] = document.createElement('div');
+    // variables[prefijoSum + i].className = "sumador";
+    // document.getElementById("contenedor").appendChild(variables[prefijoSum + i]);
 
-    // var sumador = document.createElement('div');
-    // sumador.className = "sumador";
-    // document.getElementById("contenedor").appendChild(sumador);
+    var sumador = document.createElement('div');
+    sumador.className = "sumador";
+    document.getElementById("contenedor").appendChild(sumador);
 
-    moverBox( variables[prefijoCont + i], variables[prefijoSum + i], ingr );
+    //moverBox( variables[prefijoCont + i], variables[prefijoSum + i], ingr );
+
+    if ( ingr.puntosI > 0 )
+    {
+        sumador.style.backgroundImage = "url(../../../media/games/FoodRunner/time/numeros/+" + ingr.puntosI + ".png)";
+    }
+    else
+    {
+        sumador.style.backgroundImage = "url(../../../media/games/FoodRunner/time/numeros/" + ingr.puntosI + ".png)";
+    }
+
+    function remover()
+    {
+        contenedor.parentNode.removeChild(contenedor);
+        sumador.remove();
+    }
+
+    setTimeout(remover, 100);
 
     i++;
 }
