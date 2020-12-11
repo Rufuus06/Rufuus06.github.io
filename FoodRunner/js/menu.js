@@ -287,7 +287,7 @@ function final()
     var milB = document.createElement('div');
     milB.className = "numerosMenu";
     milB.style.backgroundImage = listaNumeros[0];
-    milB.style.marginLeft = "23%";
+    milB.style.marginLeft = "23.5%";
     document.getElementById('contScoreFinal').appendChild(milB);
 
     var cienB = document.createElement('div');
