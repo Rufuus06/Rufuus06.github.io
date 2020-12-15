@@ -59,11 +59,11 @@ var frutas2 = {};
 var prefijo = "fruta";
 var y = 0;
 var listaFruta = new Array();
-var velocidadFruta = 2;
-const margenInferior = 740;
+var velocidadFruta = 1;
+const margenInferior = 656;
 var contador = 0;
 var mIzFruta = 0;
-var tiempo = 20;
+var tiempo = 10;
 var start = false;
 var reset = false;
 
@@ -123,14 +123,12 @@ function caer() {
                     gameover();
                 }
             }
-            else if (parseInt(fr.style.top) == ((margenInferior / 2) + 100)) {
+            else if (parseInt(fr.style.top) == ((margenInferior / 2) + 50)) {
                 crearFruta();
                 acelerar();
             }
         })
-
     }, tiempo);
-
 }
 
 function frutaAleatoria(fruta) {
@@ -171,7 +169,7 @@ function crearFruta() {
     frutas2[prefijo + y] = document.createElement("div");
     frutas2[prefijo + y].id = "fruta";
     frutas2[prefijo + y].className = "fruta";
-    frutas2[prefijo + y].style.top = 170 + "px";
+    frutas2[prefijo + y].style.top = 90 + "px";
     frutaAleatoria(frutas2[prefijo + y]);
     var num = columnaAleatoria();
     document.querySelector('[data-numero= "' + String(num) + '"]').appendChild(frutas2[prefijo + y]);
@@ -193,16 +191,17 @@ function columnaAleatoria() {
 function acelerar() {
     contador++;
     if (contador == 10) {
-        velocidadFruta = 4;
+        velocidadFruta = 2;
+        
     }
     else if (contador == 20) {
-        velocidadFruta = 5;
+        velocidadFruta = 3;
     }
     else if (contador == 30) {
-        velocidadFruta = 6;
+        velocidadFruta = 4;
     }
     else if (contador == 40) {
-        velocidadFruta = 6.5;
+        velocidadFruta = 4.5;
     }
 }
 
