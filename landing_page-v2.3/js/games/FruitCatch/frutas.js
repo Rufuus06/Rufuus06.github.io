@@ -238,7 +238,7 @@ function animacionPerder(frutaCaida) {
     frutaAnimada.style.top = frutaCaida.style.top;
     frutaAnimada.style.marginLeft = frutaCaida.style.marginLeft;
     if (frutaCaida.style.backgroundImage == 'url("../../../media/games/FruitCatch/pera.gif")') {
-        frutaAnimada.style.backgroundImage = "url('imagenes/../../../media/games/FruitCatch/peraLose.gif')"
+        frutaAnimada.style.backgroundImage = "url('../../../media/games/FruitCatch/peraLose.gif')"
     }
     else if (frutaCaida.style.backgroundImage == 'url("../../../media/games/FruitCatch/naranja.gif")') {
         frutaAnimada.style.backgroundImage = "url('../../../media/games/FruitCatch/naranjaLose.gif')"
