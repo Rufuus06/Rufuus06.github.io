@@ -19,7 +19,7 @@ body{
     background-position: center;
 }
 .wrapper {
-    width:800px;
+    /* width:800px; */
 }
 #board {
     width:600px;
@@ -82,7 +82,7 @@ body{
 
 .marcadores{
     padding: 0px auto;
-    width: 800px;
+    width: 600px;
     height:20px;
     display: grid;
     grid-template-columns: 0.35fr 0.72fr 1fr 1fr;

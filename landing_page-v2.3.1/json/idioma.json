@@ -28,8 +28,19 @@
         "descTienda5": "En el mercado, nosotros estamos desde su inauguración (hace 47 años) trabajando el pescado de las lonjas mediterráneas. Nuestro plato estrella es lógicamente el pescado fresco y marisco.",
         "catTienda5": "Bar-Restaurante",
         "descTienda6": "Estamos especializados en productos ibéricos, charcutería selecta y ofrecemos una gran variedad en quesos. Además tenemos una amplia gama en productos sin gluten.",
-        "catTienda6": "Charcuterías y Tocinerías" 
+        "catTienda6": "Charcuterías y Tocinerías",
+
+        "dia1": "Lunes de",
+        "dia2": "Martes de",
+        "dia3": "Miércoles de",
+        "dia4": "Jueves de",
+        "dia5": "Viernes de",
+        "dia6": "Sabado de",
+        "dia7": "Domingo de"
         
+        
+        
+
     },
 
     "en":
@@ -61,7 +72,15 @@
         "descTienda5": "Since its opening (47 years ago), we have been working with fish from Mediterranean fish markets. Our star dish is of course fresh fish and seafood.",
         "catTienda5": "Bar-Restaurant",
         "descTienda6": "We specialize in Iberian products, select delicacies and offer a wide variety of cheeses. We also have a wide range of gluten-free products.",
-        "catTienda6": "Delicatessen and Cooking Shops" 
+        "catTienda6": "Delicatessen and Cooking Shops",
+
+        "dia1": "Monday",
+        "dia2": "Tuesday",
+        "dia3": "Wednesday",
+        "dia4": "Thustday",
+        "dia5": "Friday",
+        "dia6": "Saturday",
+        "dia7": "Sunday"
     },
 
     "cat":
