@@ -15,8 +15,8 @@
 
 
     window.addEventListener("keyup", e => {
-        if (process != undefined && [37, 38, 39, 40].indexOf(e.keyCode) != -1) {
-            newDirection = { 38: "U", 40: "D", 39: "R", 37: "L" }[e.keyCode];
+        if (process != undefined && [65, 68, 83, 87].indexOf(e.keyCode) != -1) {
+            newDirection = { 87: "U", 83: "D", 68: "R", 65: "L" }[e.keyCode];
             if (
                 (newDirection == "U" && direction != "D") ||
                 (newDirection == "D" && direction != "U") ||
@@ -45,8 +45,12 @@
         }
 
     })
+   /* setTimeout(() =>{
+        snake[0].remove();
+    }, 1000);*/
 
-
+    
+      
     function start() {
 
         // tecla_start = event.keyCode;
@@ -55,6 +59,8 @@
 
         // document.getElementById("gameover").style.visibility = 'hidden';
         
+       
+
         document.getElementById("intro").style.visibility = 'hidden';
         apples.innerText = "0";
         board.classList.remove("fail");
@@ -143,6 +149,7 @@
         tecla_start = 0;
         musica.pause();
         reset = true;
+        
         
         /*while(snake.length > 0){
              snake.pop();
