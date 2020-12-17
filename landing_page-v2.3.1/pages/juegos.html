@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="../style/bootstrap.min.css">
     <link rel="stylesheet" href="../style/style.css">
 
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap-switch-button@1.1.0/css/bootstrap-switch-button.min.css"
+        rel="stylesheet">
+    <script
+        src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap-switch-button@1.1.0/dist/bootstrap-switch-button.min.js"></script>
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -73,6 +78,15 @@
         </div>
     </nav>
 
+
+    <!-- SWITCH -->
+
+    <input id="switcher" type="checkbox" data-toggle="switchbutton" checked data-onlabel="ON" data-offlabel="OFF"
+        data-onstyle="success" data-offstyle="danger">
+
+
+    <!--  -->
+
     <section class="">
         <div class="container" style="max-width: 1300px;">
             <div class="titles2" style=" padding-top: 35px">
@@ -81,11 +95,12 @@
                 </h2>
             </div>
 
+
             <div class="row" style="text-align: center;">
 
                 <div class="col-lg-4 bg-white px-lg-0 mt-3 mb-3 shadow-offers"
                     style="margin: 0px 0px; height: 420px; max-width: 425px;">
-                    <a id="juego2" href="games/FoodRunner/index.html" class="d-block bg-white desc">
+                    <a id="juego1" href="games/FoodRunner/index.html" class="d-block bg-white desc">
                         <div class="card bg-transparent border-0">
 
                             <div class="title text-left font-weight-bold mx-12 my-2" style="height: 20.2px;">
@@ -119,6 +134,8 @@
 
                             <div class="brand-img border-bottom border-alto2" style="margin-top: 10px;">
                                 <img src="../media/juegos/capturaFruitCatch.PNG" alt="Juego" width="100%" height="80%">
+                                <div id="block" style="background-color:#000;opacity: 0.7;position: absolute;top: 46px;width: 100%;height: 282px;visibility: hidden;"></div>
+                                <img id="locker" src="../media/juegos/candado2.png" style="width: 100px;top: 135px;position: absolute;left: 158px;visibility: hidden;">
                             </div>
 
                         </div>
@@ -144,6 +161,8 @@
 
                             <div class="brand-img border-bottom border-alto2" style="margin-top: 10px;">
                                 <img src="../media/juegos/calex.png" alt="Juego" width="100%" height="80%">
+                                <div id="block2" style="background-color:#000;opacity: 0.7;position: absolute;top: 46px;width: 100%;height: 282px;visibility: hidden;"></div>
+                                <img id="locker2" src="../media/juegos/candado2.png" style="width: 100px;top: 135px;position: absolute;left: 158px;visibility: hidden;">
                             </div>
 
                         </div>
@@ -177,50 +196,59 @@
                         </li>
 
                         <div class="btn-group">
-                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <img class="img-footer" src="../media/footer/instagram.png" width="40" height="40"
                                     class="rounded-circle">
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="https://www.instagram.com/rufuus06/">Rufuus06</a>
-                              <a class="dropdown-item" href="https://www.instagram.com/lokuo86/">Lokuo</a>
-                              <a class="dropdown-item" href="https://www.instagram.com/alexisartmorral?igshid=8fxtpuk0p33f">Alexisartmorral</a>
+                                <a class="dropdown-item" href="https://www.instagram.com/rufuus06/">Rufuus06</a>
+                                <a class="dropdown-item" href="https://www.instagram.com/lokuo86/">Lokuo</a>
+                                <a class="dropdown-item"
+                                    href="https://www.instagram.com/alexisartmorral?igshid=8fxtpuk0p33f">Alexisartmorral</a>
                             </div>
-                          </div>
+                        </div>
 
-                          <div class="btn-group">
-                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="btn-group">
+                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <img class="img-footer" src="../media/footer/twitter.png" width="40" height="40"
                                     class="rounded-circle">
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="https://twitter.com/rufuus06">Rufuus06</a>
-                              <a class="dropdown-item" href="https://twitter.com/lokuo86">Lokuo</a>
-                              <a class="dropdown-item" href="https://twitter.com/alexisartmorral?s=09">Alexisartmorral</a>
+                                <a class="dropdown-item" href="https://twitter.com/rufuus06">Rufuus06</a>
+                                <a class="dropdown-item" href="https://twitter.com/lokuo86">Lokuo</a>
+                                <a class="dropdown-item"
+                                    href="https://twitter.com/alexisartmorral?s=09">Alexisartmorral</a>
                             </div>
-                          </div>
+                        </div>
 
-                          <div class="btn-group">
-                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <img class="img-footer" src="../media/footer/youtube.png" width="40" height="40"
                                     class="rounded-circle">
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="https://www.youtube.com/channel/UC3b7rPsZrvsGygeSI8EJI_Q?view_as=subscriber">Rufuus06</a>
+                                <a class="dropdown-item"
+                                    href="https://www.youtube.com/channel/UC3b7rPsZrvsGygeSI8EJI_Q?view_as=subscriber">Rufuus06</a>
                             </div>
-                          </div>
+                        </div>
 
-                          <div class="btn-group">
-                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="btn-group">
+                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <img class="img-footer" src="../media/footer/linkedin.png" width="40" height="40"
                                     class="rounded-circle">
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="https://www.linkedin.com/in/rodolfo-gallardo-ibarra-98248519b/">Rufuus06</a>
-                              <a class="dropdown-item" href="https://www.linkedin.com/in/ivancabanasgarcia/">Lokuo</a>
-                              <a class="dropdown-item" href="https://www.linkedin.com/in/alex-isart-morral-158b46183">Alexisartmorral</a>
+                                <a class="dropdown-item"
+                                    href="https://www.linkedin.com/in/rodolfo-gallardo-ibarra-98248519b/">Rufuus06</a>
+                                <a class="dropdown-item" href="https://www.linkedin.com/in/ivancabanasgarcia/">Lokuo</a>
+                                <a class="dropdown-item"
+                                    href="https://www.linkedin.com/in/alex-isart-morral-158b46183">Alexisartmorral</a>
                             </div>
-                          </div>
+                        </div>
                     </ul>
 
                     <br><br>
@@ -246,5 +274,6 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
     crossorigin="anonymous"></script>
 <script src="../js/idioma.js"></script>
+<script src="../js/juegos.js"></script>
 
 </html>

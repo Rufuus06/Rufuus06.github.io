@@ -197,3 +197,18 @@ a
     background-color: #e8e8e8;
     outline: 0px;
 }
+
+.switch
+{
+    top: 2%;
+    left: 2%;
+    position: relative;
+    transition: left 1.7s;
+     -webkit-transition: left 1.7s;
+}
+
+.disabled
+{
+    cursor: not-allowed;
+    text-decoration: none;
+}
