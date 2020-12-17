@@ -130,6 +130,18 @@
     text-shadow: 0 0 30px white;
 }
 
+#espacio{
+    font-family: pixel;
+    font-size: 30px;
+    padding-left: 100px;
+    padding-top: 320px;
+    float: right;
+    position: absolute;
+    z-index: 1;
+    visibility: visible;
+    text-shadow: 0 0 30px white;
+}
+
 #restart{
     font-family: pixel;
     font-size: 30px;
