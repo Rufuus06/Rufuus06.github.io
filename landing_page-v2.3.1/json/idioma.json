@@ -53,7 +53,14 @@
         "juegaCS":"Juega a Cart Swallow",
 
         "juegoCSinicio":"Movimiento con 'W''A''S''D \n \n Pulse barra espaciadora para empezar",
-        "juegoCSpuntos":"Puntos:"
+        "juegoCSpuntos":"Puntos:",
+
+        
+        "login":"Iniciar Sesión",
+        "loginEmail":"Correo Electrónico",
+        "loginPassword":"Contraseña",
+        "loginRemember":"Recuerdame"
+
         
         
     
@@ -116,7 +123,13 @@
 
 
         "juegoCSinicio":"Movement with 'W''A''S''D' Press space bar to start",
-        "juegoCSpuntos":"Points:"
+        "juegoCSpuntos":"Points:",
+
+
+        "login":"Log in",
+        "loginEmail":"Emaiil address",
+        "loginPassword":"Password",
+        "loginRemember":"Remember me"
 
     },
 
@@ -176,7 +189,13 @@
 
 
         "juegoCSinicio":"Moviment amb 'W''A''S''D \n \n Prem barra espaciadora per començar",
-        "juegoCSpuntos":"Punts:"
+        "juegoCSpuntos":"Punts:",
+
+
+        "login":"Iniciar Sessió",
+        "loginEmail":"Correu Electrònic",
+        "loginPassword":"Contraseña",
+        "loginRemember":"Recorda'm"
         
 
     }
