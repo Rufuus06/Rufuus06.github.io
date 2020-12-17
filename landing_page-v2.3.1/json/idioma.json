@@ -1,7 +1,6 @@
 {
     "es":
     {
-        // INICIO
 
         "navTienda": "Tiendas",
         "descTienda": "Visita nuestras tiendas!",
@@ -18,7 +17,6 @@
         "footer": "Creado por Grupo2",
         "volverArriba": "Volver Arriba",
 
-        // TIENDAS
 
         "horario": "Horario",
         "descTienda1": "Toda variedad de patatas, cebollas y ajos. Patatas Rep. Pontiac, Kennebek, Monalisa, Agra, Desayuno, Violeta, cebollas de higueras, de fuentes, normales, del platillo. Ajos rojos y negros, boniatos crudos y cocidos.",
@@ -51,7 +49,21 @@
 
         "topMarcas": "TOP BRANDS",
         "footer": "Created by Grupo2",
-        "volverArriba": "Go Back Up"
+        "volverArriba": "Go Back Up",
+
+        "horario": "Schedule",
+        "descTienda1": "All variety of potatoes, onions and garlic. Potatoes Pontiac, Kennebek, Monalisa, Agra, Breakfast, Violet, Figueras and Fuentes onions, normal, from the dish. Red and black garlic, raw and cooked sweet potatoes.",
+        "catTienda1": "Fruit and Vegetables",
+        "descTienda2": "Aurora Mateo is a store dedicated to the sale of footwear for women and youth fashion, in which we offer our customers a personalized sale with the best value for money in the market.",
+        "catTienda2": "Clothes",
+        "descTienda3": "We have a trajectory of more than 30 years, trying to give the best products and the best service. We have evolved over time and have specialized in some products.",
+        "catTienda3": "Eggs and Poultry",
+        "descTienda4": "Elaboraciones propias de calidad. Ternera, cordero, cabrito y potro. Siempre de primera calidad. Elaborados, siempre con base de carne, de verduras, quesos, foie, etc.",
+        "catTienda4": "Carinceria",
+        "descTienda5": "En el mercado, nosotros estamos desde su inauguración (hace 47 años) trabajando el pescado de las lonjas mediterráneas. Nuestro plato estrella es lógicamente el pescado fresco y marisco.",
+        "catTienda5": "Bar-Restaurante",
+        "descTienda6": "Estamos especializados en productos ibéricos, charcutería selecta y ofrecemos una gran variedad en quesos. Además tenemos una amplia gama en productos sin gluten.",
+        "catTienda6": "Charcuterías y Tocinerias" 
     },
 
     "cat":
