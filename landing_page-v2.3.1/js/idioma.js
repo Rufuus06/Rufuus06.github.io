@@ -26,7 +26,7 @@ $.getJSON("https://raw.githubusercontent.com/Rufuus06/Rufuus06.github.io/master/
     var lang = localStorage.getItem("lang");
     var doc = json;
     $('.lang').each(function(index, element){
-      $(this).text(doc['cat'][$(this).attr('key')]);
+      $(this).text(doc[lang][$(this).attr('key')]);
     });//Each
   
     $('.translate').click(function(){
