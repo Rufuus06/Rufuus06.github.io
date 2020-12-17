@@ -14,7 +14,6 @@ html, body
   height: 100%;
 }
 body{
-    background: url(../../media/games/CartSwallow/fondo1.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -22,7 +21,7 @@ body{
     /* width:800px; */
 }
 #board {
-    width:600px;
+    width:100%;
     height:600px;
     margin-top: 50px;
     border:1px solid Black;
