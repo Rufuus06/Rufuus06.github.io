@@ -7,7 +7,7 @@
     let apple = [];
     let direction = "L"; // set direction Up, Down, Left, Right
     let snake = [];
-    var musica = new Audio("SpiritInTheSky.mp3");
+    var musica = new Audio("../../../media/sonidos/CartSwallow/SpiritInTheSky.mp3");
     musica.volume = 0.1;
     var empezar = false;
     var reset = false;
