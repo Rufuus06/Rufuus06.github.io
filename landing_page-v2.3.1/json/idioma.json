@@ -1,0 +1,74 @@
+{
+    "es":
+    {
+        // INICIO
+
+        "navTienda": "Tiendas",
+        "descTienda": "Visita nuestras tiendas!",
+        "btnTienda": "Ver Tiendas",
+
+        "navJuego": "Juegos",
+        "btnJuego": "Jugar",
+
+        "navOferta": "Ofertas",
+        "descOferta": "Descubre nuestras Ofertas!",
+        "btnOferta": "Ver Ofertas",
+
+        "topMarcas": "TOP MARCAS",
+        "footer": "Creado por Grupo2",
+        "volverArriba": "Volver Arriba",
+
+        // TIENDAS
+
+        "horario": "Horario",
+        "descTienda1": "Toda variedad de patatas, cebollas y ajos. Patatas Rep. Pontiac, Kennebek, Monalisa, Agra, Desayuno, Violeta, cebollas de higueras, de fuentes, normales, del platillo. Ajos rojos y negros, boniatos crudos y cocidos.",
+        "catTienda1": "Fruta y Verdura",
+        "descTienda2": "Aurora Mateo es una tienda dedicada a la venta de calzado para señora y moda juvenil, en la que ofrecemos a nuestros clientes una venta personalizada con la mejor relación calidad/precio del mercado.",
+        "catTienda2": "Ropa",
+        "descTienda3": "Tenemos una trayectoria de más de 30 años, procurando dar los mejores productos y el mejor servicio. Hemos evolucionado a lo largo del tiempo y nos hemos especializado en algunos productos.",
+        "catTienda3": "Huevos y Aves de Corral",
+        "descTienda4": "Elaboraciones propias de calidad. Ternera, cordero, cabrito y potro. Siempre de primera calidad. Elaborados, siempre con base de carne, de verduras, quesos, foie, etc.",
+        "catTienda4": "Carinceria",
+        "descTienda5": "En el mercado, nosotros estamos desde su inauguración (hace 47 años) trabajando el pescado de las lonjas mediterráneas. Nuestro plato estrella es lógicamente el pescado fresco y marisco.",
+        "catTienda5": "Bar-Restaurante",
+        "descTienda6": "Estamos especializados en productos ibéricos, charcutería selecta y ofrecemos una gran variedad en quesos. Además tenemos una amplia gama en productos sin gluten.",
+        "catTienda6": "Charcuterías y Tocinerias" 
+        
+    },
+
+    "en":
+    {
+        "navTienda": "Shops",
+        "descTienda": "Visit all our shops!",
+        "btnTienda": "See Shops",
+
+        "navJuego": "Games",
+        "btnJuego": "Play",
+
+        "navOferta": "Offers",
+        "descOferta": "Discover our Offers!",
+        "btnOferta": "See Offers", 
+
+        "topMarcas": "TOP BRANDS",
+        "footer": "Created by Grupo2",
+        "volverArriba": "Go Back Up"
+    },
+
+    "cat":
+    {
+        "navTienda": "Botigues",
+        "descTienda": "Visita totes les nostres botigues!",
+        "btnTienda": "Veure Botigues",
+
+        "navJuego": "Jocs",
+        "btnJuego": "Jugar",
+
+        "navOferta": "Ofertes",
+        "descOferta": "Descobreix les nostres Ofertes!",
+        "btnOferta": "Veure Ofertes",
+
+        "topMarcas": "TOP MARQUES",
+        "footer": "Creat per Grupo2",
+        "volverArriba": "Torna A Dalt"
+    }
+}
