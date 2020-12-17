@@ -69,6 +69,7 @@ var reset = false;
 
 //Creamos la fruta inicial dentro de la array
 crearFruta();
+saltoLinea();
 
 document.addEventListener("keydown", function (e) {
     if (!start) {
@@ -287,5 +288,12 @@ function animacionGanar(frutaCaida) {
         frutaAnimada.remove();
     }, 1000);
     
+}
+
+function saltoLinea() {
+    document.getElementById("intro").textContent.replace(/\n/g, "<br />");
+
+
+    document.getElementById("intro").innerHTML = textoEnHtml;
 }
 
