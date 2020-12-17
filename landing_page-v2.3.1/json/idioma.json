@@ -63,7 +63,8 @@
 
 
         "textoFC":"Movimiento con las flechas laterales \n \n Pulse barra espaciadora para empezar",
-        "restartFC": "Pulse ENTER para volver a jugar"
+        "restartFC": "Pulse ENTER para volver a jugar",
+        "vidas": "Vidas:"
     
         
     },
@@ -133,7 +134,8 @@
         "loginRemember":"Remember me",
 
         "textoFC":"Movement with the side arrows \n \n Press the space bar to start",
-        "restartFC": "Press ENTER to play again"
+        "restartFC": "Press ENTER to play again",
+        "vidas": "Lives:"
 
     },
 
@@ -202,7 +204,8 @@
         "loginRemember":"Recorda'm",
 
         "textoFC":"Moviment amb les fletxes laterals \n \n Premi barra d'espai per començar",
-        "restartFC": "Premi ENTER per tornar a jugar"
+        "restartFC": "Premi ENTER per tornar a jugar",
+        "vidas": "Vides:"
         
 
     }

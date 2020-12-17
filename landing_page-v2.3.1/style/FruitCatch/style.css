@@ -37,7 +37,7 @@
     text-shadow: 0 0 30px white;
 }
 
-.vidas{
+#vidas{
     font-family: pixel;
     font-size: 30px;
     float: right;
@@ -106,7 +106,7 @@
     z-index: 1;
 }
 
-.gameover{
+#gameover{
     font-family: pixel;
     font-size: 80px;
     padding-left: 210px;
@@ -118,7 +118,7 @@
     text-shadow: 0 0 30px white;
 }
 
-.intro{
+#intro{
     font-family: pixel;
     font-size: 30px;
     padding-left: 100px;
@@ -130,7 +130,7 @@
     text-shadow: 0 0 30px white;
 }
 
-.restart{
+#restart{
     font-family: pixel;
     font-size: 30px;
     padding-left: 170px;
