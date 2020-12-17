@@ -25,8 +25,21 @@ a
 #dia{
     font-size: .825rem;
     font-weight: 300;
-    margin-left: 10px;
+    margin-left: 20px;
 }
+
+.dia{
+    font-size: .825rem;
+    font-weight: 300;
+    
+    
+}
+.dia:hover{
+    text-decoration: none;
+    cursor: default;
+    color: black;
+}
+
 .mx-12
 {
     margin-left: .75rem;
