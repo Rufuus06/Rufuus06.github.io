@@ -23,7 +23,7 @@
         "catTienda2": "Ropa",
         "descTienda3": "Tenemos una trayectoria de más de 30 años, procurando dar los mejores productos y el mejor servicio. Hemos evolucionado a lo largo del tiempo y nos hemos especializado en algunos productos.",
         "catTienda3": "Huevos y Aves de Corral",
-        "descTienda4": "Elaboraciones propias de calidad. Ternera, cordero, cabrito y potro. Siempre de primera calidad. Elaborados, siempre con base de carne, de verduras, quesos, foie, etc.",
+        "descTienda4": "Elaboraciones propias de calidad. Ternera, cordero, cabrito y potro. Siempre de primera calidad. Elaborados, siempre con base de carne, de verduras, quesos, foie,   etc.",
         "catTienda4": "Carniceria",
         "descTienda5": "En el mercado, nosotros estamos desde su inauguración (hace 47 años) trabajando el pescado de las lonjas mediterráneas. Nuestro plato estrella es lógicamente el pescado fresco y marisco.",
         "catTienda5": "Bar-Restaurante",
@@ -62,9 +62,10 @@
         "loginRemember":"Recuerdame",
 
 
-        "textoFC":"Movimiento con las flechas laterales \n \n Pulse barra espaciadora para empezar",
+        "textoFC":"Movimiento con las flechas laterales",
         "restartFC": "Pulse ENTER para volver a jugar",
-        "vidas": "Vidas:"
+        "vidas": "Vidas:",
+        "espacioFC": "Pulse barra espaciadora para empezar"
     
         
     },
@@ -133,9 +134,10 @@
         "loginPassword":"Password",
         "loginRemember":"Remember me",
 
-        "textoFC":"Movement with the side arrows '<br>'\n \n Press the space bar to start",
+        "textoFC":"Movement with the side arrows",
         "restartFC": "Press ENTER to play again",
-        "vidas": "Lives:"
+        "vidas": "Lives:",
+        "espacioFC": "Press the space bar to start"
 
     },
 
@@ -203,9 +205,10 @@
         "loginPassword":"Contraseña",
         "loginRemember":"Recorda'm",
 
-        "textoFC":"Moviment amb les fletxes laterals \n \n Premi barra d'espai per començar",
+        "textoFC":"Moviment amb les fletxes laterals",
         "restartFC": "Premi ENTER per tornar a jugar",
-        "vidas": "Vides:"
+        "vidas": "Vides:",
+        "espacioFC": "Premi barra d'espai per començar"
         
 
     }

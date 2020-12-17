@@ -22,6 +22,11 @@ a
     border-color: #d7d7d7!important;
 }
 
+#dia{
+    font-size: .825rem;
+    font-weight: 300;
+    margin-left: 10px;
+}
 .mx-12
 {
     margin-left: .75rem;

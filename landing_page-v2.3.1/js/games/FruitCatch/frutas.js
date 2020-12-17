@@ -90,6 +90,7 @@ document.addEventListener("keydown", function (e) {
 
 function caer() {
     document.getElementById("intro").style.visibility = 'hidden';
+    document.getElementById("espacio").style.visibility = 'hidden';
     var bajar = setInterval(function () {
         console.log("entra");
 
@@ -288,4 +289,6 @@ function animacionGanar(frutaCaida) {
     }, 1000);
     
 }
+
+
 
