@@ -105,7 +105,7 @@ body{
     text-shadow: 0 0 10px white;
     box-sizing: border-box;
 }
-.txtpunt{
+#txtpunt{
     line-height: 70px;
     margin-left: 1%;
     font-family: pixel;
@@ -128,7 +128,7 @@ body{
 #board.fail {
     border-color:red;
 }
-.intro{
+#intro{
     position: absolute;
     text-align: center;
     font-family: pixel;

@@ -50,7 +50,10 @@
         "decuento20":"Consigue alcanzar la meta de puntos para conseguir un 20% de descuento en cualquier tienda del mercado! Cuidado! La oferta es limitada hasta el 31 de Diciembre de 2020.",
         "juegaFC":"Juega a Fruit Catch",
         "decuento30":"Consigue alcanzar la meta de puntos para conseguir un 30% de descuento en cualquier tienda del mercado! Cuidado! La oferta es limitada hasta el 31 de Diciembre de 2020.",
-        "juegaCS":"Juega a Cart Swallow"
+        "juegaCS":"Juega a Cart Swallow",
+
+        "juegoCSinicio":"Movimiento con 'W''A''S''D \n \n Pulse barra espaciadora para empezar",
+        "juegoCSpuntos":"Puntos:"
         
         
     
@@ -109,7 +112,11 @@
         "decuento20":"Achieve the points goal to get a 20% discount in any store in the market! Watch out! The offer is limited until December 31st, 2020.",
         "juegaFC":"Play Fruit Catch",
         "decuento30":"Achieve the points goal to get a 30% discount in any store in the market! Watch out! The offer is limited until December 31st, 2020.",
-        "juegaCS":"Play Cart Swallow"
+        "juegaCS":"Play Cart Swallow",
+
+
+        "juegoCSinicio":"Movement with 'W''A''S''D' Press space bar to start",
+        "juegoCSpuntos":"Points:"
 
     },
 
@@ -165,7 +172,11 @@
         "decuento20":"Aconsegueix arribar a la meta de punts per aconseguir un 20% de descompte en qualsevol botiga del mercat! Compte! L'oferta està limitada fins el 31 de Desembre de 2020.",
         "juegaFC":"Juga a Fruit Catch",
         "decuento30":"Aconsegueix arribar a la meta de punts per aconseguir un 30% de descompte en qualsevol botiga del mercat! Compte! L'oferta està limitada fins el 31 de Desembre de 2020.",
-        "juegaCS":"Juga a Cart Swallow"
+        "juegaCS":"Juga a Cart Swallow",
+
+
+        "juegoCSinicio":"Moviment amb 'W''A''S''D \n \n Prem barra espaciadora per començar",
+        "juegoCSpuntos":"Punts:"
         
 
     }
