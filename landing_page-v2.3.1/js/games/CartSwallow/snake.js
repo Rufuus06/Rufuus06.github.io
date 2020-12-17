@@ -1,7 +1,7 @@
 (function () {
     const board = document.getElementById("board");
-    let h = board.clientWidth / 2;
-    let v = board.clientHeight / 2;
+    let h = 600 / 2;
+    let v = 600 / 2;
     let speed = 300;
     let process = undefined;
     let apple = [];
@@ -53,7 +53,8 @@
 
         // if (tecla_start == 32) {
 
-        document.getElementById("gameover").style.visibility = 'hidden';
+        // document.getElementById("gameover").style.visibility = 'hidden';
+        
         document.getElementById("intro").style.visibility = 'hidden';
         apples.innerText = "0";
         board.classList.remove("fail");
@@ -61,10 +62,10 @@
         speed = 200;
         direction = "L"; // set direction Up, Down, Left, Right
         // definimos los tres primeros elementos de la serpiente
-        snake = [[h, v], [h + 40, v], [h + 80, v]];
+        snake = [[h, v], [h + 30, v], [h + 60, v]];
         board.insertBefore(createDiv([h, v]), null);
-        board.insertBefore(createDiv([h + 40, v]), null);
-        board.insertBefore(createDiv([h + 80, v]), null);
+        board.insertBefore(createDiv([h + 30, v]), null);
+        board.insertBefore(createDiv([h + 60, v]), null);
 
         apple = setApple(snake); // set position of apple [h,v]
         process = setInterval(movement, speed);
@@ -133,7 +134,10 @@
     // Funcion que se ejecuta cuando finaliza el juego
     
     function end() {
-        document.getElementById("gameover").style.visibility = 'visible';
+        // document.getElementById("gameover").style.visibility = 'visible';
+        document.getElementById('intro').innerText = "Game Over \n Pulsa Espacio para volver a Jugar!";
+        document.getElementById("intro").style.left = "9.5%";
+        document.getElementById("intro").style.visibility = 'visible';
         process = clearInterval(process);
         board.classList.add("fail");
         tecla_start = 0;
@@ -200,13 +204,13 @@
 
     function getNextPosition(direction, position) {
         if (direction == "U") {
-            return [position[0], position[1] - 40];
+            return [position[0], position[1] - 30];
         } else if (direction == "D") {
-            return [position[0], position[1] + 40];
+            return [position[0], position[1] + 30];
         } else if (direction == "R") {
-            return [position[0] + 40, position[1]];
+            return [position[0] + 30, position[1]];
         } else if (direction == "L") {
-            return [position[0] - 40, position[1]];
+            return [position[0] - 30, position[1]];
         }
     }
 
@@ -214,10 +218,10 @@
     
 
     function checkNewPositionIsOutside(newPosition) {
-        return newPosition[0] < -2 ||
-            newPosition[1] < - 2 ||
-            newPosition[0] + 38 > board.clientHeight ||
-            newPosition[1] + 38 > board.clientWidth;
+        return newPosition[0] < 0 ||
+            newPosition[1] < 0 ||
+            newPosition[0] + 28 > board.clientHeight ||
+            newPosition[1] + 28 > board.clientWidth;
     }
 
     //Funcion para verificar si la posicion recibida esta encima de la serpiente
@@ -237,8 +241,8 @@
     function setApple(snake) {
         let h, v;
         while (1) {
-            h = Math.round(Math.random() * (board.clientWidth - 40) / 40) * 40 - 1;
-            v = Math.round(Math.random() * (board.clientWidth - 40) / 40) * 40 - 1;
+            h = Math.round(Math.random() * (board.clientWidth - 30) / 30) * 30;
+            v = Math.round(Math.random() * (board.clientWidth - 30) / 30) * 30;
             if (snake.indexOf([h, v]) == -1) {
                 break;
             }
