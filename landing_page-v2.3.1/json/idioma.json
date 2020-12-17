@@ -38,11 +38,10 @@
         "dia6": "Sabado de",
         "dia7": "Domingo de",
         
-        "desJuego1": "A nuestro cocinero más importante se le está quemando la cocina! Ayúdalo a recoger todos los alimentos que puedas para conseguir menos pérdidas en el negocio.",
-        "desJuego2": "A nuestro frutero se le han escapado las frutas de las cajas! Ayúdalo a recogerlas antes de que se rompan al caer y no pueda venderlas.",
-        "desJuego3":
+        "desJuego1": "¡A nuestro cocinero más importante se le está quemando la cocina! Ayúdalo a recoger todos los alimentos que puedas para conseguir menos pérdidas en el negocio.",
+        "desJuego2": "¡A nuestro frutero se le han escapado las frutas de las cajas! Ayúdalo a recogerlas antes de que se rompan al caer y no pueda venderlas.",
+        "desJuego3": "¡A nuestro chef más importante le faltan ingredientes! Ayúdalo a recoger todos los alimentos que puedas sin chocarte ni pisarte."
         
-
     },
 
     "en":
@@ -85,8 +84,8 @@
         "dia7": "Sunday",
 
         "desJuego1": "Our most important chef's kitchen is on fire! Help him to collect as much food as you can to get fewer losses in the business.",
-        "desJuego2": "A nuestro frutero se le han escapado las frutas de las cajas! Ayúdalo a recogerlas antes de que se rompan al caer y no pueda venderlas.",
-        "desJuego3":
+        "desJuego2": "Our chef has let the fruit out of the boxes! Help him pick them up before they break when they fall over and he can't sell them.",
+        "desJuego3": "Our most important chef is missing ingredients! Help him collect as much food as you can without bumping or stepping on it."
     },
 
     "cat":
@@ -127,6 +126,10 @@
         "dia4": "Dijous",
         "dia5": "Divendres",
         "dia6": "Dissabte",
-        "dia7": "Diumenge"
+        "dia7": "Diumenge",
+
+        "desJuego1": "Al nostre xef més important se li està cremant la cuina! Ajuda'l a recollir tots els aliments que puguis per aconseguir menys pèrdues en el negoci.",
+        "desJuego2": "Al nostre xef se li han escapat les fruites de les caixes! Ajuda-li a recollir-les abans que es trenquin quan es caiguin i no pugui vendre-les.",
+        "desJuego3": "Al nostre xef més important li falten ingredients! Ajuda'l a recollir tots els aliments que puguis sense xocar ni pisarte."
     }
 }
