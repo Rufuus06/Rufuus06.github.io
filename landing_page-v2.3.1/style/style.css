@@ -117,6 +117,7 @@ a
 {
     text-align: left;
     padding: 20px;
+    padding-bottom: 0px;
     font-size: 12px;
 }
 
@@ -158,4 +159,38 @@ a
     padding-bottom: 20px;
     color: #fff;
     text-align: center;
+}
+
+.offer-card
+{
+    
+}
+
+.offer-card:hover
+{
+    background-color: rgb(222, 222, 222);
+    
+}
+
+.offer-link:hover
+{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.horarios
+{
+    border-color: #dedede;
+    border: 1px #dedede;
+    border-style: solid;
+    background-color: #f7f7f7;
+}
+
+.btnHorario:focus
+{
+    border-color: #dedede;
+    border: 1px #dedede;
+    border-style: solid;
+    background-color: #e8e8e8;
+    outline: 0px;
 }
