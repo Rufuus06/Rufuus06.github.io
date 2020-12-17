@@ -59,10 +59,12 @@
         "login":"Iniciar Sesión",
         "loginEmail":"Correo Electrónico",
         "loginPassword":"Contraseña",
-        "loginRemember":"Recuerdame"
+        "loginRemember":"Recuerdame",
 
-        
-        
+
+        "textoFC":"Movimiento con las flechas laterales \n \n Pulse barra espaciadora para empezar",
+        "restartFC": "Pulse ENTER para volver a jugar",
+        "vidas": "Vidas:"
     
         
     },
@@ -127,9 +129,13 @@
 
 
         "login":"Log in",
-        "loginEmail":"Emaiil address",
+        "loginEmail":"Email address",
         "loginPassword":"Password",
-        "loginRemember":"Remember me"
+        "loginRemember":"Remember me",
+
+        "textoFC":"Movement with the side arrows '<br>'\n \n Press the space bar to start",
+        "restartFC": "Press ENTER to play again",
+        "vidas": "Lives:"
 
     },
 
@@ -195,7 +201,11 @@
         "login":"Iniciar Sessió",
         "loginEmail":"Correu Electrònic",
         "loginPassword":"Contraseña",
-        "loginRemember":"Recorda'm"
+        "loginRemember":"Recorda'm",
+
+        "textoFC":"Moviment amb les fletxes laterals \n \n Premi barra d'espai per començar",
+        "restartFC": "Premi ENTER per tornar a jugar",
+        "vidas": "Vides:"
         
 
     }
