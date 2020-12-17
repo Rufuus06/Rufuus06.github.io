@@ -18,7 +18,7 @@
 
 // });
 
-$.getJSON("../json/idioma.json", function(json){
+$.getJSON("https://raw.githubusercontent.com/Rufuus06/Rufuus06.github.io/master/landing_page-v2.3.1/json/idioma.json", function(json){
     //Lenguaje por defecto de la página sessionStorage.setItem("lang", "idioma")"
     if(!localStorage.getItem("lang")){
       localStorage.setItem("lang", "es");
@@ -26,7 +26,7 @@ $.getJSON("../json/idioma.json", function(json){
     var lang = localStorage.getItem("lang");
     var doc = json;
     $('.lang').each(function(index, element){
-      $(this).text(doc[lang][$(this).attr('key')]);
+      $(this).text(doc['cat'][$(this).attr('key')]);
     });//Each
   
     $('.translate').click(function(){
@@ -37,4 +37,4 @@ $.getJSON("../json/idioma.json", function(json){
           $(this).text(doc[lang][$(this).attr('key')]);
         }); //Each
     }); //Funcion click
-  });//Get json AJAX
+  });
