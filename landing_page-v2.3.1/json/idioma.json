@@ -36,9 +36,11 @@
         "dia4": "Jueves de",
         "dia5": "Viernes de",
         "dia6": "Sabado de",
-        "dia7": "Domingo de"
+        "dia7": "Domingo de",
         
-        
+        "desJuego1": "A nuestro cocinero más importante se le está quemando la cocina! Ayúdalo a recoger todos los alimentos que puedas para conseguir menos pérdidas en el negocio.",
+        "desJuego2": "A nuestro frutero se le han escapado las frutas de las cajas! Ayúdalo a recogerlas antes de que se rompan al caer y no pueda venderlas.",
+        "desJuego3":
         
 
     },
@@ -77,10 +79,14 @@
         "dia1": "Monday",
         "dia2": "Tuesday",
         "dia3": "Wednesday",
-        "dia4": "Thustday",
+        "dia4": "Thursday",
         "dia5": "Friday",
         "dia6": "Saturday",
-        "dia7": "Sunday"
+        "dia7": "Sunday",
+
+        "desJuego1": "Our most important chef's kitchen is on fire! Help him to collect as much food as you can to get fewer losses in the business.",
+        "desJuego2": "A nuestro frutero se le han escapado las frutas de las cajas! Ayúdalo a recogerlas antes de que se rompan al caer y no pueda venderlas.",
+        "desJuego3":
     },
 
     "cat":
@@ -113,6 +119,14 @@
         "descTienda5": "Al mercat, nosaltres hi som des de la seva inauguració (fa 47 anys) treballant el peix de les llotges mediterrànies. El nostre plat estrella és lògicament el peix fresc i marisc.",
         "catTienda5": "Bar-Restaurant",
         "descTienda6": "Estem especialitzats en productes ibèrics, xarcuteria selecta i oferim una gran varietat en formatges. A més tenim una àmplia gamma en productes sense gluten.",
-        "catTienda6": "Xarcuteries i Cansaladeries" 
+        "catTienda6": "Xarcuteries i Cansaladeries",
+
+        "dia1": "Dilluns",
+        "dia2": "Dimarts",
+        "dia3": "Dimecres",
+        "dia4": "Dijous",
+        "dia5": "Divendres",
+        "dia6": "Dissabte",
+        "dia7": "Diumenge"
     }
 }
