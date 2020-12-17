@@ -133,7 +133,7 @@
         "loginPassword":"Password",
         "loginRemember":"Remember me",
 
-        "textoFC":"Movement with the side arrows \n \n Press the space bar to start",
+        "textoFC":"Movement with the side arrows '<br>'\n \n Press the space bar to start",
         "restartFC": "Press ENTER to play again",
         "vidas": "Lives:"
 
