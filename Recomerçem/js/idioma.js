@@ -18,7 +18,7 @@
 
 // });
 
-$.getJSON("https://raw.githubusercontent.com/Rufuus06/Rufuus06.github.io/master/landing_page-v2.3.1/json/idioma.json", function(json){
+$.getJSON("https://raw.githubusercontent.com/Rufuus06/Rufuus06.github.io/master/Recomerçem/json/idioma.json", function(json){
     //Lenguaje por defecto de la página sessionStorage.setItem("lang", "idioma")"
     if(!localStorage.getItem("lang")){
       localStorage.setItem("lang", "es");
