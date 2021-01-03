@@ -31,10 +31,10 @@
     <div class="container">
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
-                <a>Usuario</a>
+                <a>Tienda</a>
             </div>
             <div class="card-body">
-                <form action="usuarios.php">
+                <form action="tiendas.php">
                     <div class="form-group row">
                         <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
                         <div class="col-sm-10">
@@ -42,28 +42,14 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="txtEmail" class="col-sm-2 col-form-label">Email</label>
+                        <label for="txtLocalizacion" class="col-sm-2 col-form-label">Localización</label>
                         <div class="col-sm-10">
-                            <input type="text" name="txtEmail" id="txtEmail" autofocus class="form-control" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="txtContrasenya" class="col-sm-2 col-form-label">Contraseña</label>
-                        <div class="col-sm-10">
-                            <input type="password" name="txtContrasenya" id="txtContrasenya" autofocus class="form-control" placeholder="Contraseña">
-                        </div>
-                    </div>
-                    <div class="form-group row" style="width: max-content; position:relative; left:95%">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value="" checked>
-                                Admin
-                            </label>
+                            <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización">
                         </div>
                     </div>
                     <div class="form-group row" style="margin-right: 0px; float:right">
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px;">Crear usuario</button>
-                        <form action="usuarios.php">
+                        <button type="submit" class="btn btn-success" style="margin-right: 10px;">Crear tienda</button>
+                        <form action="tiendas.php">
                         <button type="submit" class="btn btn-dark">Cancelar</button>
                         </form>
                         
