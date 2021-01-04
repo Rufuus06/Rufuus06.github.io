@@ -11,7 +11,12 @@
 
 <body style="background-color: #FBF7F6;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Recomerçem</a>
+    <div class="d-flex w-10 order-0" style="margin-right: 25px;">
+            <a class="navbar-brand mr-1 color-nav" href="">
+                <!-- <h2>LANDING PAGE</h2> -->
+                <img src="../media/logo.png" alt="" style="width: 200px; height: 60px;">
+            </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
