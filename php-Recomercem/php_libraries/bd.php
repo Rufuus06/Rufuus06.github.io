@@ -117,19 +117,19 @@ function selectUsuari($id)
 }
 
 
-function insertUsuari($nombre, $email, $password, $admin, $puntos)
+function insertUsuari($nickname, $email, $passw, $admin, $puntuacion)
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "insert into usuario (nombre, email, password, admin, puntos)
-     values (:nombre, :email, :password, :admin, :puntos)";
-     $sentencia = $conexion->prepare($sentenciaInsert);
-     $sentencia->bindParam(':nombre', $nombre);
-     $sentencia->bindParam(':email', $email);
-     $sentencia->bindParam(':password', $password);
-     $sentencia->bindParam(':admin', $admin);
-     $sentencia->bindParam(':puntos', $puntos);
-     $sentencia->execute();
+    $sentenciaInsert = "insert into usuario (nickname, email, passw, admin, puntuacion)
+     values (:nickname, :email, :passw, :admin, :puntuacion)";
+    $sentencia = $conexion->prepare($sentenciaInsert);
+    $sentencia->bindParam(':nickname', $nickname);
+    $sentencia->bindParam(':email', $email);
+    $sentencia->bindParam(':passw', $passw);
+    $sentencia->bindParam(':admin', $admin);
+    $sentencia->bindParam(':puntuacion', $puntuacion);
+    $sentencia->execute();
 
     $conexion = closeBd();
 }
@@ -140,26 +140,26 @@ function insertTienda($nombre, $localizacion)
 
     $sentenciaInsert = "insert into tienda (nombre, localizacion)
      values (:nombre, :localizacion)";
-     $sentencia = $conexion->prepare($sentenciaInsert);
-     $sentencia->bindParam(':nombre', $nombre);
-     $sentencia->bindParam(':localizacion', $localizacion);
-     $sentencia->execute();
+    $sentencia = $conexion->prepare($sentenciaInsert);
+    $sentencia->bindParam(':nombre', $nombre);
+    $sentencia->bindParam(':localizacion', $localizacion);
+    $sentencia->execute();
 
     $conexion = closeBd();
 }
 
-function insertOferta($nombre, $descripcion, $puntuacion, $imagen)
+function insertOferta($name, $descripcion, $puntuacion_min, $imagen)
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "insert into oferta (nombre, descripcion, puntuacion, imagen)
-     values (:nombre, :descripcion, :puntuacion, :imagen)";
-     $sentencia = $conexion->prepare($sentenciaInsert);
-     $sentencia->bindParam(':nombre', $nombre);
-     $sentencia->bindParam(':descripcion', $descripcion);
-     $sentencia->bindParam(':puntuacion', $puntuacion);
-     $sentencia->bindParam(':imagen', $imagen);
-     $sentencia->execute();
+    $sentenciaInsert = "insert into oferta (name, imagen, descripcion, puntuacion_min)
+     values (:name, :imagen, :descripcion, :puntuacion_min)";
+    $sentencia = $conexion->prepare($sentenciaInsert);
+    $sentencia->bindParam(':name', $name);
+    $sentencia->bindParam(':imagen', $imagen);
+    $sentencia->bindParam(':descripcion', $descripcion);
+    $sentencia->bindParam(':puntuacion_min', $puntuacion_min);
+    $sentencia->execute();
 
     $conexion = closeBd();
 }
@@ -169,8 +169,8 @@ function deleteUsuari($id)
     $conexion = openBd();
 
     $sentenciaDelete = "delete from usuario where id = $id";
-     $sentencia = $conexion->prepare($sentenciaDelete);
-     $sentencia->execute();
+    $sentencia = $conexion->prepare($sentenciaDelete);
+    $sentencia->execute();
 
     $conexion = closeBd();
 }
@@ -180,8 +180,8 @@ function deleteTienda($id)
     $conexion = openBd();
 
     $sentenciaDelete = "delete from tienda where id = $id";
-     $sentencia = $conexion->prepare($sentenciaDelete);
-     $sentencia->execute();
+    $sentencia = $conexion->prepare($sentenciaDelete);
+    $sentencia->execute();
 
     $conexion = closeBd();
 }
@@ -191,53 +191,49 @@ function deleteOferta($id)
     $conexion = openBd();
 
     $sentenciaDelete = "delete from oferta where id = $id";
-     $sentencia = $conexion->prepare($sentenciaDelete);
-     $sentencia->execute();
+    $sentencia = $conexion->prepare($sentenciaDelete);
+    $sentencia->execute();
 
     $conexion = closeBd();
 }
 
-function updateUsuari($nombre, $email, $password, $admin, $puntos)
+function updateUsuari($nickname, $email, $passw, $admin, $puntuacion)
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "update usuario set nombre = $nombre,
+    $sentenciaInsert = "update usuario set nickname = $nickname,
                                              email = $email, 
-                                             password = $password, 
+                                             passw = $passw, 
                                              admin = $admin, 
-                                             puntos = $puntos";
-     $sentencia = $conexion->prepare($sentenciaInsert);
-     $sentencia->execute();
+                                             puntuacion = $puntuacion";
+    $sentencia = $conexion->prepare($sentenciaInsert);
+    $sentencia->execute();
 
     $conexion = closeBd();
 }
 
-function updateTienda($nombre, $email, $password, $admin, $puntos)
+function updateTienda($nombre, $localizacion)
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "update pokemons set nombre = $nombre,
-                                             email = $email, 
-                                             password = $password, 
-                                             admin = $admin, 
-                                             puntos = $puntos";
-     $sentencia = $conexion->prepare($sentenciaInsert);
-     $sentencia->execute();
+    $sentenciaInsert = "update tienda set nombre = $nombre,
+                                             localizacion = $localizacion";
+    $sentencia = $conexion->prepare($sentenciaInsert);
+    $sentencia->execute();
 
     $conexion = closeBd();
 }
 
-function updateOferta($nombre, $email, $password, $admin, $puntos)
+function updateOferta($name, $imagen, $descripcion, $puntuacion_min)
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "update pokemons set nombre = $nombre,
-                                             email = $email, 
-                                             password = $password, 
-                                             admin = $admin, 
-                                             puntos = $puntos";
-     $sentencia = $conexion->prepare($sentenciaInsert);
-     $sentencia->execute();
+    $sentenciaInsert = "update oferta set name = $name,
+                                            imagen = $imagen,
+                                             descripcion = $descripcion, 
+                                             puntuacion_min = $puntuacion_min";
+    $sentencia = $conexion->prepare($sentenciaInsert);
+    $sentencia->execute();
 
     $conexion = closeBd();
 }
