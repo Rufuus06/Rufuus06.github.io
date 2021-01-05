@@ -58,16 +58,22 @@
                             <input type="password" name="txtContrasenya" id="txtContrasenya" autofocus class="form-control" placeholder="Contraseña">
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <label for="txtPuntuacion" class="col-sm-2 col-form-label">Puntuación</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="Puntuación">
+                        </div>
+                    </div>
                     <div class="form-group row" style="width: max-content; position:relative; left:95%">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value="" checked>
+                                <input class="form-check-input" type="checkbox" value="" checked name="txtAdmin" id="txtAdmin">
                                 Admin
                             </label>
                         </div>
                     </div>
                     <div class="form-group row" style="margin-right: 0px; float:right">
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px;">Crear usuario</button>
+                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertUsuario">Crear usuario</button>
                         <form action="usuarios.php">
                         <button type="submit" class="btn btn-dark">Cancelar</button>
                         </form>
