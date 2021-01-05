@@ -67,7 +67,7 @@ $ofertas = selectAllOfertas();
                                 <td><?php echo $oferta['descripcion'] ?></td>
                                 <td><?php echo $oferta['puntuacion_min'] ?></td>
                                 <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                                <td><button type="submit" class="btn btn-success">Eliminar</button></td>
+                                <td><button type="submit" class="btn btn-success" name="deleteOferta">Eliminar</button></td>
                             </tr>
                         <?php } ?>
                     </tbody>

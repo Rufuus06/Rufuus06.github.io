@@ -54,17 +54,17 @@
                     <div class="form-group row">
                         <label for="txtPuntuación" class="col-sm-2 col-form-label">Puntuación</label>
                         <div class="col-sm-10">
-                            <input type="text" name="txtPuntuación" id="txtPuntuación" autofocus class="form-control" placeholder="100">
+                            <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="imagen" class="col-sm-2 col-form-label">Imagen</label>
                         <div class="col-sm-10">
-                            <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp">
+                            <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen">
                         </div>
                     </div>
                     <div class="form-group row" style="margin-right: 0px; float:right">
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px;">Crear usuario</button>
+                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertOfertas">Crear usuario</button>
                         <form action="ofertas.php">
                             <button type="submit" class="btn btn-dark">Cancelar</button>
                         </form>

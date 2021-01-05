@@ -70,7 +70,7 @@ $usuarios = selectAllUsuaris();
                                 <td><?php echo $usuario['admin'] ?></td>
                                 <td><?php echo $usuario['puntuacion'] ?></td>
                                 <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                                <td><button type="submit" class="btn btn-success">Eliminar</button></td>
+                                <td><button type="submit" class="btn btn-success" name="deleteUsuario">Eliminar</button></td>
                             </tr>
                         <?php } ?>
 

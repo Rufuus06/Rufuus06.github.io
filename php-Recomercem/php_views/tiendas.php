@@ -63,7 +63,7 @@ $tiendas = selectAllTiendas();
                                 <td><?php echo $tienda['nombre'] ?></td>
                                 <td><?php echo $tienda['localizacion'] ?></td>
                                 <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                                <td><button type="submit" class="btn btn-success">Eliminar</button></td>
+                                <td><button type="submit" class="btn btn-success" name="deleteTienda">Eliminar</button></td>
                             </tr>
                         <?php } ?>
                     </tbody>
