@@ -1,3 +1,9 @@
+<?php
+require_once('./php_libraries/bd.php');
+
+$usuarios = selectAllUsuaris();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +17,7 @@
 
 <body style="background-color: #FBF7F6;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="d-flex w-10 order-0" style="margin-right: 25px;">
+        <div class="d-flex w-10 order-0" style="margin-right: 25px;">
             <a class="navbar-brand mr-1 color-nav" href="">
                 <!-- <h2>LANDING PAGE</h2> -->
                 <img src="../media/logo.png" alt="" style="width: 200px; height: 60px;">
@@ -54,36 +60,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="table-active">
-                            <th scope="row">1</th>
-                            <td>Andres</td>
-                            <td>andres36@gmail.com</td>
-                            <td type="password">**********</td>
-                            <td>true</td>
-                            <td>1230</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-                        <tr class="table-active">
-                            <th scope="row">1</th>
-                            <td>Andres</td>
-                            <td>andres36@gmail.com</td>
-                            <td type="password">**********</td>
-                            <td>true</td>
-                            <td>1230</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-                        <tr class="table-active">
-                            <th scope="row">1</th>
-                            <td>Andres</td>
-                            <td>andres36@gmail.com</td>
-                            <td type="password">**********</td>
-                            <td>true</td>
-                            <td>1230</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
+
+                        <?php foreach ($usuarios as $usuario) { ?>
+                            <tr class="table-active">
+                                <th scope="row"><?php echo $usuario['id'] ?></th>
+                                <td><?php echo $usuario['nickname'] ?></td>
+                                <td><?php echo $usuario['email'] ?></td>
+                                <td type="password"><?php echo $usuario['passw'] ?></td>
+                                <td><?php echo $usuario['admin'] ?></td>
+                                <td><?php echo $usuario['puntuacion'] ?></td>
+                                <td><button type="submit" class="btn btn-success">Modificar</button></td>
+                                <td><button type="submit" class="btn btn-success">Eliminar</button></td>
+                            </tr>
+                        <?php } ?>
 
                     </tbody>
                 </table>

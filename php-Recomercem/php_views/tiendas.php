@@ -1,3 +1,9 @@
+<?php
+require_once('./php_libraries/bd.php');
+
+$tiendas = selectAllTiendas();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,28 +57,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="table-active">
-                            <th scope="row">1</th>
-                            <td>La Carmen</td>
-                            <td>Parada 32</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-                        <tr class="table-active">
-                            <th scope="row">1</th>
-                            <td>La Carmen</td>
-                            <td>Parada 32</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-                        <tr class="table-active">
-                            <th scope="row">1</th>
-                            <td>La Carmen</td>
-                            <td>Parada 32</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-
+                        <?php foreach ($tiendas as $tienda) { ?>
+                            <tr class="table-active">
+                                <th scope="row"><?php echo $tienda['id'] ?></th>
+                                <td><?php echo $tienda['nombre'] ?></td>
+                                <td><?php echo $tienda['localizacion'] ?></td>
+                                <td><button type="submit" class="btn btn-success">Modificar</button></td>
+                                <td><button type="submit" class="btn btn-success">Eliminar</button></td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
                 <form action="crear_tienda.php">

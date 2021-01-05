@@ -1,3 +1,9 @@
+<?php
+require_once('./php_libraries/bd.php');
+
+$ofertas = selectAllOfertas();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +17,7 @@
 
 <body style="background-color: #FBF7F6;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="d-flex w-10 order-0" style="margin-right: 25px;">
+        <div class="d-flex w-10 order-0" style="margin-right: 25px;">
             <a class="navbar-brand mr-1 color-nav" href="">
                 <!-- <h2>LANDING PAGE</h2> -->
                 <img src="../media/logo.png" alt="" style="width: 200px; height: 60px;">
@@ -53,34 +59,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="table-active">
-                            <th scope="row">1</th>
-                            <td>3x2</td>
-                            <td>Oferta 3x2 en quesos</td>
-                            <td>200</td>
-                            <td>oferta1.jpg</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-                        <tr class="table-active">
-                            <th scope="row">2</th>
-                            <td>3x2</td>
-                            <td>Oferta 3x2 en quesos</td>
-                            <td>200</td>
-                            <td>oferta1.jpg</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-                        <tr class="table-active">
-                            <th scope="row">3</th>
-                            <td>3x2</td>
-                            <td>Oferta 3x2 en quesos</td>
-                            <td>200</td>
-                            <td>oferta1.jpg</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-
+                        <?php foreach ($ofertas as $oferta) { ?>
+                            <tr class="table-active">
+                                <th scope="row"><?php echo $oferta['id'] ?></th>
+                                <td><?php echo $oferta['name'] ?></td>
+                                <td><?php echo $oferta['imagen'] ?></td>
+                                <td><?php echo $oferta['descripcion'] ?></td>
+                                <td><?php echo $oferta['puntuacion_min'] ?></td>
+                                <td><button type="submit" class="btn btn-success">Modificar</button></td>
+                                <td><button type="submit" class="btn btn-success">Eliminar</button></td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
                 <form action="crear_oferta.php">
