@@ -15,8 +15,7 @@
                 <!-- <h2>LANDING PAGE</h2> -->
                 <img src="../media/logo.png" alt="" style="width: 200px; height: 60px;">
             </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        </div>        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -36,10 +35,10 @@
     <div class="container">
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
-                <a>Usuario</a>
+                <a>Oferta</a>
             </div>
             <div class="card-body">
-                <form action="usuarios.php">
+                <form action="ofertas.php">
                     <div class="form-group row">
                         <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
                         <div class="col-sm-10">
@@ -47,37 +46,29 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="txtEmail" class="col-sm-2 col-form-label">Email</label>
+                        <label for="txtDescripcion" class="col-sm-2 col-form-label">Descripción</label>
                         <div class="col-sm-10">
-                            <input type="text" name="txtEmail" id="txtEmail" autofocus class="form-control" placeholder="Email">
+                            <textarea class="form-control" id="txtDescripcion" rows="3" placeholder="Descripción"></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="txtContrasenya" class="col-sm-2 col-form-label">Contraseña</label>
+                        <label for="txtPuntuación" class="col-sm-2 col-form-label">Puntuación</label>
                         <div class="col-sm-10">
-                            <input type="password" name="txtContrasenya" id="txtContrasenya" autofocus class="form-control" placeholder="Contraseña">
+                            <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="txtPuntuacion" class="col-sm-2 col-form-label">Puntuación</label>
+                        <label for="imagen" class="col-sm-2 col-form-label">Imagen</label>
                         <div class="col-sm-10">
-                            <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="Puntuación">
-                        </div>
-                    </div>
-                    <div class="form-group row" style="width: max-content; position:relative; left:95%">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" value="" checked name="txtAdmin" id="txtAdmin">
-                                Admin
-                            </label>
+                            <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen">
                         </div>
                     </div>
                     <div class="form-group row" style="margin-right: 0px; float:right">
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertUsuario">Crear usuario</button>
-                        <form action="usuarios.php">
-                        <button type="submit" class="btn btn-dark">Cancelar</button>
+                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertOfertas">Crear usuario</button>
+                        <form action="ofertas.php">
+                            <button type="submit" class="btn btn-dark">Cancelar</button>
                         </form>
-                        
+
                     </div>
                 </form>
             </div>
@@ -87,4 +78,5 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
 </html>

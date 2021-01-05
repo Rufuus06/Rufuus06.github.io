@@ -1,3 +1,9 @@
+<?php
+require_once('./php_libraries/bd.php');
+
+$tiendas = selectAllTiendas();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +17,12 @@
 
 <body style="background-color: #FBF7F6;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Recomerçem</a>
+        <div class="d-flex w-10 order-0" style="margin-right: 25px;">
+            <a class="navbar-brand mr-1 color-nav" href="">
+                <!-- <h2>LANDING PAGE</h2> -->
+                <img src="../media/logo.png" alt="" style="width: 200px; height: 60px;">
+            </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,31 +57,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="table-active">
-                            <th scope="row">1</th>
-                            <td>La Carmen</td>
-                            <td>Parada 32</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-                        <tr class="table-active">
-                            <th scope="row">1</th>
-                            <td>La Carmen</td>
-                            <td>Parada 32</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-                        <tr class="table-active">
-                            <th scope="row">1</th>
-                            <td>La Carmen</td>
-                            <td>Parada 32</td>
-                            <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                            <td><button type="submit" class="btn btn-success">Eliminar</button></td>
-                        </tr>
-
+                        <?php foreach ($tiendas as $tienda) { ?>
+                            <tr class="table-active">
+                                <th scope="row"><?php echo $tienda['id'] ?></th>
+                                <td><?php echo $tienda['nombre'] ?></td>
+                                <td><?php echo $tienda['localizacion'] ?></td>
+                                <td><button type="submit" class="btn btn-success">Modificar</button></td>
+                                <td><button type="submit" class="btn btn-success" name="deleteTienda">Eliminar</button></td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
-                <button type="submit" class="btn btn-success">Crear Tienda</button>
+                <form action="crear_tienda.php">
+                    <button type="submit" class="btn btn-success">Crear Tienda</button>
+                </form>
             </div>
 
         </div>
@@ -80,4 +80,5 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
 </html>

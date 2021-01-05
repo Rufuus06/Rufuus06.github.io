@@ -10,7 +10,12 @@
 
 <body style="background-color: #FBF7F6;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">Recomerçem</a>
+        <div class="d-flex w-50 order-0">
+            <a class="navbar-brand mr-1 color-nav" href="">
+                <!-- <h2>LANDING PAGE</h2> -->
+                <img src="media/logo.png" alt="" style="width: 200px; height: 60px;">
+            </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,7 +26,7 @@
                 <a>Login</a>
             </div>
             <div class="card-body">
-                <form action="/Recomerçem/php_views/usuarios.php">
+                <form action="./php_views/usuarios.php">
                     <div class="form-group row">
                         <label for="txtEmail" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
