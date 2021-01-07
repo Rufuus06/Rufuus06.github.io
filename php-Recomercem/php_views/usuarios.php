@@ -1,5 +1,5 @@
 <?php
-require_once('./php_libraries/bd.php');
+require_once('../php_libraries/bd.php');
 
 $usuarios = selectAllUsuaris();
 ?>

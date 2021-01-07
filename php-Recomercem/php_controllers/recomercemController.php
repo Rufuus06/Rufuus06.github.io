@@ -16,8 +16,8 @@
         insertUsuari($_POST['txtNombre'],
                      $_POST['txtEmail'],
                      $_POST['txtContrasenya'],
-                     $_POST['txtPuntuacion'],
-                     $_POST['txtAdmin']);
+                     $_POST['txtAdmin'],
+                     $_POST['txtPuntuacion']);
 
         header('Location: ../php_views/usuarios.php');
         exit();
@@ -25,7 +25,7 @@
 
     if (isset($_POST['insertOfertas']))
     {
-        insertOferta($_POST['txtombre'],
+        insertOferta($_POST['txtNombre'],
                      $_POST['imagen'],
                      $_POST['txtDescripcion'],
                      $_POST['txtPuntuacion']);
@@ -49,6 +49,7 @@
     }
 
     if (isset($_POST['deleteOferta'])) {
+        selectOferta($_POST['id']);
         deleteOferta($_POST['id']);
 
         header('Location: ../php_views/ofertas.php');
