@@ -121,6 +121,10 @@ function insertUsuari($nickname, $email, $passw, $admin, $puntuacion)
 {
     $conexion = openBd();
 
+    $sentenciaFK = "SET FOREIGN_KEY_CHECKS = 0";
+    $sentenciaFKon = "SET FOREIGN_KEY_CHECKS = 1";
+    $sentencia = $conexion->prepare($sentenciaFK);
+    $sentencia->execute();
     $sentenciaInsert = "insert into usuario (nickname, email, passw, admin, puntuacion)
      values (:nickname, :email, :passw, :admin, :puntuacion)";
     $sentencia = $conexion->prepare($sentenciaInsert);
@@ -129,6 +133,9 @@ function insertUsuari($nickname, $email, $passw, $admin, $puntuacion)
     $sentencia->bindParam(':passw', $passw);
     $sentencia->bindParam(':admin', $admin);
     $sentencia->bindParam(':puntuacion', $puntuacion);
+    $sentencia->execute();
+
+    $sentencia = $conexion->prepare($sentenciaFKon);
     $sentencia->execute();
 
     $conexion = closeBd();
@@ -148,7 +155,7 @@ function insertTienda($nombre, $localizacion)
     $conexion = closeBd();
 }
 
-function insertOferta($name, $descripcion, $puntuacion_min, $imagen)
+function insertOferta($name, $imagen, $descripcion, $puntuacion_min )
 {
     $conexion = openBd();
 

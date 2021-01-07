@@ -1,7 +1,8 @@
 <?php
-require_once('./php_libraries/bd.php');
+require_once('../php_libraries/bd.php');
 
 $ofertas = selectAllOfertas();
+$contador = 0;
 ?>
 
 <!DOCTYPE html>
@@ -66,8 +67,12 @@ $ofertas = selectAllOfertas();
                                 <td><?php echo $oferta['imagen'] ?></td>
                                 <td><?php echo $oferta['descripcion'] ?></td>
                                 <td><?php echo $oferta['puntuacion_min'] ?></td>
-                                <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                                <td><button type="submit" class="btn btn-success" name="deleteOferta">Eliminar</button></td>
+                                <form action="update_oferta.php" method="POST">
+                                    <td><button type="submit" class="btn btn-success">Modificar</button></td>
+                                </form>
+                                <form action="../php_controllers/recomercemController.php" method="POST">
+                                    <td><button type="submit" class="btn btn-success" name="deleteOferta" id="boton" >Eliminar</button></td>
+                                </form>
                             </tr>
                         <?php } ?>
                     </tbody>
