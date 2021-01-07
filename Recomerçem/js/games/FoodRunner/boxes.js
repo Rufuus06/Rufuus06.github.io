@@ -46,7 +46,7 @@ generarBoxes();
 function generarBoxes()
 {
     var widthBox = 110;
-    var distX = 240;
+    var distX = 540;
     var isAllowed = false;
     // Cajas por pantalla 11
     for ( i = 0; i < BOX_SCREEN; i++ )
