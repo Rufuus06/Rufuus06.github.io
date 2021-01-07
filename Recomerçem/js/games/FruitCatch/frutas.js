@@ -59,7 +59,7 @@ var frutas2 = {};
 var prefijo = "fruta";
 var y = 0;
 var listaFruta = new Array();
-var velocidadFruta = 1;
+var velocidadFruta = 2;
 const margenInferior = 656;
 var contador = 0;
 var mIzFruta = 0;
@@ -192,18 +192,15 @@ function columnaAleatoria() {
 function acelerar() {
     contador++;
     if (contador == 10) {
-        velocidadFruta = 2;
-        
-    }
-    else if (contador == 20) {
         velocidadFruta = 3;
     }
-    else if (contador == 30) {
+    else if (contador == 20) {
         velocidadFruta = 4;
     }
-    else if (contador == 40) {
+    else if (contador == 30) {
         velocidadFruta = 4.5;
     }
+    
 }
 
 function colisiones(fruit) {
