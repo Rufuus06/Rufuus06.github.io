@@ -252,7 +252,7 @@ function login($email, $passw)
 {
     $conexion = openBd();
 
-    $sentenciaSelect = "select * from usuario where email = $email and passw = $passw";
+    $sentenciaSelect = "select * from usuario where email = '$email' and passw = '$passw'";
 
     $sentencia = $conexion->prepare($sentenciaSelect);
     $sentencia->execute();

@@ -82,8 +82,8 @@
         updateUsuari($_POST['txtNombre'],
                      $_POST['txtEmail'],
                      $_POST['txtContrasenya'],
-                     $_POST['txtPuntuacion'],
                      $_POST['txtAdmin'],
+                     $_POST['txtPuntuacion'],
                      $_POST['id']);
 
         header('Location: ../php_views/usuarios.php');
@@ -98,6 +98,10 @@
         if (!empty($login)) {
             header('Location: ../php_views/usuarios.php');
         }
+        else {
+            
+            header('Location: ../index.php');
+        }
             
         exit();
     }
@@ -107,5 +111,24 @@
         header('Location: ../php_views/update_oferta.php');
         exit();
     }
+
+    if (isset($_POST['cancelarOferta']))
+    {
+        header('Location: ../php_views/ofertas.php');
+        exit();
+    }
+
+    if (isset($_POST['cancelarUsuario']))
+    {
+        header('Location: ../php_views/usuarios.php');
+        exit();
+    }
+
+    if (isset($_POST['cancelarTienda']))
+    {
+        header('Location: ../php_views/tiendas.php');
+        exit();
+    }
+
 
 ?>

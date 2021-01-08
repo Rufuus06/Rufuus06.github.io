@@ -35,6 +35,7 @@ $tiendas = selectAllTiendas();
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
+                        <a class="dropdown-item" href="../index.php">Desconectar</a>
                     </div>
                 </li>
             </ul>
@@ -57,6 +58,17 @@ $tiendas = selectAllTiendas();
                         </tr>
                     </thead>
                     <tbody>
+                        <script type="text/javascript">
+                            function confirmDelete() {
+                                var respuesta = confirm("Estas seguro que deseas eliminar la tienda?");
+
+                                if (respuesta == true) {
+                                    return true;
+                                } else {
+                                    return false;
+                                }
+                            }
+                        </script>
                         <?php foreach ($tiendas as $tienda) { ?>
                             <tr class="table-active">
 
@@ -68,7 +80,7 @@ $tiendas = selectAllTiendas();
                                     <input type="hidden" id="id" name="id" value="<?php echo $tienda['id'] ?>">
                                 </form>
                                 <form action="../php_controllers/recomercemController.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success" name="deleteTienda">Eliminar</button></td>
+                                    <td><button type="submit" class="btn btn-success" name="deleteTienda" onclick="return confirmDelete()">Eliminar</button></td>
                                     <input type="hidden" id="id" name="id" value="<?php echo $tienda['id'] ?>">
                                 </form>
                             </tr>

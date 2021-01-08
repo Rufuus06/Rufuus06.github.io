@@ -35,6 +35,8 @@ $usuarios = selectAllUsuaris();
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
+                        <a class="dropdown-item" href="../index.php">Desconectar</a>
+
                     </div>
                 </li>
             </ul>
@@ -60,18 +62,33 @@ $usuarios = selectAllUsuaris();
                         </tr>
                     </thead>
                     <tbody>
+                        <script type="text/javascript">
+                            function confirmDelete() {
+                                var respuesta = confirm("Estas seguro que deseas eliminar el usuario?");
+
+                                if (respuesta == true) {
+                                    return true;
+                                } else {
+                                    return false;
+                                }
+                            }
+                        </script>
 
                         <?php foreach ($usuarios as $usuario) { ?>
                             <tr class="table-active">
-                                <form action="../php_controllers/recomercemController.php" method="POST">
-                                    <th scope="row"><?php echo $usuario['id'] ?></th>
-                                    <td><?php echo $usuario['nickname'] ?></td>
-                                    <td><?php echo $usuario['email'] ?></td>
-                                    <td type="password"><?php echo $usuario['passw'] ?></td>
-                                    <td><?php echo $usuario['admin'] ?></td>
-                                    <td><?php echo $usuario['puntuacion'] ?></td>
+
+                                <th scope="row"><?php echo $usuario['id'] ?></th>
+                                <td><?php echo $usuario['nickname'] ?></td>
+                                <td><?php echo $usuario['email'] ?></td>
+                                <td type="password"><?php echo $usuario['passw'] ?></td>
+                                <td><?php echo $usuario['admin'] ?></td>
+                                <td><?php echo $usuario['puntuacion'] ?></td>
+                                <form action="./update_usuario.php" method="POST">
                                     <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                                    <td><button type="submit" class="btn btn-success" name="deleteUsuario">Eliminar</button></td>
+                                    <input type="hidden" id="id" name="id" value="<?php echo $usuario['id'] ?>">
+                                </form>
+                                <form action="../php_controllers/recomercemController.php" method="POST">
+                                    <td><button type="submit" class="btn btn-success" name="deleteUsuario" onclick="return confirmDelete()">Eliminar</button></td>
                                     <input type="hidden" id="id" name="id" value="<?php echo $usuario['id'] ?>">
                                 </form>
                             </tr>

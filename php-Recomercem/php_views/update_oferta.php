@@ -35,6 +35,7 @@ $oferta = selectOferta($id);
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
+                        <a class="dropdown-item" href="../index.php">Desconectar</a>
                     </div>
                 </li>
             </ul>
@@ -53,33 +54,33 @@ $oferta = selectOferta($id);
                         <div class="form-group row">
                             <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
                             <div class="col-sm-10">
-                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" required value="<?php echo $value['name'] ?>"></input>
+                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $value['name'] ?>"></input>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="txtDescripcion" class="col-sm-2 col-form-label">Descripción</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción" required><?php echo $value['descripcion'] ?></textarea>
+                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción"><?php echo $value['descripcion'] ?></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="txtPuntuacion" class="col-sm-2 col-form-label">Puntuación</label>
                             <div class="col-sm-10">
-                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100" required value="<?php echo $value['puntuacion_min'] ?>">
+                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100" value="<?php echo $value['puntuacion_min'] ?>">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="imagen" class="col-sm-2 col-form-label">Imagen</label>
                             <div class="col-sm-10">
-                                <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen" required value="<?php echo $value['imagen'] ?>">
+                                <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen" value="<?php echo $value['imagen'] ?>">
                             </div>
                         </div>
                         <div class="form-group row" style="margin-right: 0px; float:right">
                             <input type="hidden" id="id" name="id" value="<?php echo $value['id'] ?>">
                             <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateOfertas">Modificar usuario</button>
-                            <form action="./ofertas.php">
-                                <button type="submit" class="btn btn-dark">Cancelar</button>
-                            </form>
+                            
+                                <button type="submit" class="btn btn-dark" name="cancelarOferta">Cancelar</button>
+                            
 
                         </div>
                     </form>

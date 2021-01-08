@@ -36,6 +36,7 @@ $tienda = selectTienda($id);
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
+                        <a class="dropdown-item" href="../index.php">Desconectar</a>
                     </div>
                 </li>
             </ul>
@@ -65,7 +66,7 @@ $tienda = selectTienda($id);
                             <input type="hidden" id="id" name="id" value="<?php echo $value['id'] ?>">
                             <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateTienda">Modificar tienda</button>
                             <form action="tiendas.php">
-                                <button type="submit" class="btn btn-dark">Cancelar</button>
+                                <button type="submit" class="btn btn-dark" name="cancelarTienda">Cancelar</button>
                             </form>
 
                         </div>

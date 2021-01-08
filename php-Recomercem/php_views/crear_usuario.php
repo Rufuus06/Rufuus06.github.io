@@ -28,6 +28,7 @@
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
+                        <a class="dropdown-item" href="../index.php">Desconectar</a>
                     </div>
                 </li>
             </ul>
@@ -74,9 +75,9 @@
                     </div>
                     <div class="form-group row" style="margin-right: 0px; float:right">
                         <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertUsuario">Crear usuario</button>
-                        <form action="usuarios.php">
-                        <button type="submit" class="btn btn-dark">Cancelar</button>
-                        </form>
+                        
+                        <button type="submit" class="btn btn-dark" name="cancelarUsuario">Cancelar</button>
+                        
                         
                     </div>
                 </form>
