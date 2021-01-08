@@ -26,7 +26,7 @@
                 <a>Login</a>
             </div>
             <div class="card-body">
-                <form action="./php_views/usuarios.php">
+                <form action="./php_views/usuarios.php" method="POST">
                     <div class="form-group row">
                         <label for="txtEmail" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="form-group row float-right" style="margin-right: 20px;">
-                        <button type="submit" class="btn btn-success float-right">Entrar</button>
+                        <button type="submit" class="btn btn-success float-right" name="login">Entrar</button>
                         <label class=" float-right" style="margin-left: 10px; margin-top: 10px;">
                             <input type="checkbox" checked="checked" name="remember"> Remember me
                         </label>

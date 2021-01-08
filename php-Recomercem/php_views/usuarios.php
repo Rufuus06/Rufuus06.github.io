@@ -63,14 +63,17 @@ $usuarios = selectAllUsuaris();
 
                         <?php foreach ($usuarios as $usuario) { ?>
                             <tr class="table-active">
-                                <th scope="row"><?php echo $usuario['id'] ?></th>
-                                <td><?php echo $usuario['nickname'] ?></td>
-                                <td><?php echo $usuario['email'] ?></td>
-                                <td type="password"><?php echo $usuario['passw'] ?></td>
-                                <td><?php echo $usuario['admin'] ?></td>
-                                <td><?php echo $usuario['puntuacion'] ?></td>
-                                <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                                <td><button type="submit" class="btn btn-success" name="deleteUsuario">Eliminar</button></td>
+                                <form action="../php_controllers/recomercemController.php" method="POST">
+                                    <th scope="row"><?php echo $usuario['id'] ?></th>
+                                    <td><?php echo $usuario['nickname'] ?></td>
+                                    <td><?php echo $usuario['email'] ?></td>
+                                    <td type="password"><?php echo $usuario['passw'] ?></td>
+                                    <td><?php echo $usuario['admin'] ?></td>
+                                    <td><?php echo $usuario['puntuacion'] ?></td>
+                                    <td><button type="submit" class="btn btn-success">Modificar</button></td>
+                                    <td><button type="submit" class="btn btn-success" name="deleteUsuario">Eliminar</button></td>
+                                    <input type="hidden" id="id" name="id" value="<?php echo $usuario['id'] ?>">
+                                </form>
                             </tr>
                         <?php } ?>
 

@@ -1,3 +1,11 @@
+<?php
+require_once('../php_libraries/bd.php');
+
+$id = $_POST['id'];
+$tienda = selectTienda($id);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,27 +47,30 @@
                 <a>Tienda</a>
             </div>
             <div class="card-body">
-                <form action="../php_controllers/recomercemController.php" method="POST">
-                    <div class="form-group row">
-                        <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre">
+                <?php foreach ($tienda as $value) { ?>
+                    <form action="../php_controllers/recomercemController.php" method="POST">
+                        <div class="form-group row">
+                            <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $value['nombre'] ?>">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="txtLocalizacion" class="col-sm-2 col-form-label">Localización</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización">
+                        <div class="form-group row">
+                            <label for="txtLocalizacion" class="col-sm-2 col-form-label">Localización</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización" value="<?php echo $value['localizacion'] ?>">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row" style="margin-right: 0px; float:right">
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertTienda">Crear tienda</button>
-                        <form action="tiendas.php">
-                            <button type="submit" class="btn btn-dark">Cancelar</button>
-                        </form>
+                        <div class="form-group row" style="margin-right: 0px; float:right">
+                            <input type="hidden" id="id" name="id" value="<?php echo $value['id'] ?>">
+                            <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateTienda">Modificar tienda</button>
+                            <form action="tiendas.php">
+                                <button type="submit" class="btn btn-dark">Cancelar</button>
+                            </form>
 
-                    </div>
-                </form>
+                        </div>
+                    </form>
+                <?php } ?>
             </div>
         </div>
     </div>

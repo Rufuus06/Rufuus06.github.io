@@ -204,43 +204,62 @@ function deleteOferta($id)
     $conexion = closeBd();
 }
 
-function updateUsuari($nickname, $email, $passw, $admin, $puntuacion)
+function updateUsuari($nickname, $email, $passw, $admin, $puntuacion, $id)
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "update usuario set nickname = $nickname,
-                                             email = $email, 
-                                             passw = $passw, 
-                                             admin = $admin, 
-                                             puntuacion = $puntuacion";
+    $sentenciaInsert = "update usuario set nickname = '$nickname',
+                                             email = '$email', 
+                                             passw = '$passw', 
+                                             admin = '$admin', 
+                                             puntuacion = '$puntuacion'
+                                             where id = '$id'";
     $sentencia = $conexion->prepare($sentenciaInsert);
     $sentencia->execute();
 
     $conexion = closeBd();
 }
 
-function updateTienda($nombre, $localizacion)
+function updateTienda($nombre, $localizacion, $id)
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "update tienda set nombre = $nombre,
-                                             localizacion = $localizacion";
+    $sentenciaInsert = "update tienda set nombre = '$nombre',
+                                             localizacion = '$localizacion'
+                                             where id = '$id'";
     $sentencia = $conexion->prepare($sentenciaInsert);
     $sentencia->execute();
 
     $conexion = closeBd();
 }
 
-function updateOferta($name, $imagen, $descripcion, $puntuacion_min)
+function updateOferta($name, $imagen, $descripcion, $puntuacion_min, $id)
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "update oferta set name = $name,
-                                            imagen = $imagen,
-                                             descripcion = $descripcion, 
-                                             puntuacion_min = $puntuacion_min";
+    $sentenciaInsert = "update oferta set name = '$name',
+                                            imagen = '$imagen',
+                                             descripcion = '$descripcion', 
+                                             puntuacion_min = '$puntuacion_min'
+                                             where id = '$id'";
     $sentencia = $conexion->prepare($sentenciaInsert);
     $sentencia->execute();
 
     $conexion = closeBd();
+}
+
+function login($email, $passw)
+{
+    $conexion = openBd();
+
+    $sentenciaSelect = "select * from usuario where email = $email and passw = $passw";
+
+    $sentencia = $conexion->prepare($sentenciaSelect);
+    $sentencia->execute();
+
+    $resultado = $sentencia->fetchAll();
+
+    $conexion = closeBd();
+
+    return $resultado;
 }

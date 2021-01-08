@@ -49,7 +49,6 @@
     }
 
     if (isset($_POST['deleteOferta'])) {
-        selectOferta($_POST['id']);
         deleteOferta($_POST['id']);
 
         header('Location: ../php_views/ofertas.php');
@@ -58,10 +57,11 @@
 
     if (isset($_POST['updateOfertas']))
     {
-        updateOferta($_POST['txtombre'],
+        updateOferta($_POST['txtNombre'],
                      $_POST['imagen'],
                      $_POST['txtDescripcion'],
-                     $_POST['txtPuntuacion']);
+                     $_POST['txtPuntuacion'],
+                     $_POST['id']);
 
         header('Location: ../php_views/ofertas.php');
         exit();
@@ -70,7 +70,8 @@
     if (isset($_POST['updateTienda']))
     {
         updateTienda($_POST['txtNombre'],
-                     $_POST['txtLocalizacion']);
+                     $_POST['txtLocalizacion'],
+                     $_POST['id']);
 
         header('Location: ../php_views/tiendas.php');
         exit();
@@ -82,9 +83,28 @@
                      $_POST['txtEmail'],
                      $_POST['txtContrasenya'],
                      $_POST['txtPuntuacion'],
-                     $_POST['txtAdmin']);
+                     $_POST['txtAdmin'],
+                     $_POST['id']);
 
         header('Location: ../php_views/usuarios.php');
+        exit();
+    }
+
+    if (isset($_POST['login']))
+    {
+        $login = login($_POST['txtEmail'],
+                     $_POST['txtContrasenya']);
+
+        if (!empty($login)) {
+            header('Location: ../php_views/usuarios.php');
+        }
+            
+        exit();
+    }
+
+    if (isset($_POST['pasarOferta']))
+    {
+        header('Location: ../php_views/update_oferta.php');
         exit();
     }
 
