@@ -28,7 +28,7 @@
             <div class="card-body">
             <script type="text/javascript">
                 function saludar() {
-                    alert("Bienvenido");
+                    alert(document.getElementById("txtEmail").value + " ,Bienvenido");
                 }
             </script>
                 <form action="./php_controllers/recomercemController.php" method="POST">
