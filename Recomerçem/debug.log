@@ -22,3 +22,4 @@
 [1217/182730.117:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
 [1217/201654.038:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
 [1218/091650.138:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0111/104800.745:ERROR:crash_report_database_win.cc(455)] unexpected header
