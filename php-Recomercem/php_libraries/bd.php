@@ -4,7 +4,7 @@ function openBd()
 {
     $servername = "localhost";
     $username = "root";
-    $password = "mysql";
+    $password = "";
 
     $conexion = new PDO("mysql:host=$servername;dbname=recomerçem", $username, $password);
     // set the PDO error mode to exception
@@ -19,28 +19,30 @@ function closeBd()
     return null;
 }
 
-function checkLogin( $email, $password )
+function checkLogin($email, $password)
 {
-    $conexion = openBd();
+    try {
+        $conexion = openBd();
 
-    $sentenciaSelect = "select nickname from usuario where email = '$email' and passw = '$password'";
+        $sentenciaSelect = "select nickname from usuario where email = '$email' and passw = '$password'";
 
-    $sentencia = $conexion->prepare($sentenciaSelect);
-    $sentencia->execute();
+        $sentencia = $conexion->prepare($sentenciaSelect);
+        $sentencia->execute();
 
-    $resultado = $sentencia->fetchAll();
-    $conexion = closeBd();
+        $resultado = $sentencia->fetchAll();
 
-    if ( isset($resultado[0]['nickname']) )
-    {
-        $validate = true;
+
+        if (isset($resultado[0]['nickname'])) {
+            $validate = true;
+        } else {
+            $validate = false;
+        }
+    } catch (PDOException $e) {
+        $_SESSION['error'] = errorMessage($e);
+    } finally {
+        return $validate;
+        $conexion = closeBd();
     }
-    else
-    {
-        $validate = false;
-    }
-
-    return $validate;
 }
 
 function selectAllUsuaris()
@@ -141,7 +143,7 @@ function selectUsuari($id)
 }
 
 
-function insertUsuari($nickname, $email, $passw, $puntuacion, $admin )
+function insertUsuari($nickname, $email, $passw, $puntuacion, $admin)
 {
     $conexion = openBd();
 
@@ -174,7 +176,7 @@ function insertTienda($nombre, $localizacion)
     $conexion = closeBd();
 }
 
-function insertOferta($name, $imagen, $descripcion, $puntuacion_min )
+function insertOferta($name, $imagen, $descripcion, $puntuacion_min)
 {
     $conexion = openBd();
 
@@ -190,7 +192,7 @@ function insertOferta($name, $imagen, $descripcion, $puntuacion_min )
     $conexion = closeBd();
 }
 
-function deleteUsuario( $id )
+function deleteUsuario($id)
 {
     $conexion = openBd();
 
@@ -224,7 +226,7 @@ function deleteOferta($id)
     $conexion = closeBd();
 }
 
-function updateUsuari( $id, $nickname, $email, $passw, $puntuacion, $admin )
+function updateUsuari($id, $nickname, $email, $passw, $puntuacion, $admin)
 {
     $conexion = openBd();
 
@@ -269,4 +271,37 @@ function updateOferta($name, $imagen, $descripcion, $puntuacion_min)
     $sentencia->execute();
 
     $conexion = closeBd();
+}
+
+function errorMessage($e)
+{
+    if (!empty($e->errorInfo[1])) {
+        switch ($e->erroeInfo[1]) {
+            case 1062:
+                $mensaje = 'Registro duplicado';
+                break;
+            case 1451:
+                $mensaje = 'Registro con elementos relacionados';
+                break;
+            default:
+                $mensaje = $e->erroeInfo[1] . ' - ' . $e->erroeInfo[2];
+                break;
+        }
+    } else {
+        switch ($e->getCode()) {
+            case '1044':
+                $mensaje = 'Usuario y/o password incorrecto';
+                break;
+            case '1049':
+                $mensaje = 'Base de datos desconocida';
+                break;
+            case '2002':
+                $mensaje = 'No se encuentra el servidor';
+                break;
+            default:
+                $mensaje = $e->getCode() . ' - ' . $e->getMessage();
+                break;
+        }
+    }
+    return $mensaje;
 }

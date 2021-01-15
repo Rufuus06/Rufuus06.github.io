@@ -13,6 +13,9 @@
             header('Location: ../php_views/usuarios.php');
             exit();
         }
+        else {
+            header('Location: ../index.php');
+        }
     }
 
     if (isset($_POST['insertTienda']))
@@ -58,7 +61,7 @@
     }
 
     if (isset($_POST['deleteUsuario'])) {
-        deleteUsuari($_POST['id']);
+        deleteUsuario($_POST['id']);
 
         header('Location: ../php_views/usuarios.php');
         exit();
