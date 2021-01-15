@@ -20,17 +20,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
+
     <div class="container">
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
                 <a>Login</a>
             </div>
             <div class="card-body">
-            <script type="text/javascript">
-                function saludar() {
-                    alert(document.getElementById("txtEmail").value + " ,Bienvenido");
-                }
-            </script>
+
                 <form action="./php_controllers/recomercemController.php" method="POST">
                     <div class="form-group row">
                         <label for="txtEmail" class="col-sm-2 col-form-label">Email</label>
@@ -39,15 +36,23 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="txtContrasenya" class="col-sm-2 col-form-label">Contraseña</label>
+                        <label for="txtContraseña" class="col-sm-2 col-form-label">Contraseña</label>
                         <div class="col-sm-10">
-                            <input type="password" name="txtContrasenya" id="txtContrasenya" autofocus class="form-control" placeholder="Contraseña">
+                            <input type="password" name="txtContraseña" id="txtContraseña" autofocus class="form-control" placeholder="Contraseña">
                         </div>
                     </div>
+
                     <div class="form-group row float-right" style="margin-right: 20px;">
-                        <button type="submit" class="btn btn-success float-right" name="login" onclick="saludar()">Entrar</button>
+
+                        <button type="submit" class="btn btn-success float-right" name="Login">Entrar</button>
+
+                        <label class=" float-right" style="margin-left: 10px; margin-top: 10px;">
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+
                     </div>
                 </form>
+
             </div>
         </div>
     </div>

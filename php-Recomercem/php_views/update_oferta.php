@@ -1,11 +1,3 @@
-<?php
-require_once('../php_libraries/bd.php');
-
-$id = $_POST['id'];
-$oferta = selectOferta($id);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,12 +10,12 @@ $oferta = selectOferta($id);
 
 <body style="background-color: #FBF7F6;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="d-flex w-10 order-0" style="margin-right: 25px;">
+    <div class="d-flex w-10 order-0" style="margin-right: 25px;">
             <a class="navbar-brand mr-1 color-nav" href="">
                 <!-- <h2>LANDING PAGE</h2> -->
                 <img src="../media/logo.png" alt="" style="width: 200px; height: 60px;">
             </a>
-        </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        </div>        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -35,7 +27,6 @@ $oferta = selectOferta($id);
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
-                        <a class="dropdown-item" href="../index.php">Desconectar</a>
                     </div>
                 </li>
             </ul>
@@ -47,44 +38,39 @@ $oferta = selectOferta($id);
                 <a>Oferta</a>
             </div>
             <div class="card-body">
-                <?php foreach ($oferta as $value) { ?>
-                    
+                <form action="../php_controllers/recomercemController.php" method="POST" id="usdform">
+                    <div class="form-group row">
+                        <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="txtDescripcion" class="col-sm-2 col-form-label">Descripción</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción" required ></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="txtPuntuacion" class="col-sm-2 col-form-label">Puntuación</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="imagen" class="col-sm-2 col-form-label">Imagen</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen" required>
+                        </div>
+                    </div>
+                    <div class="form-group row" style="margin-right: 0px; float:right">
+                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateOfertas">Crear usuario</button>
+                        <form action="./ofertas.php">
+                            <button type="submit" class="btn btn-dark">Cancelar</button>
+                        </form>
 
-                    <form action="../php_controllers/recomercemController.php" method="POST" id="usdform">
-                        <div class="form-group row">
-                            <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $value['name'] ?>"></input>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtDescripcion" class="col-sm-2 col-form-label">Descripción</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción"><?php echo $value['descripcion'] ?></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="txtPuntuacion" class="col-sm-2 col-form-label">Puntuación</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100" value="<?php echo $value['puntuacion_min'] ?>">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="imagen" class="col-sm-2 col-form-label">Imagen</label>
-                            <div class="col-sm-10">
-                                <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen" value="<?php echo $value['imagen'] ?>">
-                            </div>
-                        </div>
-                        <div class="form-group row" style="margin-right: 0px; float:right">
-                            <input type="hidden" id="id" name="id" value="<?php echo $value['id'] ?>">
-                            <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateOfertas">Modificar usuario</button>
-                            
-                                <button type="submit" class="btn btn-dark" name="cancelarOferta">Cancelar</button>
-                            
-
-                        </div>
-                    </form>
-                <?php } ?>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

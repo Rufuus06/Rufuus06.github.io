@@ -2,6 +2,19 @@
 
     require_once('../php_libraries/bd.php');
 
+    if ( isset( $_POST['Login'] ))
+    {
+        $validate = checkLogin( $_POST['txtEmail'],
+                                $_POST['txtContraseña'] 
+                                );
+
+        if ( $validate )
+        {
+            header('Location: ../php_views/usuarios.php');
+            exit();
+        }
+    }
+
     if (isset($_POST['insertTienda']))
     {
         insertTienda($_POST['txtNombre'],
@@ -13,11 +26,21 @@
 
     if (isset($_POST['insertUsuario']))
     {
-        insertUsuari($_POST['txtNombre'],
-                     $_POST['txtEmail'],
-                     $_POST['txtContrasenya'],
-                     $_POST['txtAdmin'],
-                     $_POST['txtPuntuacion']);
+        if ( empty( $_POST['chbAdmin'] ))
+        {
+            $admin = 0;
+        }
+        else
+        {
+            $admin = 1;
+        }
+
+        insertUsuari( $_POST['txtNickname'],
+                      $_POST['txtEmail'],
+                      $_POST['txtContrasenya'],
+                      $_POST['txtPuntuacion'],
+                      $admin
+                    );
 
         header('Location: ../php_views/usuarios.php');
         exit();
@@ -49,6 +72,7 @@
     }
 
     if (isset($_POST['deleteOferta'])) {
+        selectOferta($_POST['id']);
         deleteOferta($_POST['id']);
 
         header('Location: ../php_views/ofertas.php');
@@ -57,11 +81,10 @@
 
     if (isset($_POST['updateOfertas']))
     {
-        updateOferta($_POST['txtNombre'],
+        updateOferta($_POST['txtombre'],
                      $_POST['imagen'],
                      $_POST['txtDescripcion'],
-                     $_POST['txtPuntuacion'],
-                     $_POST['id']);
+                     $_POST['txtPuntuacion']);
 
         header('Location: ../php_views/ofertas.php');
         exit();
@@ -70,65 +93,40 @@
     if (isset($_POST['updateTienda']))
     {
         updateTienda($_POST['txtNombre'],
-                     $_POST['txtLocalizacion'],
-                     $_POST['id']);
+                     $_POST['txtLocalizacion']);
 
         header('Location: ../php_views/tiendas.php');
         exit();
     }
 
     if (isset($_POST['updateUsuario']))
-    {
-        updateUsuari($_POST['txtNombre'],
-                     $_POST['txtEmail'],
-                     $_POST['txtContrasenya'],
-                     $_POST['txtAdmin'],
-                     $_POST['txtPuntuacion'],
-                     $_POST['id']);
+    {   
+        if ( empty( $_POST['chbAdmin'] ))
+        {
+            $admin = 0;
+        }
+        else
+        {
+            $admin = 1;
+        }
+
+        updateUsuari( $_POST['id_usuario'],
+                      $_POST['txtNickname'],
+                      $_POST['txtEmail'],
+                      $_POST['txtContrasenya'],
+                      $_POST['txtPuntuacion'],
+                      $admin
+                    );
 
         header('Location: ../php_views/usuarios.php');
         exit();
     }
 
-    if (isset($_POST['login']))
+    if ( isset( $_POST['BtnDeleteUsuario'] ))
     {
-        $login = login($_POST['txtEmail'],
-                     $_POST['txtContrasenya']);
+        deleteUsuario ( $_POST['id_usuario'] ); 
 
-        if (!empty($login)) {
-            header('Location: ../php_views/usuarios.php');
-        }
-        else {
-            
-            header('Location: ../index.php');
-        }
-            
-        exit();
-    }
-
-    if (isset($_POST['pasarOferta']))
-    {
-        header('Location: ../php_views/update_oferta.php');
-        exit();
-    }
-
-    if (isset($_POST['cancelarOferta']))
-    {
-        header('Location: ../php_views/ofertas.php');
-        exit();
-    }
-
-    if (isset($_POST['cancelarUsuario']))
-    {
         header('Location: ../php_views/usuarios.php');
         exit();
     }
-
-    if (isset($_POST['cancelarTienda']))
-    {
-        header('Location: ../php_views/tiendas.php');
-        exit();
-    }
-
-
 ?>

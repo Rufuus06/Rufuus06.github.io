@@ -2,6 +2,7 @@
 require_once('../php_libraries/bd.php');
 
 $usuarios = selectAllUsuaris();
+unset($usuarios[0]);
 ?>
 
 <!DOCTYPE html>
@@ -35,13 +36,12 @@ $usuarios = selectAllUsuaris();
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
-                        <a class="dropdown-item" href="../index.php">Desconectar</a>
-
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
+    
     <div class="container">
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
@@ -54,7 +54,7 @@ $usuarios = selectAllUsuaris();
                             <th scope="col">ID</th>
                             <th scope="col">Nickname</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Password</th>
+                            <!-- <th scope="col">Password</th> -->
                             <th scope="col">Admin</th>
                             <th scope="col">Puntos</th>
                             <th scope="col">Modificar</th>
@@ -62,41 +62,47 @@ $usuarios = selectAllUsuaris();
                         </tr>
                     </thead>
                     <tbody>
-                        <script type="text/javascript">
-                            function confirmDelete() {
-                                var respuesta = confirm("Estas seguro que deseas eliminar el usuario?");
-
-                                if (respuesta == true) {
-                                    return true;
-                                } else {
-                                    return false;
-                                }
-                            }
-                        </script>
 
                         <?php foreach ($usuarios as $usuario) { ?>
                             <tr class="table-active">
-
                                 <th scope="row"><?php echo $usuario['id'] ?></th>
                                 <td><?php echo $usuario['nickname'] ?></td>
                                 <td><?php echo $usuario['email'] ?></td>
-                                <td type="password"><?php echo $usuario['passw'] ?></td>
+                                <!-- <td type="password"><?php //echo $usuario['passw'] ?></td> -->
                                 <td><?php echo $usuario['admin'] ?></td>
                                 <td><?php echo $usuario['puntuacion'] ?></td>
-                                <form action="./update_usuario.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                                    <input type="hidden" id="id" name="id" value="<?php echo $usuario['id'] ?>">
-                                </form>
-                                <form action="../php_controllers/recomercemController.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success" name="deleteUsuario" onclick="return confirmDelete()">Eliminar</button></td>
-                                    <input type="hidden" id="id" name="id" value="<?php echo $usuario['id'] ?>">
-                                </form>
+
+                                <!-- BOTON ACEPTAR -->
+                                <td>                                    
+                                    <form action="../php_views/update_usuario.php" method="post">           
+
+                                        <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $usuario['id'] ?>">
+
+                                        <button type="submit" class="btn btn-success" name="BtnUpdateUsuario">
+                                            Modificar
+                                        </button>
+
+                                    </form>
+                                </td>
+
+                                <!-- BOTON ELIMINAR -->
+                                <td>
+                                    <form action="../php_controllers/recomercemController.php" method="post">           
+
+                                        <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $usuario['id'] ?>">
+
+                                        <button type="submit" class="btn btn-success" name="BtnDeleteUsuario">
+                                            Eliminar    
+                                        </button>
+
+                                    </form>
+                                </td>
                             </tr>
                         <?php } ?>
 
                     </tbody>
                 </table>
-                <form action="./crear_usuario.php">
+                <form action="../php_views/update_usuario.php">
                     <button type="submit" class="btn btn-success">Crear Usuario</button>
                 </form>
 

@@ -4,7 +4,7 @@ function openBd()
 {
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "mysql";
 
     $conexion = new PDO("mysql:host=$servername;dbname=recomerçem", $username, $password);
     // set the PDO error mode to exception
@@ -17,6 +17,30 @@ function openBd()
 function closeBd()
 {
     return null;
+}
+
+function checkLogin( $email, $password )
+{
+    $conexion = openBd();
+
+    $sentenciaSelect = "select nickname from usuario where email = '$email' and passw = '$password'";
+
+    $sentencia = $conexion->prepare($sentenciaSelect);
+    $sentencia->execute();
+
+    $resultado = $sentencia->fetchAll();
+    $conexion = closeBd();
+
+    if ( isset($resultado[0]['nickname']) )
+    {
+        $validate = true;
+    }
+    else
+    {
+        $validate = false;
+    }
+
+    return $validate;
 }
 
 function selectAllUsuaris()
@@ -117,27 +141,22 @@ function selectUsuari($id)
 }
 
 
-function insertUsuari($nickname, $email, $passw, $admin, $puntuacion)
+function insertUsuari($nickname, $email, $passw, $puntuacion, $admin )
 {
     $conexion = openBd();
 
-    $sentenciaFK = "SET FOREIGN_KEY_CHECKS = 0";
-    $sentenciaFKon = "SET FOREIGN_KEY_CHECKS = 1";
-    $sentencia = $conexion->prepare($sentenciaFK);
-    $sentencia->execute();
-    $sentenciaInsert = "insert into usuario (nickname, email, passw, admin, puntuacion)
-     values (:nickname, :email, :passw, :admin, :puntuacion)";
+    $sentenciaInsert = "insert into usuario ( nickname, email, passw, puntuacion, admin)
+     values (:nickname, :email, :passw, :puntuacion, :admin)";
+
     $sentencia = $conexion->prepare($sentenciaInsert);
+
     $sentencia->bindParam(':nickname', $nickname);
     $sentencia->bindParam(':email', $email);
     $sentencia->bindParam(':passw', $passw);
-    $sentencia->bindParam(':admin', $admin);
     $sentencia->bindParam(':puntuacion', $puntuacion);
-    $sentencia->execute();
+    $sentencia->bindParam(':admin', $admin);
 
-    $sentencia = $conexion->prepare($sentenciaFKon);
     $sentencia->execute();
-
     $conexion = closeBd();
 }
 
@@ -171,11 +190,12 @@ function insertOferta($name, $imagen, $descripcion, $puntuacion_min )
     $conexion = closeBd();
 }
 
-function deleteUsuari($id)
+function deleteUsuario( $id )
 {
     $conexion = openBd();
 
-    $sentenciaDelete = "delete from usuario where id = $id";
+    $sentenciaDelete = "delete from usuario where id = '$id'";
+
     $sentencia = $conexion->prepare($sentenciaDelete);
     $sentencia->execute();
 
@@ -204,62 +224,49 @@ function deleteOferta($id)
     $conexion = closeBd();
 }
 
-function updateUsuari($nickname, $email, $passw, $admin, $puntuacion, $id)
+function updateUsuari( $id, $nickname, $email, $passw, $puntuacion, $admin )
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "update usuario set nickname = '$nickname',
-                                             email = '$email', 
-                                             passw = '$passw', 
-                                             admin = '$admin', 
-                                             puntuacion = '$puntuacion'
-                                             where id = '$id'";
+    $sentenciaInsert = "
+        update usuario set
+        nickname = '$nickname',
+        email = '$email', 
+        passw = '$passw', 
+        admin = '$admin', 
+        puntuacion = '$puntuacion'
+        where id = '$id'
+        ";
+
+    $sentencia = $conexion->prepare($sentenciaInsert);
+    $sentencia->execute();
+    // $conexion->commit();
+
+    $conexion = closeBd();
+}
+
+function updateTienda($nombre, $localizacion)
+{
+    $conexion = openBd();
+
+    $sentenciaInsert = "update tienda set nombre = $nombre,
+                                             localizacion = $localizacion";
     $sentencia = $conexion->prepare($sentenciaInsert);
     $sentencia->execute();
 
     $conexion = closeBd();
 }
 
-function updateTienda($nombre, $localizacion, $id)
+function updateOferta($name, $imagen, $descripcion, $puntuacion_min)
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "update tienda set nombre = '$nombre',
-                                             localizacion = '$localizacion'
-                                             where id = '$id'";
+    $sentenciaInsert = "update oferta set name = $name,
+                                            imagen = $imagen,
+                                             descripcion = $descripcion, 
+                                             puntuacion_min = $puntuacion_min";
     $sentencia = $conexion->prepare($sentenciaInsert);
     $sentencia->execute();
 
     $conexion = closeBd();
-}
-
-function updateOferta($name, $imagen, $descripcion, $puntuacion_min, $id)
-{
-    $conexion = openBd();
-
-    $sentenciaInsert = "update oferta set name = '$name',
-                                            imagen = '$imagen',
-                                             descripcion = '$descripcion', 
-                                             puntuacion_min = '$puntuacion_min'
-                                             where id = '$id'";
-    $sentencia = $conexion->prepare($sentenciaInsert);
-    $sentencia->execute();
-
-    $conexion = closeBd();
-}
-
-function login($email, $passw)
-{
-    $conexion = openBd();
-
-    $sentenciaSelect = "select * from usuario where email = '$email' and passw = '$passw'";
-
-    $sentencia = $conexion->prepare($sentenciaSelect);
-    $sentencia->execute();
-
-    $resultado = $sentencia->fetchAll();
-
-    $conexion = closeBd();
-
-    return $resultado;
 }

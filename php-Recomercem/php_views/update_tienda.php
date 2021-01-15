@@ -1,11 +1,3 @@
-<?php
-require_once('../php_libraries/bd.php');
-
-$id = $_POST['id'];
-$tienda = selectTienda($id);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +28,6 @@ $tienda = selectTienda($id);
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
-                        <a class="dropdown-item" href="../index.php">Desconectar</a>
                     </div>
                 </li>
             </ul>
@@ -48,30 +39,27 @@ $tienda = selectTienda($id);
                 <a>Tienda</a>
             </div>
             <div class="card-body">
-                <?php foreach ($tienda as $value) { ?>
-                    <form action="../php_controllers/recomercemController.php" method="POST">
-                        <div class="form-group row">
-                            <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $value['nombre'] ?>">
-                            </div>
+                <form action="../php_controllers/recomercemController.php" method="POST">
+                    <div class="form-group row">
+                        <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre">
                         </div>
-                        <div class="form-group row">
-                            <label for="txtLocalizacion" class="col-sm-2 col-form-label">Localización</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización" value="<?php echo $value['localizacion'] ?>">
-                            </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="txtLocalizacion" class="col-sm-2 col-form-label">Localización</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización">
                         </div>
-                        <div class="form-group row" style="margin-right: 0px; float:right">
-                            <input type="hidden" id="id" name="id" value="<?php echo $value['id'] ?>">
-                            <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateTienda">Modificar tienda</button>
-                            <form action="tiendas.php">
-                                <button type="submit" class="btn btn-dark" name="cancelarTienda">Cancelar</button>
-                            </form>
+                    </div>
+                    <div class="form-group row" style="margin-right: 0px; float:right">
+                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertTienda">Crear tienda</button>
+                        <form action="tiendas.php">
+                            <button type="submit" class="btn btn-dark">Cancelar</button>
+                        </form>
 
-                        </div>
-                    </form>
-                <?php } ?>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
