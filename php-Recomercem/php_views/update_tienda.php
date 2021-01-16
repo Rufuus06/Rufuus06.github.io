@@ -33,6 +33,8 @@
             </ul>
         </div>
     </nav>
+
+
     <div class="container">
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
@@ -40,18 +42,24 @@
             </div>
             <div class="card-body">
                 <form action="../php_controllers/recomercemController.php" method="POST">
+
+                    <!-- NOMBRE -->
                     <div class="form-group row">
                         <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
                         <div class="col-sm-10">
                             <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre">
                         </div>
                     </div>
+
+                    <!-- LOCALIZACIÓN -->
                     <div class="form-group row">
                         <label for="txtLocalizacion" class="col-sm-2 col-form-label">Localización</label>
                         <div class="col-sm-10">
                             <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización">
                         </div>
                     </div>
+
+                    <!-- BOTON CREAR TIENDA / CANCELAR -->
                     <div class="form-group row" style="margin-right: 0px; float:right">
                         <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertTienda">Crear tienda</button>
                         <form action="tiendas.php">

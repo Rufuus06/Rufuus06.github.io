@@ -1,8 +1,8 @@
 <?php
-require_once('../php_libraries/bd.php');
+    require_once('../php_libraries/bd.php');
 
-$usuarios = selectAllUsuaris();
-unset($usuarios[0]);
+    $usuarios = selectAllUsuaris();
+    unset($usuarios[0]);
 ?>
 
 <!DOCTYPE html>

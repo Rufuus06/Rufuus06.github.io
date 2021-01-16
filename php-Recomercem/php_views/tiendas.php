@@ -1,7 +1,7 @@
 <?php
-require_once('../php_libraries/bd.php');
+    require_once('../php_libraries/bd.php');
 
-$tiendas = selectAllTiendas();
+    $tiendas = selectAllTiendas();
 ?>
 
 <!DOCTYPE html>
@@ -40,13 +40,16 @@ $tiendas = selectAllTiendas();
             </ul>
         </div>
     </nav>
+
     <div class="container">
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
                 <a>Tiendas</a>
             </div>
+
             <div class="card-body">
                 <table class="table table-hover">
+
                     <thead>
                         <tr class="table-secondary">
                             <th scope="col">ID</th>
@@ -56,6 +59,7 @@ $tiendas = selectAllTiendas();
                             <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         <?php foreach ($tiendas as $tienda) { ?>
                             <tr class="table-active">
@@ -67,7 +71,9 @@ $tiendas = selectAllTiendas();
                             </tr>
                         <?php } ?>
                     </tbody>
+
                 </table>
+                
                 <form action="crear_tienda.php">
                     <button type="submit" class="btn btn-success">Crear Tienda</button>
                 </form>
