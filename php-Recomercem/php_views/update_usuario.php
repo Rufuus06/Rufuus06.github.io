@@ -176,7 +176,7 @@
 
 
                     <!-- BOTON CANCELAR -->
-                    <button type="button" class="btn btn btn-dark" style="float: right;">
+                    <button type="button" class="btn btn-dark" style="float: right;">
                         <a href="../php_views/usuarios.php" style="color: white;">Cancelar</a>
                     </button>
 

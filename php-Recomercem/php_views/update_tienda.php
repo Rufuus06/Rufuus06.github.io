@@ -1,3 +1,18 @@
+<?php
+
+    require_once('../php_libraries/bd.php');
+
+    $isUpdate = false;
+
+    if ( isset($_POST['BtnUpdateTienda']) )
+    {   
+        $isUpdate = true;
+        $id_tienda = $_POST['id_tienda'];
+        $tienda = selectTienda( $id_tienda );
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +48,8 @@
             </ul>
         </div>
     </nav>
+
+
     <div class="container">
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
@@ -40,25 +57,71 @@
             </div>
             <div class="card-body">
                 <form action="../php_controllers/recomercemController.php" method="POST">
+
+                    <!-- NOMBRE -->
                     <div class="form-group row">
                         <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
                         <div class="col-sm-10">
-                            <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre">
+
+                            <?php if ( $isUpdate ) { ?>
+
+                                <!-- CREAR NOMBRE TIENDA -->
+                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $tienda[0]['nombre'] ?>">
+
+                            <?php } else { ?>
+
+                                <!-- CREAR NOMBRE TIENDA -->
+                                <input type="text" name="txtNombre" id="txtNombre" class="form-control" placeholder="Nombre" autofocus>
+
+                            <?php } ?>
+
                         </div>
                     </div>
+
+                    <!-- LOCALIZACIÓN -->
                     <div class="form-group row">
                         <label for="txtLocalizacion" class="col-sm-2 col-form-label">Localización</label>
                         <div class="col-sm-10">
-                            <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización">
+
+                            <?php if ( $isUpdate ) { ?>
+
+                                <!-- CREAR LOCALIZACION TIENDA -->
+                                <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización" value="<?php echo $tienda[0]['Localizacion'] ?>">
+
+                            <?php } else { ?>
+
+                                <!-- CREAR LOCALIZACION TIENDA -->
+                                <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización">
+
+                            <?php } ?>                        
+                        
                         </div>
                     </div>
-                    <div class="form-group row" style="margin-right: 0px; float:right">
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertTienda">Crear tienda</button>
-                        <form action="tiendas.php">
-                            <button type="submit" class="btn btn-dark">Cancelar</button>
-                        </form>
 
-                    </div>
+                    <!-- BOTON CANCELAR -->
+                    <button type="button" class="btn btn-dark" style="float: right;">
+                        <a href="../php_views/tiendas.php" style="color: white;">Cancelar</a>
+                    </button>
+
+                    <!-- BOTON ACEPTAR -->
+                    <?php if ( $isUpdate ) { ?>
+
+                        <!-- UPDATE BUTTON -->
+                        <input type="hidden" id="id_tienda" name="id_tienda" value="<?php echo $tienda[0]['id'] ?>">
+
+                        <button type="submit" class="btn btn-success" style="margin-right: 10px; float: right;" name="updateTienda">
+                            Aceptar
+                        </button>
+
+                    <?php } else { ?>
+
+                        <!-- CREATE BUTTON -->
+                        <button type="submit" class="btn btn-success" style="margin-right: 10px; float: right;" name="insertTienda">
+                            Aceptar
+                        </button>
+
+                    <?php } ?>
+
                 </form>
             </div>
         </div>

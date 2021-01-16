@@ -6,7 +6,7 @@ function openBd()
 {
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "mysql";
 
     $conexion = new PDO("mysql:host=$servername;dbname=recomerçem", $username, $password);
     // set the PDO error mode to exception
@@ -39,9 +39,13 @@ function checkLogin($email, $password)
         } else {
             $validate = false;
         }
-    } catch (PDOException $e) {
+    } 
+    catch (PDOException $e) {
+
         $_SESSION['error'] = errorMessage($e);
-    } finally {
+
+    } 
+    finally {
         return $validate;
         $conexion = closeBd();
     }
@@ -65,14 +69,22 @@ function selectAllUsuaris()
 
 function selectAllTiendas()
 {
-    $conexion = openBd();
+    try
+    {
+        $conexion = openBd();
 
-    $sentenciaSelect = "select * from tienda";
+        $sentenciaSelect = "select * from tienda";
 
-    $sentencia = $conexion->prepare($sentenciaSelect);
-    $sentencia->execute();
+        $sentencia = $conexion->prepare($sentenciaSelect);
+        $sentencia->execute();
 
-    $resultado = $sentencia->fetchAll();
+        $resultado = $sentencia->fetchAll();
+
+    }
+    catch ( PDOException $e )
+    {
+        $_SESSION['error'] = errorMessage( $e );
+    }
 
     $conexion = closeBd();
 
@@ -96,19 +108,25 @@ function selectAllOfertas()
 }
 
 
-function selectTienda($id)
+function selectTienda( $id )
 {
-    $conexion = openBd();
+    try
+    {
+        $conexion = openBd();
 
-    $sentenciaSelect = "select * from tienda where id = $id";
+        $sentenciaSelect = "select * from tienda where id = '$id'";
 
-    $sentencia = $conexion->prepare($sentenciaSelect);
-    $sentencia->execute();
+        $sentencia = $conexion->prepare($sentenciaSelect);
+        $sentencia->execute();
 
-    $resultado = $sentencia->fetchAll();
+        $resultado = $sentencia->fetchAll();
+    }
+    catch ( PDOException $e )
+    {
+        $_SESSION['error'] = errorMessage( $e );
+    }
 
     $conexion = closeBd();
-
     return $resultado;
 }
 
@@ -145,7 +163,7 @@ function selectUsuari($id)
 }
 
 
-function insertUsuari($nickname, $email, $passw, $puntuacion, $admin)
+function insertUsuari( $nickname, $email, $passw, $puntuacion, $admin )
 {
     $conexion = openBd();
 
@@ -164,17 +182,19 @@ function insertUsuari($nickname, $email, $passw, $puntuacion, $admin)
     $conexion = closeBd();
 }
 
-function insertTienda($nombre, $localizacion)
+function insertTienda( $nombre, $localizacion )
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "insert into tienda (nombre, localizacion)
+    $sentenciaInsert = "insert into tienda (nombre, Localizacion)
      values (:nombre, :localizacion)";
+
     $sentencia = $conexion->prepare($sentenciaInsert);
+
     $sentencia->bindParam(':nombre', $nombre);
     $sentencia->bindParam(':localizacion', $localizacion);
-    $sentencia->execute();
 
+    $sentencia->execute();
     $conexion = closeBd();
 }
 
@@ -204,7 +224,7 @@ function insertOferta($name, $imagen, $descripcion, $puntuacion_min)
     $conexion = closeBd();
 }
 
-function deleteUsuario($id)
+function deleteUsuario( $id )
 {
     $conexion = openBd();
 
@@ -216,13 +236,22 @@ function deleteUsuario($id)
     $conexion = closeBd();
 }
 
-function deleteTienda($id)
+function deleteTienda( $id )
 {
-    $conexion = openBd();
+    try 
+    {
+        $conexion = openBd();
 
-    $sentenciaDelete = "delete from tienda where id = $id";
-    $sentencia = $conexion->prepare($sentenciaDelete);
-    $sentencia->execute();
+        $sentenciaDelete = "delete from tienda where id = '$id'";
+
+        $sentencia = $conexion->prepare($sentenciaDelete);
+        $sentencia->execute();
+
+    }
+    catch ( PDOException $e )
+    {
+        $_SESSION['error'] = errorMessage( $e );
+    }
 
     $conexion = closeBd();
 }
@@ -254,19 +283,29 @@ function updateUsuari($id, $nickname, $email, $passw, $puntuacion, $admin)
 
     $sentencia = $conexion->prepare($sentenciaInsert);
     $sentencia->execute();
-    // $conexion->commit();
 
     $conexion = closeBd();
 }
 
 function updateTienda($nombre, $localizacion)
 {
-    $conexion = openBd();
+    try 
+    {
+        $conexion = openBd();
 
-    $sentenciaInsert = "update tienda set nombre = $nombre,
-                                             localizacion = $localizacion";
-    $sentencia = $conexion->prepare($sentenciaInsert);
-    $sentencia->execute();
+        $sentenciaInsert = "
+            update tienda set nombre = '$nombre',
+            Localizacion = '$localizacion'
+            ";
+
+        $sentencia = $conexion->prepare($sentenciaInsert);
+        $sentencia->execute();
+
+    }
+    catch ( PDOException $e )
+    {
+        $_SESSION['error'] = errorMessage( $e );
+    }
 
     $conexion = closeBd();
 }
@@ -275,11 +314,14 @@ function updateOferta($name, $imagen, $descripcion, $puntuacion_min, $id)
 {
     $conexion = openBd();
 
+
     $sentenciaInsert = "update oferta set name = '$name',
                                             imagen = '$imagen',
                                              descripcion = '$descripcion', 
                                              puntuacion_min = '$puntuacion_min'
                                              where id = '$id'";
+
+
     $sentencia = $conexion->prepare($sentenciaInsert);
     $sentencia->execute();
 
