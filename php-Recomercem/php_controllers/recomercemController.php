@@ -88,14 +88,15 @@ if (isset($_POST['updateOfertas'])) {
 if (isset($_POST['updateTienda'])) {
     updateTienda(
         $_POST['txtNombre'],
-        $_POST['txtLocalizacion']
+        $_POST['txtLocalizacion'],
+        $_POST['id_tienda']
     );
 
     if (isset($_SESSION['error'])) {
-        header('Location: ../php_views/tiendas.php');
+        header('Location: ../php_views/update_tienda.php');
         exit();
     } else {
-        header('Location: ../php_views/update_tienda.php');
+        header('Location: ../php_views/tiendas.php');
         exit();
     }
 }

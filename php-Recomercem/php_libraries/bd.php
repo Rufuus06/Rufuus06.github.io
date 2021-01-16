@@ -300,7 +300,7 @@ function updateUsuari($id, $nickname, $email, $passw, $puntuacion, $admin)
     $conexion = closeBd();
 }
 
-function updateTienda($nombre, $localizacion)
+function updateTienda($nombre, $localizacion, $id)
 {
     try {
         $conexion = openBd();
@@ -308,6 +308,7 @@ function updateTienda($nombre, $localizacion)
         $sentenciaInsert = "
             update tienda set nombre = '$nombre',
             Localizacion = '$localizacion'
+            where id = '$id'
             ";
 
         $sentencia = $conexion->prepare($sentenciaInsert);
