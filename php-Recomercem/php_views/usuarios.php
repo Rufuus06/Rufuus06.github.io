@@ -36,6 +36,7 @@
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
+                        <a class="dropdown-item" href="../index.php">Desconectar</a>
                     </div>
                 </li>
             </ul>
@@ -43,6 +44,7 @@
     </nav>
     
     <div class="container">
+    <?php require_once('../php_partials/mensajes.php') ?>
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
                 <a>Usuarios</a>
@@ -91,7 +93,7 @@
 
                                         <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $usuario['id'] ?>">
 
-                                        <button type="submit" class="btn btn-success" name="BtnDeleteUsuario">
+                                        <button type="submit" class="btn btn-success" name="BtnDeleteUsuario"  onclick="return confirm('Estas seguro que deseas eliminar?');">
                                             Eliminar    
                                         </button>
 

@@ -89,7 +89,7 @@ $contador = 0;
 
 
                                 <form action="../php_controllers/recomercemController.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success" name="deleteOferta" id="boton"  onclick=" return confirmDelete()">Eliminar</button></td>
+                                    <td><button type="submit" class="btn btn-success" name="BtnDeleteOferta" id="boton" onclick="return confirm('Estas seguro que deseas eliminar?');">Eliminar</button></td>
                                     <input type="hidden" id="id" name="id" value="<?php echo $oferta['id'] ?>">
                                 </form>
                             </tr>

@@ -43,6 +43,7 @@
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
+                        <a class="dropdown-item" href="../index.php">Desconectar</a>
                     </div>
                 </li>
             </ul>
@@ -51,6 +52,7 @@
 
 
     <div class="container">
+    <?php require_once('../php_partials/mensajes.php') ?>
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
                 <a>Usuario</a>
@@ -176,7 +178,7 @@
 
 
                     <!-- BOTON CANCELAR -->
-                    <button type="button" class="btn btn-dark" style="float: right;">
+                    <button type="button" class="btn btn-dark" style="float: right;" name="cancelarUsuario">
                         <a href="../php_views/usuarios.php" style="color: white;">Cancelar</a>
                     </button>
 

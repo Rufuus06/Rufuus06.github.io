@@ -38,6 +38,7 @@ if (isset($_POST['id'])) {
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
+                        <a class="dropdown-item" href="../index.php">Desconectar</a>
                     </div>
                 </li>
             </ul>
