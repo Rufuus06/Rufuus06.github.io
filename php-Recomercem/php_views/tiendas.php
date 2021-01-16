@@ -65,16 +65,43 @@
                             <tr class="table-active">
                                 <th scope="row"><?php echo $tienda['id'] ?></th>
                                 <td><?php echo $tienda['nombre'] ?></td>
-                                <td><?php echo $tienda['localizacion'] ?></td>
-                                <td><button type="submit" class="btn btn-success">Modificar</button></td>
-                                <td><button type="submit" class="btn btn-success" name="deleteTienda">Eliminar</button></td>
+                                <td><?php echo $tienda['Localizacion'] ?></td>
+                                <!-- <td><button type="submit" class="btn btn-success">Modificar</button></td> -->
+                                <!-- <td><button type="submit" class="btn btn-success" name="deleteTienda">Eliminar</button></td> -->
+
+                                <!-- BOTON MODIFICAR -->
+                                <td>
+                                    <form action="../php_views/update_tienda.php" method="POST">
+
+                                        <input type="hidden" id="id_tienda" name="id_tienda" value="<?php echo $tienda['id'] ?>">
+
+                                        <button type="submit" class="btn btn-success" name="BtnUpdateTienda">
+                                            Modificar
+                                        </button>
+                                    
+                                    </form>
+                                </td>
+
+                                <!-- BOTON ELIMINAR -->
+                                <td>
+                                    <form action="../php_controllers/recomercemController.php" method="POST">
+
+                                        <input type="hidden" id="id_tienda" name="id_tienda" value="<?php echo $tienda['id'] ?>">
+
+                                        <button type="submit" class="btn btn-success" name="BtnDeleteTienda">
+                                            Eliminar
+                                        </button>
+                                    
+                                    </form>
+                                </td>
+
                             </tr>
                         <?php } ?>
                     </tbody>
 
                 </table>
                 
-                <form action="crear_tienda.php">
+                <form action="../php_views/update_tienda.php">
                     <button type="submit" class="btn btn-success">Crear Tienda</button>
                 </form>
             </div>

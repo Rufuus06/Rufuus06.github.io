@@ -20,8 +20,9 @@
 
     if (isset($_POST['insertTienda']))
     {
-        insertTienda($_POST['txtNombre'],
-                     $_POST['txtLocalizacion']);
+        insertTienda(  $_POST['txtNombre'],
+                       $_POST['txtLocalizacion']
+                    );
 
         header('Location: ../php_views/tiendas.php');
         exit();
@@ -60,28 +61,6 @@
         exit();
     }
 
-    if (isset($_POST['deleteUsuario'])) {
-        deleteUsuario($_POST['id']);
-
-        header('Location: ../php_views/usuarios.php');
-        exit();
-    }
-
-    if (isset($_POST['deleteTienda'])) {
-        deleteTienda($_POST['id']);
-
-        header('Location: ../php_views/tiendas.php');
-        exit();
-    }
-
-    if (isset($_POST['deleteOferta'])) {
-        selectOferta($_POST['id']);
-        deleteOferta($_POST['id']);
-
-        header('Location: ../php_views/ofertas.php');
-        exit();
-    }
-
     if (isset($_POST['updateOfertas']))
     {
         updateOferta($_POST['txtombre'],
@@ -95,11 +74,20 @@
 
     if (isset($_POST['updateTienda']))
     {
-        updateTienda($_POST['txtNombre'],
-                     $_POST['txtLocalizacion']);
+        updateTienda(  $_POST['txtNombre'],
+                       $_POST['txtLocalizacion']
+                    );
 
-        header('Location: ../php_views/tiendas.php');
-        exit();
+        if ( isset( $_SESSION['error'] ) )
+        {
+            header('Location: ../php_views/tiendas.php');
+            exit();
+        }
+        else
+        {
+            header('Location: ../php_views/update_tienda.php');
+            exit();
+        }
     }
 
     if (isset($_POST['updateUsuario']))
@@ -130,6 +118,14 @@
         deleteUsuario ( $_POST['id_usuario'] ); 
 
         header('Location: ../php_views/usuarios.php');
+        exit();
+    }
+
+    if ( isset( $_POST['BtnDeleteTienda'] ))
+    {
+        deleteTienda ( $_POST['id_tienda'] ); 
+
+        header('Location: ../php_views/tiendas.php');
         exit();
     }
 ?>

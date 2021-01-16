@@ -72,9 +72,9 @@
                                 <td><?php echo $usuario['admin'] ?></td>
                                 <td><?php echo $usuario['puntuacion'] ?></td>
 
-                                <!-- BOTON ACEPTAR -->
+                                <!-- BOTON MODIFICAR -->
                                 <td>                                    
-                                    <form action="../php_views/update_usuario.php" method="post">           
+                                    <form action="../php_views/update_usuario.php" method="POST">           
 
                                         <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $usuario['id'] ?>">
 
