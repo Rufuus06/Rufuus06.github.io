@@ -1,3 +1,14 @@
+<?php
+require_once('../php_libraries/bd.php');
+
+if (isset($_POST['id'])) {
+    $id = $_POST['id'];
+    $oferta = selectOferta($id);
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,12 +21,12 @@
 
 <body style="background-color: #FBF7F6;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="d-flex w-10 order-0" style="margin-right: 25px;">
+        <div class="d-flex w-10 order-0" style="margin-right: 25px;">
             <a class="navbar-brand mr-1 color-nav" href="">
                 <!-- <h2>LANDING PAGE</h2> -->
                 <img src="../media/logo.png" alt="" style="width: 200px; height: 60px;">
             </a>
-        </div>        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        </div> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -33,44 +44,75 @@
         </div>
     </nav>
     <div class="container">
+    <?php require_once('../php_partials/mensajes.php') ?>
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
                 <a>Oferta</a>
             </div>
             <div class="card-body">
+
                 <form action="../php_controllers/recomercemController.php" method="POST" id="usdform">
                     <div class="form-group row">
                         <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
                         <div class="col-sm-10">
-                            <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" required>
+                            <?php if (isset($_POST['id'])) { ?>
+                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $oferta[0]['name'] ?>"></input>
+                            <?php } else { ?>
+                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre"></input>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtDescripcion" class="col-sm-2 col-form-label">Descripción</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción" required ></textarea>
+                            <?php if (isset($_POST['id'])) { ?>
+                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción"><?php echo $oferta[0]['descripcion'] ?></textarea>
+                            <?php } else { ?>
+                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción"></textarea>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="txtPuntuacion" class="col-sm-2 col-form-label">Puntuación</label>
                         <div class="col-sm-10">
-                            <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100" required>
+                            <?php if (isset($_POST['id'])) { ?>
+                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100" value="<?php echo $oferta[0]['puntuacion_min'] ?>">
+                            <?php } else { ?>
+                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100">
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="imagen" class="col-sm-2 col-form-label">Imagen</label>
                         <div class="col-sm-10">
-                            <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen" required>
+                            <div class="custom-file">
+                            <?php if (isset($_POST['id'])) { ?>
+                                <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen" value="<?php echo $oferta[0]['imagen'] ?>">
+                                <label class=" custom-file-label" name="imagen" id="imagen" for="imagen"><?php echo $oferta[0]['imagen'] ?></label>
+                                <?php } else { ?>
+                                    <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen" >
+                                <label class=" custom-file-label" name="imagen" id="imagen" for="imagen"></label>
+                                    <?php } ?>
+                                
+                            </div>
                         </div>
                     </div>
                     <div class="form-group row" style="margin-right: 0px; float:right">
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateOfertas">Crear usuario</button>
-                        <form action="./ofertas.php">
-                            <button type="submit" class="btn btn-dark">Cancelar</button>
-                        </form>
+                        <?php if (isset($id)) { ?>
+                            <input type="hidden" id="id" name="id" value="<?php echo $id ?>">
+
+                            <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateOfertas">Modificar oferta</button>
+                        <?php } else { ?>
+
+                            <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertOfertas">Crear oferta</button>
+                        <?php } ?>
+
+                        <button type="submit" class="btn btn-dark" name="cancelarOferta">Cancelar</button>
+
 
                     </div>
                 </form>
+
             </div>
         </div>
     </div>

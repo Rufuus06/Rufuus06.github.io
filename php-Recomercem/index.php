@@ -22,7 +22,7 @@
     </nav>
     
     <div class="container">
-    <?php require_once('php_partials/mensajes.php') ?>
+    <?php require_once('./php_partials/mensajes.php') ?>
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
                 <a>Login</a>

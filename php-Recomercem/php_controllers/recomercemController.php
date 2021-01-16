@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     require_once('../php_libraries/bd.php');
 
     if ( isset( $_POST['Login'] ))
@@ -13,7 +15,7 @@
             header('Location: ../php_views/usuarios.php');
             exit();
         }
-        else {
+        elseif (isset($_SESSION['mensaje'])){
             header('Location: ../index.php');
         }
     }
@@ -56,7 +58,14 @@
                      $_POST['txtDescripcion'],
                      $_POST['txtPuntuacion']);
 
-        header('Location: ../php_views/ofertas.php');
+        if (isset($_SESSION['error'])) {
+            header('Location: ../php_views/update_oferta.php');
+        }
+        else {
+            header('Location: ../php_views/ofertas.php');
+        }
+
+        
         exit();
     }
 
@@ -84,10 +93,11 @@
 
     if (isset($_POST['updateOfertas']))
     {
-        updateOferta($_POST['txtombre'],
+        updateOferta($_POST['txtNombre'],
                      $_POST['imagen'],
                      $_POST['txtDescripcion'],
-                     $_POST['txtPuntuacion']);
+                     $_POST['txtPuntuacion'],
+                    $_POST['id']);
 
         header('Location: ../php_views/ofertas.php');
         exit();

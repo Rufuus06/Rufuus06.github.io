@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 function openBd()
 {
     $servername = "localhost";
@@ -178,17 +180,27 @@ function insertTienda($nombre, $localizacion)
 
 function insertOferta($name, $imagen, $descripcion, $puntuacion_min)
 {
-    $conexion = openBd();
+    try {
+        $conexion = openBd();
 
-    $sentenciaInsert = "insert into oferta (name, imagen, descripcion, puntuacion_min)
+        $sentenciaInsert = "insert into oferta (name, imagen, descripcion, puntuacion_min)
      values (:name, :imagen, :descripcion, :puntuacion_min)";
-    $sentencia = $conexion->prepare($sentenciaInsert);
-    $sentencia->bindParam(':name', $name);
-    $sentencia->bindParam(':imagen', $imagen);
-    $sentencia->bindParam(':descripcion', $descripcion);
-    $sentencia->bindParam(':puntuacion_min', $puntuacion_min);
-    $sentencia->execute();
+        $sentencia = $conexion->prepare($sentenciaInsert);
+        $sentencia->bindParam(':name', $name);
+        $sentencia->bindParam(':imagen', $imagen);
+        $sentencia->bindParam(':descripcion', $descripcion);
+        $sentencia->bindParam(':puntuacion_min', $puntuacion_min);
+        $sentencia->execute();
 
+        $_SESSION['mensaje'] = "Registro insertado correctamente";
+    } catch (PDOException $e) {
+        $_SESSION['error'] = errorMessage($e);
+        $oferta['name'] = $name;
+        $oferta['imagen'] = $imagen;
+        $oferta['descripcion'] = $descripcion;
+        $oferta['puntuacion_min'] = $puntuacion_min;
+        $_SESSION['oferta'] = $oferta;
+    }
     $conexion = closeBd();
 }
 
@@ -259,14 +271,15 @@ function updateTienda($nombre, $localizacion)
     $conexion = closeBd();
 }
 
-function updateOferta($name, $imagen, $descripcion, $puntuacion_min)
+function updateOferta($name, $imagen, $descripcion, $puntuacion_min, $id)
 {
     $conexion = openBd();
 
-    $sentenciaInsert = "update oferta set name = $name,
-                                            imagen = $imagen,
-                                             descripcion = $descripcion, 
-                                             puntuacion_min = $puntuacion_min";
+    $sentenciaInsert = "update oferta set name = '$name',
+                                            imagen = '$imagen',
+                                             descripcion = '$descripcion', 
+                                             puntuacion_min = '$puntuacion_min'
+                                             where id = '$id'";
     $sentencia = $conexion->prepare($sentenciaInsert);
     $sentencia->execute();
 
@@ -276,7 +289,7 @@ function updateOferta($name, $imagen, $descripcion, $puntuacion_min)
 function errorMessage($e)
 {
     if (!empty($e->errorInfo[1])) {
-        switch ($e->erroeInfo[1]) {
+        switch ($e->errorInfo[1]) {
             case 1062:
                 $mensaje = 'Registro duplicado';
                 break;
@@ -284,7 +297,7 @@ function errorMessage($e)
                 $mensaje = 'Registro con elementos relacionados';
                 break;
             default:
-                $mensaje = $e->erroeInfo[1] . ' - ' . $e->erroeInfo[2];
+                $mensaje = $e->errorInfo[1] . ' - ' . $e->errorInfo[2];
                 break;
         }
     } else {

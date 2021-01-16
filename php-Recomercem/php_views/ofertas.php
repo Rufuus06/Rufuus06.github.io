@@ -17,6 +17,17 @@ $contador = 0;
 </head>
 
 <body style="background-color: #FBF7F6;">
+    <script type="text/javascript">
+        function confirmDelete() {
+            var respuesta = confirm("Estas seguro que deseas eliminar la oferta?");
+            
+            if (respuesta == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="d-flex w-10 order-0" style="margin-right: 25px;">
             <a class="navbar-brand mr-1 color-nav" href="">
@@ -36,12 +47,14 @@ $contador = 0;
                         <a class="dropdown-item" href="usuarios.php">Usuarios</a>
                         <a class="dropdown-item" href="tiendas.php">Tiendas</a>
                         <a class="dropdown-item" href="ofertas.php">Ofertas</a>
+                        <a class="dropdown-item" href="../index.php">Desconectar</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container">
+    <?php require_once('../php_partials/mensajes.php') ?>
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
                 <a>Ofertas</a>
@@ -62,22 +75,28 @@ $contador = 0;
                     <tbody>
                         <?php foreach ($ofertas as $oferta) { ?>
                             <tr class="table-active">
+
                                 <th scope="row"><?php echo $oferta['id'] ?></th>
                                 <td><?php echo $oferta['name'] ?></td>
-                                <td><?php echo $oferta['imagen'] ?></td>
                                 <td><?php echo $oferta['descripcion'] ?></td>
                                 <td><?php echo $oferta['puntuacion_min'] ?></td>
-                                <form action="update_oferta.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success">Modificar</button></td>
+                                <td><?php echo $oferta['imagen'] ?></td>
+
+                                <form action="./update_oferta.php" method="POST">
+                                    <td><button type="submit" class="btn btn-success" name="pasarOferta">Modificar</button></td>
+                                    <input type="hidden" id="id" name="id" value="<?php echo $oferta['id'] ?>">
                                 </form>
+
+
                                 <form action="../php_controllers/recomercemController.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success" name="deleteOferta" id="boton" >Eliminar</button></td>
+                                    <td><button type="submit" class="btn btn-success" name="deleteOferta" id="boton"  onclick=" return confirmDelete()">Eliminar</button></td>
+                                    <input type="hidden" id="id" name="id" value="<?php echo $oferta['id'] ?>">
                                 </form>
                             </tr>
                         <?php } ?>
                     </tbody>
                 </table>
-                <form action="crear_oferta.php">
+                <form action="./update_oferta.php" method="POST">
                     <button type="submit" class="btn btn-success">Crear Oferta</button>
                 </form>
             </div>
