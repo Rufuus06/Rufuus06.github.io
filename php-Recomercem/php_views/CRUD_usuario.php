@@ -68,12 +68,12 @@
                             <?php if ( $isUpdate ) { ?>
                                     
                                 <!-- EDITAR NICKNAME USUARIO -->
-                                <input type="text" name="txtNickname" id="txtNickname" class="form-control" placeholder="Nickname" value="<?php echo $usuario[0]['nickname'] ?>">
+                                <input type="text" name="txtNickname" id="txtNickname" class="form-control" placeholder="Nickname" value="<?php echo $usuario[0]['nickname'] ?>" required >
 
                             <?php } else { ?>
 
                                 <!-- CREAR NICKNAME USUARIO -->
-                                <input type="text" name="txtNickname" id="txtNickname" class="form-control" placeholder="Nickname" autofocus>
+                                <input type="text" name="txtNickname" id="txtNickname" class="form-control" placeholder="Nickname" autofocus required>
 
                             <?php } ?>  
                             
@@ -89,12 +89,12 @@
                             <?php if ( $isUpdate ) { ?>
                                 
                                 <!-- EDITAR EMAIL USUARIO -->
-                                <input type="text" name="txtEmail" id="txtEmail" class="form-control" placeholder="Email" value="<?php echo $usuario[0]['email'] ?>">
+                                <input type="text" name="txtEmail" id="txtEmail" class="form-control" placeholder="Email" value="<?php echo $usuario[0]['email'] ?>" required>
 
                             <?php } else { ?>
 
                                 <!-- CREAR EMAIL USUARIO -->
-                                <input type="text" name="txtEmail" id="txtEmail" class="form-control" placeholder="Email">
+                                <input type="text" name="txtEmail" id="txtEmail" class="form-control" placeholder="Email" required>
 
                             <?php } ?> 
 
@@ -110,12 +110,12 @@
                             <?php if ( $isUpdate ) { ?>
                                 
                                 <!-- EDITAR CONTRASEÑA USUARIO -->
-                                <input type="password" name="txtContrasenya" id="txtContrasenya" class="form-control" placeholder="Contraseña" value="<?php echo $usuario[0]['passw'] ?>">
+                                <input type="password" name="txtContrasenya" id="txtContrasenya" class="form-control" placeholder="Contraseña" value="<?php echo $usuario[0]['passw'] ?>" required>
 
                             <?php } else { ?>
 
                                 <!-- CREAR CONTRASEÑA USUARIO -->
-                                <input type="password" name="txtContrasenya" id="txtContrasenya" class="form-control" placeholder="Contraseña">
+                                <input type="password" name="txtContrasenya" id="txtContrasenya" class="form-control" placeholder="Contraseña" required>
 
                             <?php } ?> 
 
@@ -131,12 +131,12 @@
                             <?php if ( $isUpdate ) { ?>
                                 
                                 <!-- EDITAR PUNTUACION USUARIO -->
-                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" class="form-control" placeholder="Puntuación" value="<?php echo $usuario[0]['puntuacion'] ?>">
+                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" class="form-control" placeholder="Puntuación" value="<?php echo $usuario[0]['puntuacion'] ?>" required>
 
                             <?php } else { ?>
 
                                 <!-- CREAR PUNTUACION USUARIO -->
-                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" class="form-control" placeholder="Puntuación">
+                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" class="form-control" placeholder="Puntuación" required>
 
                             <?php } ?> 
 

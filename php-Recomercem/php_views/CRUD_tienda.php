@@ -68,12 +68,12 @@
                             <?php if ( $isUpdate ) { ?>
 
                                 <!-- CREAR NOMBRE TIENDA -->
-                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $tienda[0]['nombre'] ?>">
+                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $tienda[0]['nombre'] ?>" required>
 
                             <?php } else { ?>
 
                                 <!-- CREAR NOMBRE TIENDA -->
-                                <input type="text" name="txtNombre" id="txtNombre" class="form-control" placeholder="Nombre" autofocus>
+                                <input type="text" name="txtNombre" id="txtNombre" class="form-control" placeholder="Nombre" autofocus required>
 
                             <?php } ?>
 
@@ -88,12 +88,12 @@
                             <?php if ( $isUpdate ) { ?>
 
                                 <!-- CREAR LOCALIZACION TIENDA -->
-                                <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización" value="<?php echo $tienda[0]['Localizacion'] ?>">
+                                <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización" value="<?php echo $tienda[0]['Localizacion'] ?>" required>
 
                             <?php } else { ?>
 
                                 <!-- CREAR LOCALIZACION TIENDA -->
-                                <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización">
+                                <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización" required>
 
                             <?php } ?>                        
                         

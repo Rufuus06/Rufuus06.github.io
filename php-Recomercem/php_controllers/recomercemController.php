@@ -28,7 +28,7 @@ if (isset($_POST['insertTienda'])) {
     );
 
     if (isset($_SESSION['error'])) {
-        header('Location: ../php_views/update_tienda.php');
+        header('Location: ../php_views/CRUD_tienda.php');
     } else {
         header('Location: ../php_views/tiendas.php');
     }
@@ -50,8 +50,12 @@ if (isset($_POST['insertUsuario'])) {
         $admin
     );
 
-    header('Location: ../php_views/usuarios.php');
-    exit();
+    if (isset($_SESSION['error'])) {
+        header('Location: ../php_views/CRUD_usuario.php');
+        exit();
+    } else {
+        header('Location: ../php_views/usuarios.php');
+    }
 }
 
 if (isset($_POST['insertOfertas'])) {
@@ -63,13 +67,11 @@ if (isset($_POST['insertOfertas'])) {
     );
 
     if (isset($_SESSION['error'])) {
-        header('Location: ../php_views/update_oferta.php');
+        header('Location: ../php_views/CRUD_oferta.php');
     } else {
         header('Location: ../php_views/ofertas.php');
+        exit();
     }
-
-
-    exit();
 }
 
 if (isset($_POST['updateOfertas'])) {
@@ -81,8 +83,13 @@ if (isset($_POST['updateOfertas'])) {
         $_POST['id']
     );
 
-    header('Location: ../php_views/ofertas.php');
-    exit();
+    if (isset($_SESSION['error'])) {
+        header('Location: ../php_views/CRUD_oferta.php');
+        exit();
+    } else {
+        header('Location: ../php_views/ofertas.php');
+        exit();
+    }
 }
 
 if (isset($_POST['updateTienda'])) {
@@ -93,7 +100,7 @@ if (isset($_POST['updateTienda'])) {
     );
 
     if (isset($_SESSION['error'])) {
-        header('Location: ../php_views/update_tienda.php');
+        header('Location: ../php_views/CRUD_tienda.php');
         exit();
     } else {
         header('Location: ../php_views/tiendas.php');
@@ -117,8 +124,14 @@ if (isset($_POST['updateUsuario'])) {
         $admin
     );
 
-    header('Location: ../php_views/usuarios.php');
-    exit();
+    if (isset($_SESSION['error'])) {
+        header('Location: ../php_views/CRUD_usuario.php');
+        exit();
+    } else 
+    {
+        header('Location: ../php_views/usuarios.php');
+        exit();
+    }
 }
 
 if (isset($_POST['BtnDeleteUsuario'])) {
@@ -129,9 +142,6 @@ if (isset($_POST['BtnDeleteUsuario'])) {
 }
 
 if (isset($_POST['BtnDeleteOferta'])) {
-
-    
-
     deleteOferta($_POST['id']);
 
     header('Location: ../php_views/ofertas.php');

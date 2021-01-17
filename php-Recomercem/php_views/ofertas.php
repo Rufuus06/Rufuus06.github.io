@@ -82,7 +82,7 @@ $contador = 0;
                                 <td><?php echo $oferta['puntuacion_min'] ?></td>
                                 <td><?php echo $oferta['imagen'] ?></td>
 
-                                <form action="./update_oferta.php" method="POST">
+                                <form action="./CRUD_oferta.php" method="POST">
                                     <td><button type="submit" class="btn btn-success" name="pasarOferta">Modificar</button></td>
                                     <input type="hidden" id="id" name="id" value="<?php echo $oferta['id'] ?>">
                                 </form>
@@ -96,7 +96,7 @@ $contador = 0;
                         <?php } ?>
                     </tbody>
                 </table>
-                <form action="./update_oferta.php" method="POST">
+                <form action="./CRUD_oferta.php" method="POST">
                     <button type="submit" class="btn btn-success">Crear Oferta</button>
                 </form>
             </div>

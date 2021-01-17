@@ -73,7 +73,7 @@
 
                                 <!-- BOTON MODIFICAR -->
                                 <td>
-                                    <form action="../php_views/update_tienda.php" method="POST">
+                                    <form action="../php_views/CRUD_tienda.php" method="POST">
 
                                         <input type="hidden" id="id_tienda" name="id_tienda" value="<?php echo $tienda['id'] ?>">
 
@@ -103,7 +103,7 @@
 
                 </table>
                 
-                <form action="../php_views/update_tienda.php">
+                <form action="../php_views/CRUD_tienda.php">
                     <button type="submit" class="btn btn-success">Crear Tienda</button>
                 </form>
             </div>

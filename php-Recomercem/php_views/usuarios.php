@@ -76,7 +76,7 @@
 
                                 <!-- BOTON MODIFICAR -->
                                 <td>                                    
-                                    <form action="../php_views/update_usuario.php" method="POST">           
+                                    <form action="../php_views/CRUD_usuario.php" method="POST">           
 
                                         <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $usuario['id'] ?>">
 
@@ -104,7 +104,7 @@
 
                     </tbody>
                 </table>
-                <form action="../php_views/update_usuario.php">
+                <form action="../php_views/CRUD_usuario.php">
                     <button type="submit" class="btn btn-success">Crear Usuario</button>
                 </form>
 

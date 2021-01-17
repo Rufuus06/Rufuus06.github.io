@@ -53,36 +53,44 @@ if (isset($_POST['id'])) {
             <div class="card-body">
 
                 <form action="../php_controllers/recomercemController.php" method="POST" id="usdform">
+
+                    <!-- NOMBRE -->
                     <div class="form-group row">
                         <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
                         <div class="col-sm-10">
                             <?php if (isset($_POST['id'])) { ?>
-                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $oferta[0]['name'] ?>"></input>
+                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $oferta[0]['name'] ?>" required>
                             <?php } else { ?>
-                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre"></input>
+                                <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" required>
                             <?php } ?>
                         </div>
                     </div>
+
+                    <!-- DESCRIPCION -->
                     <div class="form-group row">
                         <label for="txtDescripcion" class="col-sm-2 col-form-label">Descripción</label>
                         <div class="col-sm-10">
                             <?php if (isset($_POST['id'])) { ?>
-                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción"><?php echo $oferta[0]['descripcion'] ?></textarea>
+                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción" required ><?php echo $oferta[0]['descripcion'] ?></textarea>
                             <?php } else { ?>
-                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción"></textarea>
+                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción" required ></textarea>
                             <?php } ?>
                         </div>
                     </div>
+
+                    <!-- PUNTUACION -->
                     <div class="form-group row">
                         <label for="txtPuntuacion" class="col-sm-2 col-form-label">Puntuación</label>
                         <div class="col-sm-10">
                             <?php if (isset($_POST['id'])) { ?>
-                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100" value="<?php echo $oferta[0]['puntuacion_min'] ?>">
+                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100" value="<?php echo $oferta[0]['puntuacion_min'] ?>" required>
                             <?php } else { ?>
-                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100">
+                                <input type="text" name="txtPuntuacion" id="txtPuntuacion" autofocus class="form-control" placeholder="100" required>
                             <?php } ?>
                         </div>
                     </div>
+
+                    <!-- IMAGEN -->
                     <div class="form-group row">
                         <label for="imagen" class="col-sm-2 col-form-label">Imagen</label>
                         <div class="col-sm-10">
@@ -98,6 +106,8 @@ if (isset($_POST['id'])) {
                             </div>
                         </div>
                     </div>
+
+                    <!-- BOTONES -->
                     <div class="form-group row" style="margin-right: 0px; float:right">
                         <?php if (isset($id)) { ?>
                             <input type="hidden" id="id" name="id" value="<?php echo $id ?>">
