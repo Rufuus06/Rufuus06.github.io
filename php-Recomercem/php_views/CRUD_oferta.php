@@ -107,20 +107,23 @@ if (isset($_POST['id'])) {
                         </div>
                     </div>
 
+                    <!-- BOTON CANCELAR -->
+                    <button type="button" class="btn btn-dark" style="float: right;" name="cancelarOferta">
+                            <a href="../php_views/usuarios.php" style="color: white;">Cancelar</a>
+                    </button>
+
                     <!-- BOTONES -->
                     <div class="form-group row" style="margin-right: 0px; float:right">
                         <?php if (isset($id)) { ?>
                             <input type="hidden" id="id" name="id" value="<?php echo $id ?>">
 
-                            <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateOfertas">Modificar oferta</button>
+                            <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateOfertas">Modificar Oferta</button>
                         <?php } else { ?>
 
-                            <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertOfertas">Crear oferta</button>
+                            <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertOfertas">Crear Oferta</button>
                         <?php } ?>
 
-                        <button type="submit" class="btn btn-dark" name="cancelarOferta">Cancelar</button>
-
-
+                        <!-- <button type="submit" class="btn btn-dark" name="cancelarOferta">Cancelar</button> -->
                     </div>
                 </form>
 

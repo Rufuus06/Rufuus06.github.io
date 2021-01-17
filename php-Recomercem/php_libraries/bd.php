@@ -8,7 +8,7 @@ function openBd()
 {
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "mysql";
 
     $conexion = new PDO("mysql:host=$servername;dbname=recomerçem", $username, $password);
     // set the PDO error mode to exception
@@ -202,7 +202,7 @@ function insertOferta($name, $imagen, $descripcion, $puntuacion_min)
         $conexion = openBd();
 
         $sentenciaInsert = "insert into oferta (name, imagen, descripcion, puntuacion_min)
-     values (:name, :imagen, :descripcion, :puntuacion_min)";
+        values (:name, :imagen, :descripcion, :puntuacion_min)";
         $sentencia = $conexion->prepare($sentenciaInsert);
         $sentencia->bindParam(':name', $name);
         $sentencia->bindParam(':imagen', $imagen);

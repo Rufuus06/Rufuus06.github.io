@@ -190,7 +190,7 @@
                         <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $usuario[0]['id'] ?>">
 
                         <button type="submit" class="btn btn-success" style="margin-right: 10px; float: right;" name="updateUsuario">
-                            Aceptar
+                            Modificar Usuario
                         </button>
 
                     <?php } else { ?>

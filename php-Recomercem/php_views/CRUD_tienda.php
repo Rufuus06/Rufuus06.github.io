@@ -112,14 +112,14 @@
                         <input type="hidden" id="id_tienda" name="id_tienda" value="<?php echo $tienda[0]['id'] ?>">
 
                         <button type="submit" class="btn btn-success" style="margin-right: 10px; float: right;" name="updateTienda">
-                            Aceptar
+                            Modificar Tienda
                         </button>
 
                     <?php } else { ?>
 
                         <!-- CREATE BUTTON -->
                         <button type="submit" class="btn btn-success" style="margin-right: 10px; float: right;" name="insertTienda">
-                            Aceptar
+                            Crear Tienda
                         </button>
 
                     <?php } ?>
