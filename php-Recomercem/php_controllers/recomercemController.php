@@ -9,7 +9,8 @@ require_once('../php_libraries/bd.php');
 if (isset($_POST['Login'])) {
     $validate = checkLogin(
         $_POST['txtEmail'],
-        $_POST['txtContraseña']
+        $_POST['txtContraseña'],
+        $_POST['admin']
     );
 
     if ($validate) {

@@ -23,12 +23,12 @@ function closeBd()
     return null;
 }
 
-function checkLogin($email, $password)
+function checkLogin($email, $password, $admin)
 {
     try {
         $conexion = openBd();
 
-        $sentenciaSelect = "select * from usuario where email = '$email' and passw = '$password'";
+        $sentenciaSelect = "select * from usuario where email = '$email' and passw = '$password' and admin = '$admin'";
 
         $sentencia = $conexion->prepare($sentenciaSelect);
         $sentencia->execute();
