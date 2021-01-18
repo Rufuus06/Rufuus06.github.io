@@ -29,8 +29,6 @@ function checkLogin($email, $password, $admin)
         $conexion = openBd();
 
         $sentenciaSelect = "select * from usuario where email = '$email' and passw = '$password' and admin = '$admin'";
-
-        $sentencia = $conexion->prepare($sentenciaSelect);
         $sentencia->execute();
 
         $resultado = $sentencia->fetchAll();
@@ -67,12 +65,49 @@ function selectAllUsuaris()
     return $resultado;
 }
 
+function selectAllCategorias()
+{
+    $conexion = openBd();
+
+    $sentenciaSelect = "select * from categoria";
+
+    $sentencia = $conexion->prepare($sentenciaSelect);
+    $sentencia->execute();
+
+    $resultado = $sentencia->fetchAll();
+
+    $conexion = closeBd();
+
+    return $resultado;
+}
+
+function selectCategoria( $id )
+{
+    try {
+        $conexion = openBd();
+
+        $sentenciaSelect = "select * from categoria                
+        where id = '$id'";
+
+        $sentencia = $conexion->prepare($sentenciaSelect);
+        $sentencia->execute();
+
+        $resultado = $sentencia->fetchAll();
+    } catch (PDOException $e) {
+        $_SESSION['error'] = errorMessage($e);
+    }
+
+    $conexion = closeBd();
+    return $resultado;
+}
+
 function selectAllTiendas()
 {
     try {
         $conexion = openBd();
 
-        $sentenciaSelect = "select * from tienda";
+        $sentenciaSelect = "select t.*, c.nombre as categoria_nombre from tienda t 
+        join categoria c on c.id = t.id_categoria";
 
         $sentencia = $conexion->prepare($sentenciaSelect);
         $sentencia->execute();
@@ -109,7 +144,9 @@ function selectTienda($id)
     try {
         $conexion = openBd();
 
-        $sentenciaSelect = "select * from tienda where id = '$id'";
+        $sentenciaSelect = "select t.*, c.nombre as categoria_nombre from tienda t 
+        join categoria c on c.id = t.id_categoria                    
+        where t.id = '$id'";
 
         $sentencia = $conexion->prepare($sentenciaSelect);
         $sentencia->execute();
@@ -156,6 +193,23 @@ function selectUsuari($id)
 }
 
 
+function select_ID_categoria($nombre)
+{
+    $conexion = openBd();
+
+    $sentenciaSelect = "select id from categoria where nombre = '$nombre'";
+
+    $sentencia = $conexion->prepare($sentenciaSelect);
+    $sentencia->execute();
+
+    $resultado = $sentencia->fetchAll();
+
+    $conexion = closeBd();
+
+    return $resultado;
+}
+
+
 function insertUsuari($nickname, $email, $passw, $puntuacion, $admin)
 {
     try {
@@ -176,27 +230,39 @@ function insertUsuari($nickname, $email, $passw, $puntuacion, $admin)
         $_SESSION['mensaje'] = "Registro insertado correctamente";
     } catch (PDOException $e) {
         $_SESSION['error'] = errorMessage($e);
+        $usuario['nickname'] = $nickname;
+        $usuario['email'] = $email;
+        $usuario['passw'] = $passw;
+        $usuario['puntuacion'] = $puntuacion;
+        $usuario['admin'] = $admin;
     }
     $conexion = closeBd();
 }
 
-function insertTienda($nombre, $localizacion)
+function insertTienda($nombre, $localizacion, $categoria)
 {
     try {
         $conexion = openBd();
 
-        $sentenciaInsert = "insert into tienda (nombre, Localizacion)
-     values (:nombre, :localizacion)";
+        $id_categoria_arr = select_ID_categoria( $categoria );
+        $id_categoria = $id_categoria_arr[0]['id'];
+
+        $sentenciaInsert = "insert into tienda (nombre, Localizacion, id_categoria)
+     values (:nombre, :localizacion, :id_categoria)";
 
         $sentencia = $conexion->prepare($sentenciaInsert);
 
         $sentencia->bindParam(':nombre', $nombre);
         $sentencia->bindParam(':localizacion', $localizacion);
+        $sentencia->bindParam(':id_categoria', $id_categoria);
 
         $sentencia->execute();
         $_SESSION['mensaje'] = "Registro insertado correctamente";
     } catch (PDOException $e) {
         $_SESSION['error'] = errorMessage($e);
+        $tienda['nombre'] = $nombre;
+        $tienda['localizacion'] = $localizacion;
+        $tienda['categoria'] = $categoria;
     }
 
     $conexion = closeBd();
@@ -227,6 +293,30 @@ function insertOferta($name, $imagen, $descripcion, $puntuacion_min)
     }
     $conexion = closeBd();
 }
+
+function insertCategoria( $nombre )
+{
+    try
+    {
+        $conexion = openBd();
+
+        $sentenciaInsert = "insert into categoria ( nombre )
+        values ( :nombre )";
+        $sentencia = $conexion->prepare($sentenciaInsert);
+        $sentencia->bindParam(':nombre', $nombre);
+        $sentencia->execute();
+
+        $_SESSION['mensaje'] = "Registro insertado correctamente";
+
+    } catch (PDOException $e) {
+        $_SESSION['error'] = errorMessage($e);
+        $categoria['nombre'] = $nombre;
+    }
+    
+    $conexion = closeBd();    
+}
+
+
 
 function deleteUsuario($id)
 {
@@ -276,6 +366,21 @@ function deleteOferta($id)
         $_SESSION['error'] = errorMessage($e);
     }
 
+    $conexion = closeBd();
+}
+
+function deleteCategoria( $id )
+{
+    try {
+        $conexion = openBd();
+
+        $sentenciaDelete = "delete from categoria where id = '$id'";
+        $sentencia = $conexion->prepare($sentenciaDelete);
+        $sentencia->execute();
+        $_SESSION['mensaje'] = "Eliminado correctamente";
+    } catch (PDOException $e) {
+        $_SESSION['error'] = errorMessage($e);
+    }
 
     $conexion = closeBd();
 }
@@ -306,14 +411,18 @@ function updateUsuari($id, $nickname, $email, $passw, $puntuacion, $admin)
     $conexion = closeBd();
 }
 
-function updateTienda($nombre, $localizacion, $id)
+function updateTienda($nombre, $localizacion, $categoria, $id)
 {
     try {
         $conexion = openBd();
 
+        $id_categoria_arr = select_ID_categoria( $categoria );
+        $id_categoria = $id_categoria_arr[0]['id'];
+
         $sentenciaInsert = "
             update tienda set nombre = '$nombre',
-            Localizacion = '$localizacion'
+            Localizacion = '$localizacion',
+            id_categoria = '$id_categoria'
             where id = '$id'
             ";
 
@@ -333,7 +442,7 @@ function updateOferta($name, $imagen, $descripcion, $puntuacion_min, $id)
         $conexion = openBd();
 
         $sentenciaInsert = "update oferta set name = '$name',
-                                            imagen = '$imagen',
+                                             imagen = '$imagen',
                                              descripcion = '$descripcion', 
                                              puntuacion_min = '$puntuacion_min'
                                              where id = '$id'";
@@ -346,6 +455,25 @@ function updateOferta($name, $imagen, $descripcion, $puntuacion_min, $id)
         $_SESSION['error'] = errorMessage($e);
     }
 
+    $conexion = closeBd();
+}
+
+function updateCategoria( $nombre, $id )
+{
+    try {
+        $conexion = openBd();
+
+        $sentenciaInsert = "update categoria set 
+            nombre = '$nombre' 
+            where id = '$id'
+        ";
+
+        $sentencia = $conexion->prepare($sentenciaInsert);
+        $sentencia->execute();
+        $_SESSION['mensaje'] = "Modificado correctamente";
+    } catch (PDOException $e) {
+        $_SESSION['error'] = errorMessage($e);
+    }
 
     $conexion = closeBd();
 }

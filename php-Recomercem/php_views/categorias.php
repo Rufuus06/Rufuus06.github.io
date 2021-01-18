@@ -1,8 +1,7 @@
 <?php
-require_once('../php_libraries/bd.php');
+    require_once('../php_libraries/bd.php');
 
-$ofertas = selectAllOfertas();
-$contador = 0;
+    $categorias = selectAllCategorias();
 ?>
 
 <!DOCTYPE html>
@@ -17,67 +16,55 @@ $contador = 0;
 </head>
 
 <body style="background-color: #FBF7F6;">
-    <script type="text/javascript">
-        function confirmDelete() {
-            var respuesta = confirm("Estas seguro que deseas eliminar la oferta?");
-            
-            if (respuesta == true) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    </script>
     
     <?php
         require_once("../php_partials/menu.php");
     ?>
-    
+
     <div class="container">
     <?php require_once('../php_partials/mensajes.php') ?>
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
-                <a>Ofertas</a>
+                <a>Categorias</a>
             </div>
+
             <div class="card-body">
                 <table class="table table-hover">
+
                     <thead>
                         <tr class="table-secondary">
                             <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
-                            <th scope="col">Descripción</th>
-                            <th scope="col">Puntuación</th>
-                            <th scope="col">Imagen</th>
                             <th scope="col">Modificar</th>
                             <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
+
                     <tbody>
-                        <?php foreach ($ofertas as $oferta) { ?>
+                        <?php foreach ($categorias as $categoria) { ?>
                             <tr class="table-active">
+                                <th scope="row"><?php echo $categoria['id'] ?></th>
+                                <td><?php echo $categoria['nombre'] ?></td>
 
-                                <th scope="row"><?php echo $oferta['id'] ?></th>
-                                <td><?php echo $oferta['name'] ?></td>
-                                <td><?php echo $oferta['descripcion'] ?></td>
-                                <td><?php echo $oferta['puntuacion_min'] ?></td>
-                                <td><?php echo $oferta['imagen'] ?></td>
-
-                                <form action="./CRUD_oferta.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success" name="BtnUpdateOferta">Modificar</button></td>
-                                    <input type="hidden" id="id" name="id" value="<?php echo $oferta['id'] ?>">
+                                <form action="./CRUD_categoria.php" method="POST">
+                                    <td><button type="submit" class="btn btn-success" name="BtnUpdateCategoria">Modificar</button></td>
+                                    <input type="hidden" id="id" name="id" value="<?php echo $categoria['id'] ?>">
                                 </form>
 
 
                                 <form action="../php_controllers/recomercemController.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success" name="BtnDeleteOferta" id="boton" onclick="return confirm('Estas seguro que deseas eliminar?');">Eliminar</button></td>
-                                    <input type="hidden" id="id" name="id" value="<?php echo $oferta['id'] ?>">
+                                    <td><button type="submit" class="btn btn-success" name="BtnDeleteCategoria" id="boton" onclick="return confirm('Estas seguro que deseas eliminar?');">Eliminar</button></td>
+                                    <input type="hidden" id="id" name="id" value="<?php echo $categoria['id'] ?>">
                                 </form>
+
                             </tr>
                         <?php } ?>
                     </tbody>
+
                 </table>
-                <form action="./CRUD_oferta.php" method="POST">
-                    <button type="submit" class="btn btn-success">Crear Oferta</button>
+                
+                <form action="../php_views/CRUD_categoria.php">
+                    <button type="submit" class="btn btn-success">Crear Categoria</button>
                 </form>
             </div>
 

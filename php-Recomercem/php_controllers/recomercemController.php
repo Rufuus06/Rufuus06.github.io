@@ -26,7 +26,8 @@ if (isset($_POST['Login'])) {
 if (isset($_POST['insertTienda'])) {
     insertTienda(
         $_POST['txtNombre'],
-        $_POST['txtLocalizacion']
+        $_POST['txtLocalizacion'],
+        $_POST['cbxCategoria']
     );
 
     if (isset($_SESSION['error'])) {
@@ -57,6 +58,19 @@ if (isset($_POST['insertUsuario'])) {
         exit();
     } else {
         header('Location: ../php_views/usuarios.php');
+    }
+}
+
+if (isset($_POST['insertCategoria'])) {
+    insertCategoria(
+        $_POST['txtNombre'],
+    );
+
+    if (isset($_SESSION['error'])) {
+        header('Location: ../php_views/CRUD_categoria.php');
+    } else {
+        header('Location: ../php_views/categorias.php');
+        exit();
     }
 }
 
@@ -98,6 +112,7 @@ if (isset($_POST['updateTienda'])) {
     updateTienda(
         $_POST['txtNombre'],
         $_POST['txtLocalizacion'],
+        $_POST['cbxCategoria'],
         $_POST['id_tienda']
     );
 
@@ -106,6 +121,21 @@ if (isset($_POST['updateTienda'])) {
         exit();
     } else {
         header('Location: ../php_views/tiendas.php');
+        exit();
+    }
+}
+
+if (isset($_POST['updateCategoria'])) {
+    updateCategoria(
+            $_POST['txtNombre'],
+            $_POST['id_categoria']
+    );
+
+    if (isset($_SESSION['error'])) {
+        header('Location: ../php_views/CRUD_categoria.php');
+        exit();
+    } else {
+        header('Location: ../php_views/categorias.php');
         exit();
     }
 }
@@ -157,6 +187,13 @@ if (isset($_POST['BtnDeleteTienda'])) {
     exit();
 }
 
+if (isset($_POST['BtnDeleteCategoria'])) {
+    deleteCategoria($_POST['id']);
+
+    header('Location: ../php_views/categorias.php');
+    exit();
+}
+
 if (isset($_POST['cancelarOferta'])) {
     header('Location: ../php_views/ofertas.php');
     exit();
@@ -167,7 +204,32 @@ if (isset($_POST['cancelarTienda'])) {
     exit();
 }
 
+if (isset($_POST['cancelaCategoria'])) {
+    header('Location: ../php_views/categorias.php');
+    exit();
+}
+
 if (isset($_POST['cancelarUsuario'])) {
     header('Location: ../php_views/usuarios.php');
     exit();
 }
+
+// if (isset($_POST['BtnUpdateUsuario'])) {
+//     header('Location: ../php_views/CRUD_usuario.php');
+//     exit();
+// }
+
+// if (isset($_POST['BtnUpdateTienda'])) {
+//     header('Location: ../php_views/CRUD_tienda.php');
+//     exit();
+// }
+
+// if (isset($_POST['BtnUpdateOferta'])) {
+//     header('Location: ../php_views/CRUD_oferta.php');
+//     exit();
+// }
+
+// if (isset($_POST['BtnUpdateCategoria'])) {
+//     header('Location: ../php_views/CRUD_categoria.php');
+//     exit();
+// }

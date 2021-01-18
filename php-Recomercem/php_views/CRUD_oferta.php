@@ -1,12 +1,10 @@
 <?php
-require_once('../php_libraries/bd.php');
+    require_once('../php_libraries/bd.php');
 
-if (isset($_POST['id'])) {
-    $id = $_POST['id'];
-    $oferta = selectOferta($id);
-}
-
-
+    if (isset($_POST['id'])) {
+        $id = $_POST['id'];
+        $oferta = selectOferta($id);
+    }
 ?>
 
 <!DOCTYPE html>

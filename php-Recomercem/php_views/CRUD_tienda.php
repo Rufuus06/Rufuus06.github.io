@@ -11,6 +11,7 @@
         $tienda = selectTienda( $id_tienda );
     }
 
+    $categorias = selectAllCategorias();
 ?>
 
 <!DOCTYPE html>
@@ -96,6 +97,46 @@
                                 <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización" required>
 
                             <?php } ?>                        
+                        
+                        </div>
+                    </div>
+
+                    <!-- CATEGORIA -->
+                    <div class="form-group row">
+                        <label for="cbxCategoria" class="col-sm-2 col-form-label">Categoría</label>
+                        <div class="col-sm-10">
+
+                            <select class="custom-select" name="cbxCategoria" id="cbxCategoria">
+
+                                <?php if ( $isUpdate ) { ?>
+
+                                    <!-- CREAR CATEGORIA TIENDA -->
+                                    <?php foreach( $categorias as $categoria ) { ?>
+                                        
+                                        <?php if ( $categoria['nombre'] == $tienda[0]['categoria_nombre'] ) { ?>
+
+                                            <option value="<?php echo $categoria['nombre'] ?>" selected="selected"><?php echo $categoria['nombre'] ?></option>
+
+                                        <?php } else { ?>
+
+                                            <option value="<?php echo $categoria['nombre'] ?>"><?php echo $categoria['nombre'] ?></option>
+
+                                        <?php } ?>
+
+                                    <?php } ?>
+
+                                <?php } else { ?>
+
+                                    <!-- CREAR CATEGORIA TIENDA -->
+                                    <?php foreach( $categorias as $categoria ) { ?>
+
+                                            <option value="<?php echo $categoria['nombre'] ?>" ><?php echo $categoria['nombre'] ?></option>>
+
+                                    <?php } ?>
+
+                                <?php } ?>    
+
+                            </select>                    
                         
                         </div>
                     </div>
