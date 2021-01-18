@@ -29,6 +29,7 @@ function checkLogin($email, $password, $admin)
         $conexion = openBd();
 
         $sentenciaSelect = "select * from usuario where email = '$email' and passw = '$password' and admin = '$admin'";
+		$sentencia = $conexion->prepare($sentenciaSelect);
         $sentencia->execute();
 
         $resultado = $sentencia->fetchAll();
