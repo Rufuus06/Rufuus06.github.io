@@ -236,6 +236,7 @@ function insertUsuari($nickname, $email, $passw, $puntuacion, $admin)
         $usuario['passw'] = $passw;
         $usuario['puntuacion'] = $puntuacion;
         $usuario['admin'] = $admin;
+        $_SESSION['usuario'] = $usuario;
     }
     $conexion = closeBd();
 }
@@ -264,6 +265,7 @@ function insertTienda($nombre, $localizacion, $categoria)
         $tienda['nombre'] = $nombre;
         $tienda['localizacion'] = $localizacion;
         $tienda['categoria'] = $categoria;
+        $_SESSION['tienda'] = $tienda;
     }
 
     $conexion = closeBd();
@@ -312,6 +314,7 @@ function insertCategoria( $nombre )
     } catch (PDOException $e) {
         $_SESSION['error'] = errorMessage($e);
         $categoria['nombre'] = $nombre;
+        $_SESSION['categoria'] = $categoria;
     }
     
     $conexion = closeBd();    
