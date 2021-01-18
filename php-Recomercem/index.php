@@ -1,3 +1,7 @@
+<?php
+    require_once('./php_libraries/bd.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,10 +51,6 @@
 
                         <button type="submit" class="btn btn-success float-right" name="Login">Entrar</button>
                         <input type="hidden" id="admin" name="admin" value="1">
-
-                        <label class=" float-right" style="margin-left: 10px; margin-top: 10px;">
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
-                        </label>
 
                     </div>
                 </form>

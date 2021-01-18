@@ -8,7 +8,7 @@ function openBd()
 {
     $servername = "localhost";
     $username = "root";
-    $password = "mysql";
+    $password = "";
 
     $conexion = new PDO("mysql:host=$servername;dbname=recomerçem", $username, $password);
     // set the PDO error mode to exception
@@ -35,7 +35,13 @@ function checkLogin($email, $password, $admin)
 
         $resultado = $sentencia->fetchAll();
 
-        $_SESSION['mensaje'] = "Bienvenido";
+        if ($resultado) {
+            $_SESSION['mensaje'] = "Bienvenido";
+        }
+        else {
+            $_SESSION['error'] = "Usuario y/o contraseña incorrectos";
+        }
+        
         
     } catch (PDOException $e) {
         $_SESSION['error'] = errorMessage($e);

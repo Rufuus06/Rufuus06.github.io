@@ -15,11 +15,12 @@ if (isset($_POST['Login'])) {
 
     if ($validate) {
         header('Location: ../php_views/usuarios.php');
-        exit();
+        
     } else {
-        $_SESSION['mensaje'] = "Usuario y/o contraseña erronea";
+        
         header('Location: ../index.php');
     }
+    exit();
 }
 
 if (isset($_POST['insertTienda'])) {
