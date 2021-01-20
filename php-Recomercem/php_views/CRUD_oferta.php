@@ -1,10 +1,10 @@
 <?php
-    require_once('../php_libraries/bd.php');
+require_once('../php_libraries/bd.php');
 
-    if (isset($_POST['id'])) {
-        $id = $_POST['id'];
-        $oferta = selectOferta($id);
-    }
+if (isset($_POST['id'])) {
+    $id = $_POST['id'];
+    $oferta = selectOferta($id);
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,23 +18,26 @@
 </head>
 
 <body style="background-color: #FBF7F6;">
-<?php
-        require_once("../php_partials/menu.php");
+    <?php
+    require_once("../php_partials/menu.php");
     ?>
     <div class="container">
-    <?php require_once('../php_partials/mensajes.php');
-    if (isset($_SESSION['oferta'])) {
-        $oferta = $_SESSION['oferta'];
-        unset($_SESSION['oferta']);
-    } else {
-        $oferta = [
-            'name' => '',
-            'imagen' => '',
-            'descripcion' => '',
-            'puntuacion_min' => ''
-        ];
-    }
-    ?>
+        <?php require_once('../php_partials/mensajes.php');
+        if (!isset($_POST['id'])) {
+            if (isset($_SESSION['oferta'])) {
+                $oferta = $_SESSION['oferta'];
+                unset($_SESSION['oferta']);
+            } else {
+                $oferta = [
+                    'name' => '',
+                    'imagen' => '',
+                    'descripcion' => '',
+                    'puntuacion_min' => ''
+                ];
+            }
+        }
+
+        ?>
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
                 <a>Oferta</a>
@@ -60,9 +63,9 @@
                         <label for="txtDescripcion" class="col-sm-2 col-form-label">Descripción</label>
                         <div class="col-sm-10">
                             <?php if (isset($_POST['id'])) { ?>
-                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción" required ><?php echo $oferta[0]['descripcion'] ?></textarea>
+                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción" required><?php echo $oferta[0]['descripcion'] ?></textarea>
                             <?php } else { ?>
-                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción" required ><?php echo $oferta['descripcion'] ?></textarea>
+                                <textarea class="form-control" id="txtDescripcion" rows="3" name="txtDescripcion" placeholder="Descripción" required><?php echo $oferta['descripcion'] ?></textarea>
                             <?php } ?>
                         </div>
                     </div>
@@ -84,21 +87,21 @@
                         <label for="imagen" class="col-sm-2 col-form-label">Imagen</label>
                         <div class="col-sm-10">
                             <div class="custom-file">
-                            <?php if (isset($_POST['id'])) { ?>
-                                <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen" value="<?php echo $oferta[0]['imagen'] ?>">
-                                <label class=" custom-file-label" name="imagen" id="imagen" for="imagen"><?php echo $oferta[0]['imagen'] ?></label>
+                                <?php if (isset($_POST['id'])) { ?>
+                                    <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen" value="<?php echo $oferta[0]['imagen'] ?>">
+                                    <label class=" custom-file-label" name="imagen" id="imagen" for="imagen"><?php echo $oferta[0]['imagen'] ?></label>
                                 <?php } else { ?>
-                                    <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen" >
-                                <label class=" custom-file-label" name="imagen" id="imagen" for="imagen"><?php echo $oferta['imagen'] ?></label>
-                                    <?php } ?>
-                                
+                                    <input type="file" class="form-control-file" id="imagen" aria-describedby="fileHelp" name="imagen">
+                                    <label class=" custom-file-label" name="imagen" id="imagen" for="imagen"><?php echo $oferta['imagen'] ?></label>
+                                <?php } ?>
+
                             </div>
                         </div>
                     </div>
 
                     <!-- BOTON CANCELAR -->
                     <button type="button" class="btn btn-dark" style="float: right;" name="cancelarOferta">
-                            <a href="../php_views/usuarios.php" style="color: white;">Cancelar</a>
+                        <a href="../php_views/usuarios.php" style="color: white;">Cancelar</a>
                     </button>
 
                     <!-- BOTONES -->
@@ -109,7 +112,7 @@
                             <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="updateOfertas">Modificar Oferta</button>
                         <?php } else { ?>
 
-                            <button type="submit" class="btn btn-success" style="margin-right: 10px;" name="insertOfertas">Crear Oferta</button>
+                            <button type="submit" class="btn" style="background-color: #89c43f; margin-right: 10px; float: right;" name="insertOfertas">Crear Oferta</button>
                         <?php } ?>
 
                         <!-- <button type="submit" class="btn btn-dark" name="cancelarOferta">Cancelar</button> -->

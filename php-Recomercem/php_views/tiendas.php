@@ -58,8 +58,8 @@
 
                                         <input type="hidden" id="id_tienda" name="id_tienda" value="<?php echo $tienda['id'] ?>">
 
-                                        <button type="submit" class="btn btn-success" name="BtnUpdateTienda">
-                                            Modificar
+                                        <button type="submit" class="btn" name="BtnUpdateTienda">
+                                        <img src="../media/edit.png" alt="modificar" width="30px" height="30px">
                                         </button>
                                     
                                     </form>
@@ -71,8 +71,8 @@
 
                                         <input type="hidden" id="id_tienda" name="id_tienda" value="<?php echo $tienda['id'] ?>">
 
-                                        <button type="submit" class="btn btn-success" name="BtnDeleteTienda" onclick="return confirm('Estas seguro que deseas eliminar?');">
-                                            Eliminar
+                                        <button type="submit" class="btn" name="BtnDeleteTienda" onclick="return confirm('Estas seguro que deseas eliminar?');">
+                                        <img src="../media/delete.png" alt="borrar" width="30px" height="30px">
                                         </button>
                                     
                                     </form>
@@ -85,7 +85,7 @@
                 </table>
                 
                 <form action="../php_views/CRUD_tienda.php">
-                    <button type="submit" class="btn btn-success">Crear Tienda</button>
+                    <button type="submit" class="btn" style="background-color: #89c43f;">Crear Tienda</button>
                 </form>
             </div>
 

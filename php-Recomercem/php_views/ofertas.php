@@ -63,13 +63,14 @@ $contador = 0;
                                 <td><?php echo $oferta['imagen'] ?></td>
 
                                 <form action="./CRUD_oferta.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success" name="BtnUpdateOferta">Modificar</button></td>
+                                    <td><button type="submit" class="btn" name="BtnUpdateOferta"><img src="../media/edit.png" alt="modificar" width="30px" height="30px"></button></td>
                                     <input type="hidden" id="id" name="id" value="<?php echo $oferta['id'] ?>">
                                 </form>
 
 
                                 <form action="../php_controllers/recomercemController.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success" name="BtnDeleteOferta" id="boton" onclick="return confirm('Estas seguro que deseas eliminar?');">Eliminar</button></td>
+                                    <td><button type="submit" class="btn
+                                    " name="BtnDeleteOferta" id="boton" onclick="return confirm('Estas seguro que deseas eliminar?');"><img src="../media/delete.png" alt="borrar" width="30px" height="30px"></button></td>
                                     <input type="hidden" id="id" name="id" value="<?php echo $oferta['id'] ?>">
                                 </form>
                             </tr>
@@ -77,7 +78,7 @@ $contador = 0;
                     </tbody>
                 </table>
                 <form action="./CRUD_oferta.php" method="POST">
-                    <button type="submit" class="btn btn-success">Crear Oferta</button>
+                    <button type="submit" class="btn" style="background-color: #89c43f;">Crear Oferta</button>
                 </form>
             </div>
 

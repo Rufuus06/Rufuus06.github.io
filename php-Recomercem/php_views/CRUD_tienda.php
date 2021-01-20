@@ -26,15 +26,17 @@ $categorias = selectAllCategorias();
 <body style="background-color: #FBF7F6;">
     <?php
     require_once("../php_partials/menu.php");
-    if (isset($_SESSION['tienda'])) {
-        $tienda = $_SESSION['tienda'];
-        unset($_SESSION['tienda']);
-    } else {
-        $tienda = [
-            'nombre' => '',
-            'localizacion' => '',
-            'categoria' => ''
-        ];
+    if (!isset($_POST['BtnUpdateTienda'])) {
+        if (isset($_SESSION['tienda'])) {
+            $tienda = $_SESSION['tienda'];
+            unset($_SESSION['tienda']);
+        } else {
+            $tienda = [
+                'nombre' => '',
+                'localizacion' => '',
+                'categoria' => ''
+            ];
+        }
     }
     ?>
 
@@ -117,9 +119,7 @@ $categorias = selectAllCategorias();
                                     <!-- CREAR CATEGORIA TIENDA -->
                                     <?php foreach ($categorias as $categoria) { ?>
 
-                                        <option value="<?php echo $categoria['nombre'] ?>"<?php if ($categoria['nombre'] == $tienda['categoria']) { ?>
-                                            selected="selected"
-                                        <?php }  ?>><?php echo $categoria['nombre'] ?></option>>
+                                        <option value="<?php echo $categoria['nombre'] ?>" <?php if ($categoria['nombre'] == $tienda['categoria']) { ?> selected="selected" <?php }  ?>><?php echo $categoria['nombre'] ?></option>>
 
                                     <?php } ?>
 
@@ -148,7 +148,7 @@ $categorias = selectAllCategorias();
                     <?php } else { ?>
 
                         <!-- CREATE BUTTON -->
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px; float: right;" name="insertTienda">
+                        <button type="submit" class="btn" style="background-color: #89c43f; margin-right: 10px; float: right;" name="insertTienda">
                             Crear Tienda
                         </button>
 

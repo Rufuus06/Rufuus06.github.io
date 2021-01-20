@@ -32,6 +32,7 @@
 
     <div class="container">
     <?php require_once('../php_partials/mensajes.php');
+    if (!$isUpdate) {
         if (isset($_SESSION['categoria'])) {
             $categoria = $_SESSION['categoria'];
             unset($_SESSION['categoria']);
@@ -40,6 +41,8 @@
                 'nombre' => ''
             ];
         }
+    }
+        
     ?>
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
@@ -77,7 +80,7 @@
                     <?php if ( $isUpdate ) { ?>
 
                         <!-- UPDATE BUTTON -->
-                        <input type="hidden" id="id_categoria" name="id_categoria" value="<?php echo $categoria[0]['id'] ?>">
+                        <input type="hidden" id="id_categoria" name="id_categoria" value="<?php echo $id_categoria ?>">
 
                         <button type="submit" class="btn btn-success" style="margin-right: 10px; float: right;" name="updateCategoria">
                             Modificar Categoria
@@ -86,7 +89,7 @@
                     <?php } else { ?>
 
                         <!-- CREATE BUTTON -->
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px; float: right;" name="insertCategoria">
+                        <button type="submit" class="btn" style="background-color: #89c43f; margin-right: 10px; float: right;" name="insertCategoria">
                             Crear Categoria
                         </button>
 

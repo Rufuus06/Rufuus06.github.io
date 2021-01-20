@@ -187,7 +187,7 @@ if (isset($_POST['BtnUpdateUsuario'])) {
                     <?php } else { ?>
 
                         <!-- CREATE BUTTON -->
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px; float: right;" name="insertUsuario">
+                        <button type="submit" class="btn" style="background-color: #89c43f; margin-right: 10px; float: right;" name="insertUsuario">
                             Aceptar
                         </button>
 
