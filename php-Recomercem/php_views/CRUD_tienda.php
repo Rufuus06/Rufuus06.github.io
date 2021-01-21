@@ -1,17 +1,16 @@
 <?php
 
-    require_once('../php_libraries/bd.php');
+require_once('../php_libraries/bd.php');
 
-    $isUpdate = false;
+$isUpdate = false;
 
-    if ( isset($_POST['BtnUpdateTienda']) )
-    {   
-        $isUpdate = true;
-        $id_tienda = $_POST['id_tienda'];
-        $tienda = selectTienda( $id_tienda );
-    }
+if (isset($_POST['BtnUpdateTienda'])) {
+    $isUpdate = true;
+    $id_tienda = $_POST['id_tienda'];
+    $tienda = selectTienda($id_tienda);
+}
 
-    $categorias = selectAllCategorias();
+$categorias = selectAllCategorias();
 ?>
 
 <!DOCTYPE html>
@@ -25,35 +24,25 @@
 </head>
 
 <body style="background-color: #FBF7F6;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="d-flex w-10 order-0" style="margin-right: 25px;">
-            <a class="navbar-brand mr-1 color-nav" href="">
-                <!-- <h2>LANDING PAGE</h2> -->
-                <img src="../media/logo.png" alt="" style="width: 200px; height: 60px;">
-            </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="usuarios.php">Usuarios</a>
-                        <a class="dropdown-item" href="tiendas.php">Tiendas</a>
-                        <a class="dropdown-item" href="ofertas.php">Ofertas</a>
-                        <a class="dropdown-item" href="../index.php">Desconectar</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <?php
+    require_once("../php_partials/menu.php");
+    if (!isset($_POST['BtnUpdateTienda'])) {
+        if (isset($_SESSION['tienda'])) {
+            $tienda = $_SESSION['tienda'];
+            unset($_SESSION['tienda']);
+        } else {
+            $tienda = [
+                'nombre' => '',
+                'localizacion' => '',
+                'categoria' => ''
+            ];
+        }
+    }
+    ?>
 
 
     <div class="container">
-    <?php require_once('../php_partials/mensajes.php') ?>
+        <?php require_once('../php_partials/mensajes.php') ?>
         <div class="card bg-light" style="margin-top: 10px;">
             <div class="card-header">
                 <a>Tienda</a>
@@ -66,7 +55,7 @@
                         <label for="txtNombre" class="col-sm-2 col-form-label">Nombre</label>
                         <div class="col-sm-10">
 
-                            <?php if ( $isUpdate ) { ?>
+                            <?php if ($isUpdate) { ?>
 
                                 <!-- CREAR NOMBRE TIENDA -->
                                 <input type="text" name="txtNombre" id="txtombre" autofocus class="form-control" placeholder="Nombre" value="<?php echo $tienda[0]['nombre'] ?>" required>
@@ -74,7 +63,7 @@
                             <?php } else { ?>
 
                                 <!-- CREAR NOMBRE TIENDA -->
-                                <input type="text" name="txtNombre" id="txtNombre" class="form-control" placeholder="Nombre" autofocus required>
+                                <input type="text" name="txtNombre" id="txtNombre" class="form-control" placeholder="Nombre" autofocus required value="<?php echo $tienda['nombre'] ?>">
 
                             <?php } ?>
 
@@ -86,7 +75,7 @@
                         <label for="txtLocalizacion" class="col-sm-2 col-form-label">Localización</label>
                         <div class="col-sm-10">
 
-                            <?php if ( $isUpdate ) { ?>
+                            <?php if ($isUpdate) { ?>
 
                                 <!-- CREAR LOCALIZACION TIENDA -->
                                 <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización" value="<?php echo $tienda[0]['Localizacion'] ?>" required>
@@ -94,10 +83,10 @@
                             <?php } else { ?>
 
                                 <!-- CREAR LOCALIZACION TIENDA -->
-                                <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización" required>
+                                <input type="text" name="txtLocalizacion" id="txtLocalizacion" autofocus class="form-control" placeholder="Localización" required value="<?php echo $tienda['localizacion'] ?>">
 
-                            <?php } ?>                        
-                        
+                            <?php } ?>
+
                         </div>
                     </div>
 
@@ -108,12 +97,12 @@
 
                             <select class="custom-select" name="cbxCategoria" id="cbxCategoria">
 
-                                <?php if ( $isUpdate ) { ?>
+                                <?php if ($isUpdate) { ?>
 
                                     <!-- CREAR CATEGORIA TIENDA -->
-                                    <?php foreach( $categorias as $categoria ) { ?>
-                                        
-                                        <?php if ( $categoria['nombre'] == $tienda[0]['categoria_nombre'] ) { ?>
+                                    <?php foreach ($categorias as $categoria) { ?>
+
+                                        <?php if ($categoria['nombre'] == $tienda[0]['categoria_nombre']) { ?>
 
                                             <option value="<?php echo $categoria['nombre'] ?>" selected="selected"><?php echo $categoria['nombre'] ?></option>
 
@@ -128,16 +117,16 @@
                                 <?php } else { ?>
 
                                     <!-- CREAR CATEGORIA TIENDA -->
-                                    <?php foreach( $categorias as $categoria ) { ?>
+                                    <?php foreach ($categorias as $categoria) { ?>
 
-                                            <option value="<?php echo $categoria['nombre'] ?>" ><?php echo $categoria['nombre'] ?></option>>
+                                        <option value="<?php echo $categoria['nombre'] ?>" <?php if ($categoria['nombre'] == $tienda['categoria']) { ?> selected="selected" <?php }  ?>><?php echo $categoria['nombre'] ?></option>>
 
                                     <?php } ?>
 
-                                <?php } ?>    
+                                <?php } ?>
 
-                            </select>                    
-                        
+                            </select>
+
                         </div>
                     </div>
 
@@ -147,7 +136,7 @@
                     </button>
 
                     <!-- BOTON ACEPTAR -->
-                    <?php if ( $isUpdate ) { ?>
+                    <?php if ($isUpdate) { ?>
 
                         <!-- UPDATE BUTTON -->
                         <input type="hidden" id="id_tienda" name="id_tienda" value="<?php echo $tienda[0]['id'] ?>">
@@ -159,7 +148,7 @@
                     <?php } else { ?>
 
                         <!-- CREATE BUTTON -->
-                        <button type="submit" class="btn btn-success" style="margin-right: 10px; float: right;" name="insertTienda">
+                        <button type="submit" class="btn" style="background-color: #89c43f; margin-right: 10px; float: right;" name="insertTienda">
                             Crear Tienda
                         </button>
 

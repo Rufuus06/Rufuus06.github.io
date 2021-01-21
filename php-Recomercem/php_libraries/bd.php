@@ -87,7 +87,7 @@ function selectCategoria( $id )
     try {
         $conexion = openBd();
 
-        $sentenciaSelect = "select * from categoria                
+        $sentenciaSelect = "select nombre from categoria                
         where id = '$id'";
 
         $sentencia = $conexion->prepare($sentenciaSelect);
@@ -136,6 +136,27 @@ function selectAllOfertas()
 
     $conexion = closeBd();
 
+    return $resultado;
+}
+
+function selectUnaTienda($id)
+{
+    try {
+        $conexion = openBd();
+
+        $sentenciaSelect = "select t.*, c.nombre as categoria_nombre from tienda t 
+        join categoria c on c.id = t.id_categoria                    
+        where t.id = '$id'";
+
+        $sentencia = $conexion->prepare($sentenciaSelect);
+        $sentencia->execute();
+
+        $resultado = $sentencia->fetchAll();
+    } catch (PDOException $e) {
+        $_SESSION['error'] = errorMessage($e);
+    }
+
+    $conexion = closeBd();
     return $resultado;
 }
 
@@ -236,6 +257,7 @@ function insertUsuari($nickname, $email, $passw, $puntuacion, $admin)
         $usuario['passw'] = $passw;
         $usuario['puntuacion'] = $puntuacion;
         $usuario['admin'] = $admin;
+        $_SESSION['usuario'] = $usuario;
     }
     $conexion = closeBd();
 }
@@ -264,6 +286,7 @@ function insertTienda($nombre, $localizacion, $categoria)
         $tienda['nombre'] = $nombre;
         $tienda['localizacion'] = $localizacion;
         $tienda['categoria'] = $categoria;
+        $_SESSION['tienda'] = $tienda;
     }
 
     $conexion = closeBd();
@@ -312,6 +335,7 @@ function insertCategoria( $nombre )
     } catch (PDOException $e) {
         $_SESSION['error'] = errorMessage($e);
         $categoria['nombre'] = $nombre;
+        $_SESSION['categoria'] = $categoria;
     }
     
     $conexion = closeBd();    

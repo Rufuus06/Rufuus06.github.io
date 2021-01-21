@@ -59,8 +59,8 @@
 
                                         <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $usuario['id'] ?>">
 
-                                        <button type="submit" class="btn btn-success" name="BtnUpdateUsuario">
-                                            Modificar
+                                        <button type="submit" class="btn" name="BtnUpdateUsuario">
+                                        <img src="../media/edit.png" alt="modificar" width="30px" height="30px">
                                         </button>
 
                                     </form>
@@ -72,8 +72,8 @@
 
                                         <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $usuario['id'] ?>">
 
-                                        <button type="submit" class="btn btn-success" name="BtnDeleteUsuario"  onclick="return confirm('Estas seguro que deseas eliminar?');">
-                                            Eliminar    
+                                        <button type="submit" class="btn " name="BtnDeleteUsuario" onclick="return confirm('Estas seguro que deseas eliminar?');">
+                                            <img src="../media/delete.png" alt="borrar" width="30px" height="30px">   
                                         </button>
 
                                     </form>
@@ -84,7 +84,7 @@
                     </tbody>
                 </table>
                 <form action="../php_views/CRUD_usuario.php">
-                    <button type="submit" class="btn btn-success">Crear Usuario</button>
+                    <button type="submit" class="btn" style="background-color: #89c43f;">Crear Usuario</button>
                 </form>
 
             </div>

@@ -49,7 +49,7 @@
 
                     <div class="form-group row float-right" style="margin-right: 20px;">
 
-                        <button type="submit" class="btn btn-success float-right" name="Login">Entrar</button>
+                        <button type="submit" class="btn" style="background-color: #89c43f; margin-right: 10px; float: right;" name="Login">Entrar</button>
                         <input type="hidden" id="admin" name="admin" value="1">
 
                     </div>

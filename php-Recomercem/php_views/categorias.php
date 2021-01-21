@@ -47,13 +47,14 @@
                                 <td><?php echo $categoria['nombre'] ?></td>
 
                                 <form action="./CRUD_categoria.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success" name="BtnUpdateCategoria">Modificar</button></td>
+                                    <td><button type="submit" class="btn" name="BtnUpdateCategoria"><img src="../media/edit.png" alt="modificar" width="30px" height="30px"></button></td>
                                     <input type="hidden" id="id" name="id" value="<?php echo $categoria['id'] ?>">
                                 </form>
 
 
                                 <form action="../php_controllers/recomercemController.php" method="POST">
-                                    <td><button type="submit" class="btn btn-success" name="BtnDeleteCategoria" id="boton" onclick="return confirm('Estas seguro que deseas eliminar?');">Eliminar</button></td>
+                                    <td><button type="submit" class="btn" name="BtnDeleteCategoria" id="boton" onclick="return confirm('Estas seguro que deseas eliminar?');">
+                                    <img src="../media/delete.png" alt="borrar" width="30px" height="30px"></button></td>
                                     <input type="hidden" id="id" name="id" value="<?php echo $categoria['id'] ?>">
                                 </form>
 
@@ -64,7 +65,7 @@
                 </table>
                 
                 <form action="../php_views/CRUD_categoria.php">
-                    <button type="submit" class="btn btn-success">Crear Categoria</button>
+                    <button type="submit" class="btn" style="background-color: #89c43f;">Crear Categoria</button>
                 </form>
             </div>
 
