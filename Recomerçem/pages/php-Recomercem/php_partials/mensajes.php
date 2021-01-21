@@ -11,7 +11,7 @@
 <?php } ?>
 
 <?php if (isset($_SESSION['mensaje'])) { ?>
-    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+    <div class="alert alert-dismissible fade show mt-3" role="alert" style="background-color: #89c43f">
         <?php
         echo $_SESSION['mensaje'];
         unset($_SESSION['mensaje']);

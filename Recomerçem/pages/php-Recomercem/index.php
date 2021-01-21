@@ -23,6 +23,12 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="d-flex ml-auto" style="margin-right: 30px;"> 
+        <a class="navbar-brand mr-1 color-nav" href="">
+                <!-- <h2>LANDING PAGE</h2> -->
+                <img src="media/house.png" alt="" style="width: 40px; height: 40px;">
+            </a>
+        </div>
     </nav>
     
     <div class="container">
