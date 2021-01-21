@@ -65,8 +65,40 @@
         "textoFC":"Movimiento con las flechas laterales",
         "restartFC": "Pulse ENTER para volver a jugar",
         "vidas": "Vidas:",
-        "espacioFC": "Pulse barra espaciadora para empezar"
-    
+        "espacioFC": "Pulse barra espaciadora para empezar",
+
+        "djTitle":"Explicación breve de los juegos",
+        "djDescripcionFood":" Es un juego en el que debes ir saltando los obstáculos del mapa utilizando las flechas de “Arriba”, “izquierda” y “Derecha” recogiendo el máximo de alimentos, evitando las pociones de veneno, antes de que seas alcanzado por el fuego. Si el fuego te alcanza, pierdes.",  
+        "djDescripcionFruit":"Es un juego donde caen frutas del cielo. Pulsa la tecla “Espacio” para empezar. Te mueves horizontalmente con las flechas del teclado (“Derecha” e “Izquierda”). Coge las máximas frutas que puedas. El juego acaba cuando pierdes las tres vidas (4 oportunidades).",
+        "djDescripcionart":"Es el típico juego de snake. Debes coger todas las manzanas que puedas sin pisarte la cola ni salirte de los márgenes. Pulsa la tecla “Espacio” para empezar. Te mueves con las teclas “A”, “W”, “S”, “D”.",
+
+        "descTitle":"Descripción:",
+        "desc1":"Página Web centrada en la divulgación de un mercado inventado. Se basa en la intención del cliente de conseguir ofertas exclusivas de la web completando un número de juegos integrados en la misma. En esta web se puede consultar toda la información necesaria de las tiendas del mercado, las ofertas y sus requerimientos y tres juegos que se desbloquean consecuentemente.",
+        "desc2":"Entre los objetivos más importante de la web podemos encontrar que:",
+        "desc3":"Entre los objetivos más importantes de los juegos podemos encontrar que:",
+        "desc4":"Entre los objetivos más importantes de la administración podemos encontrar que:",
+        "desclist1":"Ha de ser atractiva y que capte la atención.",
+        "desclist2":"Ha de dar a conocer el CEP y el mercado.",
+        "desclist3":"Multilingüe.",
+        "desclist4":"Ha de cuidar la usabilidad y la experiencia del usuario en todo momento.",
+        "desclist5":"El juego ha de requerir del correo del usuario para comenzar.",
+        "desclist6":"El juego ha de tener una meta de puntos para conseguir desbloquear el resto.",
+        "desclist7":"Cada juego ha de contener una parte divulgativa del mercado.",
+        "desclist8":"La app ha de permitir dar de alta y de baja a los usuarios administradores, además de poder modificar las contraseñas de los usuarios.",
+        "desclist9":"Lo mismo anterior pero con usuarios generales.",
+        "desclist10":"Posibilidad de consultar ofertas.",
+        "desclist11":"El administrador ha de poder modificar las ofertas de la web.",
+        "desclist12":"El administrador ha de poder consultar y modificar cuantos puntos máximos se pueden ganar en un juego.",
+
+        "docuTitle":"Descripción",
+        "docu1":"Web centrada en la divulgación de un mercado con el objetivo de atraer usuarios a través de los minijuegos.",
+        "docu1.1":"Ver más",
+        "docu2":"Paleta de Colores",
+        "docu3":"Diagrama Base de Datos",
+        "docu4":"Mapa Mental",
+        "docu5":"Diagrama de Casos de Uso",
+        "docu6":"Target Customer",
+        "docu6.1":"Ver Documento"
         
     },
 
@@ -137,7 +169,41 @@
         "textoFC":"Movement with the side arrows",
         "restartFC": "Press ENTER to play again",
         "vidas": "Lives:",
-        "espacioFC": "Press the space bar to start"
+        "espacioFC": "Press the space bar to start",
+
+        "djTitle":"Brief explanation of the games",
+        "djDescripcionFood":"It is a game in which you must jump over the obstacles on the map using the “Up”, “Left” and “Right” arrows, collecting as much food as possible, avoiding the poison potions, before you are hit by the fire. If the fire hits you, you lose.",
+        "djDescripcionFruit":"It is a game where fruits fall from the sky. Press the “Space” key to start. Move horizontally with the arrow keys (“Right” and “Left”). Catch as many fruits as you can. The game ends when you lose all three lives (4 opportunities).",
+        "djDescripcionart":"It is the typical snake game. You must catch as many apples as you can without stepping on your tail or going out of the margins. Press the “Space” key to start. You move with the keys “A”, “W”, “S”, “D”.",
+
+        "descTitle":"Description:",
+        "desc1":"Website focused on the disclosure of an invented market. It is based on the customer's intention to get exclusive offers from the website by completing a number of games integrated in it. In this website you can consult all the necessary information about the market stores, the offers and their requirements and three games that are unlocked consequently.",
+        "desc2":"Among the most important objectives of the web we can find that:",
+        "desc3":"Among the most important objectives of the games we can find that:",
+        "desc4":"Among the most important objectives of the administration we can find that:",
+        "desclist1":"It must be attractive and attention-grabbing.",
+        "desclist2":"It has to make the CEP and the market known.",
+        "desclist3":"Multilingual.",
+        "desclist4":"It has to take care of usability and user experience at all times.",
+        "desclist5":"The game will require the user's email to start.",
+        "desclist6":"The game must have a goal of points to unlock the rest.",
+        "desclist7":"Each set must contain an informative part of the market.",
+        "desclist8":"The app must be able to register and deregister administrator users, as well as modify user passwords.",
+        "desclist9":"Same as above but with general users.",
+        "desclist10":"Possibility of consulting offers.",
+        "desclist11":"The administrator must be able to modify the web offers.",
+        "desclist12":"The administrator must be able to consult and modify the maximum points that can be earned in a game.",
+
+        "docuTitle":"Description",
+        "docu1":"Web focused on the disclosure of a market with the aim of attracting users through mini-games.",
+        "docu1.1":"See more",
+        "docu2":"Color Palette",
+        "docu3":"Database Diagram",
+        "docu4":"Mental Map",
+        "docu5":"Use Case Diagram",
+        "docu6":"Target Customer",
+        "docu6.1":"See Document"
+        
 
     },
 
@@ -208,7 +274,40 @@
         "textoFC":"Moviment amb les fletxes laterals",
         "restartFC": "Premi ENTER per tornar a jugar",
         "vidas": "Vides:",
-        "espacioFC": "Premi barra d'espai per començar"
+        "espacioFC": "Premi barra d'espai per començar",
+
+        "djTitle":"Explicació breu dels jocs",
+        "djDescripcionFood": "És un joc en el qual has d'anar saltant els obstacles de mapa utilitzant les fletxes de “A dalt”,“Esquerra” i “Dreta” recollint el màxim de aliments, evitant les pocions de verí, abans de que siguis aconseguit pel foc. Si el foc et aconsegueix, perds.",
+        "djDescripcionFruit":"És un joc on cauen fruites de el cel. Prem la tecla “Espai” per començar. Et mous horitzontalment amb les fletxes del teclat (“Dreta” i “Esquerra”). Agafa les màximes fruites que puguis. El joc acaba quan perds les tres vides (4 oportunitats).",
+        "djDescripcionart":"És el típic joc de snake. Has d'agafar totes les pomes que puguis sense pisarte la cua ni sortir-te dels marges. Prem la tecla “Espai” per començar. Et mous amb les tecles “A”, “W”, “S”, “D”.",
+
+        "descTitle":"Descripció:",
+        "desc1":"Lloc web centrat en la divulgació d’un mercat inventat. Es basa en la intenció del client d’obtenir ofertes exclusives del lloc web completant diversos jocs integrats al mateix. En aquest lloc web podeu consultar tota la informació necessària sobre les botigues del mercat, les ofertes i els seus requisits i tres jocs que es desbloquegen en conseqüència.",
+        "desc2":"Entre els objectius més important de la web podem trobar que:",
+        "desc3":"Entre els objectius més importants dels jocs podem trobar que:",
+        "desc4":"Entre els objectius més importants de l'administració podem trobar que:",
+        "desclist1":"Ha de ser atractiva i que capti l'atenció.",
+        "desclist2":"Ha de donar a conèixer el CEP i el mercat.",
+        "desclist3":"Multilingüe.",
+        "desclist4":"Ha de tenir cura de la usabilitat i l'experiència d'usuari en tot moment.",
+        "desclist5":"El joc ha de requerir de l'correu de l'usuari per a començar.",
+        "desclist6":"El joc ha de tenir una meta de punts per aconseguir desbloquejar la resta.",
+        "desclist7":"Cada joc ha de contenir una part divulgativa de l'mercat.",
+        "desclist8":"L'app ha de permetre donar d'alta i de baixa als usuaris administradors, a més de poder modificar les contrasenyes dels usuaris.",
+        "desclist9":"El mateix anterior però amb usuaris generals.",
+        "desclist10":"Possibilitat de consultar ofertes.    ",
+        "desclist11":"L'administrador ha de poder modificar les ofertes de la web.",
+        "desclist12":"L'administrador ha de poder consultar i modificar quants punts màxims es poden guanyar en un joc.",
+
+        "docuTitle":"Descripció",
+        "docu1":"Web centrada en la divulgació d'un mercat amb l'objectiu d'atreure usuaris a través dels minijocs.",
+        "docu1.1":"Veure més",
+        "docu2":"Paleta de Colors",
+        "docu3":"Diagrama Base de Dades",
+        "docu4":"Mapa Mental",
+        "docu5":"Diagrama de Casos d'Ús",
+        "docu6":"Target Customer",
+        "docu6.1":"Veure Document"
         
 
     }
