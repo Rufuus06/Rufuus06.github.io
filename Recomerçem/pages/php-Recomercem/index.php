@@ -24,7 +24,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="d-flex ml-auto" style="margin-right: 30px;"> 
-        <a class="navbar-brand mr-1 color-nav" href="">
+        <a class="navbar-brand mr-1 color-nav" href="../../index.html">
                 <!-- <h2>LANDING PAGE</h2> -->
                 <img src="media/house.png" alt="" style="width: 40px; height: 40px;">
             </a>
