@@ -98,7 +98,12 @@
         "docu4":"Mapa Mental",
         "docu5":"Diagrama de Casos de Uso",
         "docu6":"Target Customer",
-        "docu6.1":"Ver Documento"
+        "docu6.1":"Ver Documento",
+
+        "navDescripcion":"Descripción",
+        "navDescripcionJ":"Descripcion juegos",
+        "navDocumentacion":"Documentación"
+        
         
     },
 
@@ -202,7 +207,11 @@
         "docu4":"Mental Map",
         "docu5":"Use Case Diagram",
         "docu6":"Target Customer",
-        "docu6.1":"See Document"
+        "docu6.1":"See Document",
+
+        "navDescripcion":"Description",
+        "navDescripcionJ":"Games description",
+        "navDocumentacion":"Documentation"
         
 
     },
@@ -307,7 +316,11 @@
         "docu4":"Mapa Mental",
         "docu5":"Diagrama de Casos d'Ús",
         "docu6":"Target Customer",
-        "docu6.1":"Veure Document"
+        "docu6.1":"Veure Document",
+
+        "navDescripcion":"Descripció",
+        "navDescripcionJ":"Descripcio jocs",
+        "navDocumentacion":"Documentació"
         
 
     }
