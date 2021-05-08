@@ -19,13 +19,16 @@
             </a>
 
             <ul id="Navigation" class="navbar-custom-options">
-                <li class="navbar-custom-items navbar-custom-items--home navbar-custom-items--active">
-                    <a class="" href="" aria-current="page"><img src="img/home.png" alt="" width="20px" height="20px" style="margin-inline: 30px;"></a>
+                <li id="li-0" class="navbar-custom-items navbar-custom-items--home navbar-custom-items--active navbar-custom-items-active" onclick="selectLI(0)">
+                    <a class="" href="" aria-current="page">
+                        <!-- cambiar imagen en hover -->
+                        <img class="home-icon home-icon-active" src="img/casa.png" alt="" width="20px" height="20px" style="margin-inline: 30px;">
+                    </a>
                 </li>
-                <li class="navbar-custom-items"><a href="https://rufuus06.github.io/IMT-GAME">Juego</a></li>
-                <li class="navbar-custom-items"><a href="">Documentación</a></li>
-                <li class="navbar-custom-items"><a href="">Perfil</a></li>
-                <li class="navbar-custom-items"><a href="" style="margin-right: 20px;">Contacto</a></li>
+                <li id="li-1" class="navbar-custom-items" onclick="selectLI(1)"><a href="https://rufuus06.github.io/IMT-GAME">Juego</a></li>
+                <li id="li-2" class="navbar-custom-items" onclick="selectLI(2)"><a href="#">Documentación</a></li>
+                <li id="li-3" class="navbar-custom-items" onclick="selectLI(3)"><a href="#">Perfil</a></li>
+                <li id="li-4" class="navbar-custom-items" onclick="selectLI(4)"><a href="#" style="margin-right: 20px;">Contacto</a></li>
             </ul>
             
         </nav>
@@ -254,7 +257,7 @@
     function startAnimation()
     {
        
-        setInterval(doAnimation, 4000);
+        //setInterval(doAnimation, 4000);
     }
 
     function changeImage(value)
@@ -303,6 +306,14 @@
                 document.getElementById("d-" + value).style = "display: block !important;";
             }
         }
+    }
+
+    function selectLI( value )
+    {
+        var list = document.getElementsByClassName("navbar-custom-items-active");
+        list[0].classList.remove("navbar-custom-items-active");
+
+        document.getElementById("li-" + value).classList.add("navbar-custom-items-active")
     }
 
     // function showImage(value)

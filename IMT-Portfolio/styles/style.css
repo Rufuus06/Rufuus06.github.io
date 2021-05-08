@@ -125,6 +125,26 @@
     transition: all 110ms ease-in-out;
 }
 
+.navbar-custom-items:hover
+{
+    box-shadow: inset 0 -5px 0 white;
+}
+
+.navbar-custom-items-active 
+{
+    box-shadow: inset 0 -5px 0 #0cf;
+}
+
+.navbar-custom-items-active a
+{
+    color: #0cf;
+}
+
+.navbar-custom-items a:hover
+{
+    color: white;
+}
+
 /* MAIN */
 
 .main
