@@ -255,17 +255,20 @@ html, body {
 .set-blackandwhite {
     filter: grayscale(1);
     -webkit-filter: grayscale(100%);
+    
     transition: filter 0.3s ease-in-out;
 }
 
 .set-blackandwhite:hover {
     filter: grayscale(0);
+    box-shadow: 3px 3px 5px 0px black;
     -webkit-filter: grayscale(0%);
 }
 
 .off-blackandwhite
 {
     filter: grayscale(0) !important;
+    box-shadow: 3px 3px 5px 0px black;
     -webkit-filter: grayscale(0%) !important;
 }
 
@@ -327,7 +330,7 @@ img {
 
 
 .c-hero-navigation-item p {
-    color: #999;
+    color: rgb(184, 184, 184);
     /* display: none; */
     font-size: .6875rem;
     /* opacity: 0; */
@@ -341,6 +344,11 @@ img {
     transform-origin: left bottom;
     width: 100%;
     font-size: 16px;
+}
+
+.c-hero-navigation-item:hover
+{
+    font-weight:bold;
 }
 
 /* TITLES */
