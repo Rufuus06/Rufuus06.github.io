@@ -5,6 +5,12 @@
     background-size: cover;
 } */
 
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
 /* NAVBAR */
 
 .navbar-custom
@@ -151,7 +157,18 @@
 {
     /* background-image: url(../img/fondo.png); */
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;   
+    transition: background-image 0.3s ease-in-out;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+}
+
+.zoom
+{
+    transform: scale(1.25) !important; 
+    transition: transform 0.65s ease-in-out;
 }
 
 .main-top
@@ -224,7 +241,6 @@
 .c-hero-navigation-item
 {
     display: block;
-    filter: grayscale(1);
     margin: 0 0 .0625rem 0;
     /* opacity: 0; */
     position: relative;
@@ -232,7 +248,39 @@
     transform: translate3d(0, 0, 0);
     transition: all 180ms ease-in-out;
     width: 145px;
-    -webkit-filter: grayscale(1);
+    /* filter: grayscale(1);
+    -webkit-filter: grayscale(1); */
+}
+
+.set-blackandwhite {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.set-blackandwhite:hover {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0%);
+}
+
+.off-blackandwhite
+{
+    filter: grayscale(0) !important;
+    -webkit-filter: grayscale(0%) !important;
+}
+
+.show
+{
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: visibility 0.3s, opacity 0.3 ease-in-out;
+}
+
+.hide
+{
+    visibility: hidden !important;
+    opacity: 0 !important;
+    /* transition: visibility 0.1s, opacity 0.3s linear; */
 }
 
 .c-hero-navigation-item p {
