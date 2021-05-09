@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Juego</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/font/flaticon.css">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <nav class="navbar-custom">
+
+      <a href="" class="navbar-custom-icon">
+          <img src="../../img/Logo-Rufuus.png" alt="" width="31px" height="40px">
+      </a>
+
+      <ul id="Navigation" class="navbar-custom-options">
+          <li id="li-0" class="navbar-custom-items navbar-custom-items--home navbar-custom-items--active navbar-custom-items-active" onclick="selectLI(0)">
+              <a class="" href="../../index.html" aria-current="page">
+                  <!-- cambiar imagen en hover -->
+                  <img class="home-icon home-icon-active" src="../../img/casa.png" alt="" width="20px" height="20px" style="margin-inline: 30px;">
+              </a>
+          </li>
+          <li id="li-1" class="navbar-custom-items" onclick="selectLI(1)"><a href="">Juego</a></li>
+          <li id="li-2" class="navbar-custom-items" onclick="selectLI(2)"><a href="#">Documentación</a></li>
+          <li id="li-3" class="navbar-custom-items" onclick="selectLI(3)"><a href="#">Perfil</a></li>
+          <li id="li-4" class="navbar-custom-items" onclick="selectLI(4)"><a href="#" style="margin-right: 20px;">Contacto</a></li>
+      </ul>
+      
+    </nav>
+
+    <div id="main" class="main" style="height: 100%; background-image: url('../../img/fondo2.jpg');"></div>
+    
+    <div>
+      <div id="unity-container" class="unity-desktop">
+        <canvas id="unity-canvas"></canvas>
+        <div id="unity-loading-bar">
+          <div id="unity-logo"></div>
+          <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+          </div>
+        </div>
+
+        <div id="unity-mobile-warning">
+          WebGL builds are not supported on mobile devices.
+        </div>
+
+        <div id="unity-footer">
+          <div id="unity-fullscreen-button" style="background-color: transparent;"></div>
+          <div id="unity-build-title" style="color: white;">Game-Portfoliov.2</div>
+        </div>
+      </div>
+    </div>
+
+      <script>
+        var buildUrl = "Build";
+        var loaderUrl = buildUrl + "/IMT-GAME.loader.js";
+        var config = {
+          dataUrl: buildUrl + "/IMT-GAME.data",
+          frameworkUrl: buildUrl + "/IMT-GAME.framework.js",
+          codeUrl: buildUrl + "/IMT-GAME.wasm",
+          streamingAssetsUrl: "StreamingAssets",
+          companyName: "DefaultCompany",
+          productName: "Game-Portfoliov.2",
+          productVersion: "1.0",
+        };
+
+        var container = document.querySelector("#unity-container");
+        var canvas = document.querySelector("#unity-canvas");
+        var loadingBar = document.querySelector("#unity-loading-bar");
+        var progressBarFull = document.querySelector("#unity-progress-bar-full");
+        var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        var mobileWarning = document.querySelector("#unity-mobile-warning");
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+          container.className = "unity-mobile";
+          config.devicePixelRatio = 1;
+          mobileWarning.style.display = "block";
+          setTimeout(() => {
+            mobileWarning.style.display = "none";
+          }, 5000);
+        } else {
+          canvas.style.width = "960px";
+          canvas.style.height = "600px";
+        }
+        loadingBar.style.display = "block";
+
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+          createUnityInstance(canvas, config, (progress) => {
+            progressBarFull.style.width = 100 * progress + "%";
+          }).then((unityInstance) => {
+            loadingBar.style.display = "none";
+            fullscreenButton.onclick = () => {
+              unityInstance.SetFullscreen(1);
+            };
+          }).catch((message) => {
+            alert(message);
+          });
+        };
+        document.body.appendChild(script);
+      </script>
+  </body>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+
+</html>
