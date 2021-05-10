@@ -83,16 +83,13 @@ function changeImage(value)
 
 function selectLI( value )
 {
-    if ( value == "0" || value == "2" || value == "3" || value == "4" )
-    {
-        var list = document.getElementsByClassName("navbar-custom-items-active");
-        list[0].classList.remove("navbar-custom-items-active");
+    var list = document.getElementsByClassName("navbar-custom-items-active");
+    list[0].classList.remove("navbar-custom-items-active");
 
-        main.style.backgroundImage = "url('" + images[value] + "')";
-        clearInterval(interval);
-    
-        document.getElementById("li-" + value).classList.add("navbar-custom-items-active");
-    }
+    main.style.backgroundImage = "url('" + images[value] + "')";
+    clearInterval(interval);
+
+    document.getElementById("li-" + value).classList.add("navbar-custom-items-active");
 
     switch(value)
     {

@@ -442,7 +442,7 @@ img {
 }
 
 .b-heading-xlarge {
-    letter-spacing: -0.2vh;
+    letter-spacing: .1vh;
     line-height: 1.1;
     margin-bottom: 1.25rem;
     
@@ -628,7 +628,7 @@ p {
     list-style: none;
     margin: 0;
     padding: 0;
-    /* margin-left: -20px; */
+    margin-left: -20px;
     letter-spacing: -0.31em;
 }
 
@@ -774,7 +774,117 @@ p {
     opacity: 1;
 }
 
-.c-design-item-end
+.c-footer
 {
+    padding: 7.5rem 0;
+    display: block;
+    background: #0B0B0B;
+    position: relative;
+}
 
+.sites-constraint
+{
+    padding-left: 0;
+    padding-right: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+}
+
+.sites-constraint-relative
+{
+    position: relative;
+}
+.large-one-third
+{
+    width: 33.333%;
+}
+
+.c-footer-twitter
+{
+    padding-left: 0;
+    padding: 0 1.25rem;
+    margin: 0;
+}
+
+.c-footer-twitter-heading
+{
+    font-size: 1.5rem;
+    letter-spacing: .125rem;
+    margin-bottom: .625rem;
+}
+
+.c-footer-tweet
+{
+    height: 7.5rem;
+    margin-bottom: .625rem;
+    color: #fff;
+    font-style: italic;
+}
+
+.e-button--no-margin 
+{
+    margin: 0 !important;
+}
+
+.e-button--border-white 
+{
+    border: 1px solid rgba(255,255,255,0.2);
+    position: relative;
+}
+
+.e-button--border-white:before 
+{
+    top: -1px;
+    left: -1px;
+}
+
+.e-button--border-white:after
+{
+    top: -1px;
+    right: -1px;
+}
+
+.e-button--border-white:after,
+.e-button--border-white:before 
+{
+    background: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.e-button--border-white .e-button__text:before 
+{
+    bottom: -1px;
+    left: -1px;
+}
+
+.e-button--border-white .e-button__text:after,
+.e-button--border-white .e-button__text:before 
+{
+    background: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+}
+
+.e-button--border-white .e-button__text:after {
+    bottom: -1px;
+    right: -1px;
+}
+
+.c-footer-twitter-heading:before {
+    background: #494949;
+    content: '';
+    display: block;
+    height: .0625rem;
+    margin-bottom: .9375rem;
+    width: 1.875rem;
 }
