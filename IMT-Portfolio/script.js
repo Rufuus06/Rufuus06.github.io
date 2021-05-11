@@ -2,7 +2,7 @@ const images = [
     "img/fondo3.jpg",
     "img/design.png",
     "img/fondo5.jpg",
-    "img/fondo6.jfif",
+    "img/fondo-test.jpg",
     "img/fondo7.jpg",
     "img/fondo8.jpg",
     "img/fondo2.jpg"
