@@ -1,11 +1,11 @@
 const images = [
-    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo3.jpg",
-    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/design.png",
-    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo5.jpg",
-    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo-test.jpg",
-    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/visual.png",
-    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo8.jpg",
-    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo2.jpg"
+    "img/fondo3.jpg",
+    "img/design.png",
+    "img/fondo5.jpg",
+    "img/fondo-test.jpg",
+    "img/visual.png",
+    "img/fondo8.jpg",
+    "img/fondo2.jpg"
 ]
 
 var main = document.getElementById("main");
