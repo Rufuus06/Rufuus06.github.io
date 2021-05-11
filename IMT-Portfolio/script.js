@@ -1,6 +1,6 @@
 const images = [
     "img/fondo3.jpg",
-    "img/fondo4.jpg",
+    "img/design.png",
     "img/fondo5.jpg",
     "img/fondo6.jfif",
     "img/fondo7.jpg",
@@ -17,6 +17,8 @@ if (main != null)
 
 var i = 0;
 var value_aux = -1;
+
+var interval = null;
 
 function doAnimation()
 {
@@ -50,7 +52,7 @@ function doAnimation()
 
 function startAnimation()
 {
-    setInterval(doAnimation, 7000);
+    interval = setInterval(doAnimation, 7000);
 }
 
 function changeImage(value)
@@ -84,7 +86,11 @@ function selectLI( value )
     var list = document.getElementsByClassName("navbar-custom-items-active");
     list[0].classList.remove("navbar-custom-items-active");
 
+    main.style.backgroundImage = "url('" + images[value] + "')";
+    clearInterval(interval);
+
     document.getElementById("li-" + value).classList.add("navbar-custom-items-active");
+
     switch(value)
     {
         case "0":
@@ -95,10 +101,10 @@ function selectLI( value )
             break;
 
         case "2":
+            document.getElementById("documentacion-content").style.display = "block";
             document.getElementById("perfil-content").style.display = "none";
             document.getElementById("contacto-content").style.display = "none";
             document.getElementById("home-content").style.display = "none";
-            document.getElementById("documentacion-content").style.display = "block";
             break;
 
         case "3":

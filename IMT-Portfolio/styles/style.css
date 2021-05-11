@@ -208,6 +208,11 @@ html, body {
     transform: translate3d(0, 0, 0);
 }
 
+.main-content
+{
+    /* padding-top: 4.5rem; */
+}
+
 /* SECTION */
 
 .c-hero-desliza
@@ -437,7 +442,7 @@ img {
 }
 
 .b-heading-xlarge {
-    letter-spacing: -0.2vh;
+    letter-spacing: .1vh;
     line-height: 1.1;
     margin-bottom: 1.25rem;
     
@@ -459,6 +464,7 @@ img {
 
 .c-hero-article p {
     font-size: 2vh !important;
+    text-shadow: 2px 2px 2px black;
 }
 
 p {
@@ -520,4 +526,365 @@ p {
     top: -15px;
     right: 0px;
     width: 40px;
+}
+
+/* DESIGN */
+
+.c-design-wrapper
+{
+    /* padding-top: 2.5rem; */
+}
+
+.c-design-title
+{
+    padding-left: 0;
+    padding-right: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+}
+
+.c-design-header
+{
+    padding-bottom: 2.5rem;
+    /* padding-top: 0; */
+    text-align: left;
+    padding-top: 6.25rem;
+    position: relative;
+}
+
+.c-design-page-heading
+{
+    font-size: 3.75rem;
+    margin-bottom: 0;
+
+    display: inline-block;
+    /* padding-top: 3.125rem; */
+}
+
+.c-heading
+{
+    font-family: fantasy;
+}
+
+.c-heading-xlarge
+{
+    color: #fff;
+    font-weight: 200;
+}
+
+.c-page-subheading
+{
+    display: inline-block;
+    margin: 0 0 0 2.5rem;
+
+    font-size: 1rem;
+    line-height: 1.4;
+    /* margin: 0 auto; */
+    max-width: 31.875rem;
+    color: #999;
+}
+
+.c-page__select {
+    margin: 0;
+    bottom: 7.1875rem;
+    color: #999;
+}
+
+.c-page__select {
+    display: inline-block;
+    font-size: 1rem;
+    float: right;
+    /* margin: 1.25rem 0 0 0; */
+    text-transform: uppercase;
+    /* margin: 0; */
+    position: absolute;
+    bottom: 2.5rem;
+    right: 0;
+}
+
+.c.design-block
+{
+    padding-top: 0;
+}
+
+.site_constraint 
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+}
+
+.site_constraint-medium
+{
+    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.grid 
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -20px;
+    letter-spacing: -0.31em;
+}
+
+.grid--full
+{
+    margin-left: -10px;
+}
+
+.grid-item
+{
+    display: inline-block;
+    padding-left: 10px;
+    vertical-align: top;
+    box-sizing: border-box;
+    letter-spacing: normal;
+    word-spacing: normal;
+} 
+
+.one-whole
+{
+    width: 100%;
+} 
+
+.small-one-half 
+{
+    width: 50%; 
+}
+
+.large-one-half
+{
+    width: 50%;
+}
+
+.c-design-item
+{
+    margin: 0 0 25px 0;
+
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+}
+
+.c-design-link
+{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+
+.c-projects__imageWrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.c-design-image
+{
+    display: block;
+    width: 100%;
+    transition: all 180ms ease-in-out, transform 500ms ease-in-out, filter 500ms ease-in-out;
+}
+
+.c-projects__underline {
+    z-index: 100;
+    background: inherit;
+    content: '';
+    display: block;
+    height: .125rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+}
+
+.c-projects__triangle {
+    z-index: 11;
+    background: #000;
+    content: '';
+    display: block;
+    height: 40px;
+    opacity: 0;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    transform: rotate(45deg);
+    width: 40px;
+}
+
+.c-design-content
+{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+    padding: 15px 0 0 0;
+
+    z-index: 10;
+    bottom: 1.4375rem;
+    left: 1.875rem;
+    text-transform: uppercase;
+}
+
+.c-projects__title {
+    margin-right: 5px;
+}
+
+.c-projects__title {
+    color: #fff;
+    font-family: 'Orgon Thin';
+    font-size: 1.375rem;
+    font-weight: 200;
+    line-height: 1.3;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.c-projects__tags {
+    color: #efc621;
+    display: block;
+    font-size: .75rem;
+    margin: 0;
+    opacity: 0.7;
+    list-style-type: none;
+    padding: 0 20px 0 0;
+}
+
+.c-projects__tags:before {
+    content: '-';
+    margin: 0 5px 0 0;
+}
+
+.c-design-link:hover .c-projects__underline,
+.c-design-link:focus .c-projects__underline,
+.c-design-link:active .c-projects__underline 
+{
+    width: 100%;
+}
+
+.c-design-link:hover .c-projects__triangle,
+.c-design-link:focus .c-projects__triangle,
+.c-design-link:active .c-projects__triangle
+{
+    opacity: 1;
+}
+
+.c-footer
+{
+    padding: 7.5rem 0;
+    display: block;
+    background: #0B0B0B;
+    position: relative;
+}
+
+.sites-constraint
+{
+    padding-left: 0;
+    padding-right: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+}
+
+.sites-constraint-relative
+{
+    position: relative;
+}
+.large-one-third
+{
+    width: 33.333%;
+}
+
+.c-footer-twitter
+{
+    padding-left: 0;
+    padding: 0 1.25rem;
+    margin: 0;
+}
+
+.c-footer-twitter-heading
+{
+    font-size: 1.5rem;
+    letter-spacing: .125rem;
+    margin-bottom: .625rem;
+}
+
+.c-footer-tweet
+{
+    height: 7.5rem;
+    margin-bottom: .625rem;
+    color: #fff;
+    font-style: italic;
+}
+
+.e-button--no-margin 
+{
+    margin: 0 !important;
+}
+
+.e-button--border-white 
+{
+    border: 1px solid rgba(255,255,255,0.2);
+    position: relative;
+}
+
+.e-button--border-white:before 
+{
+    top: -1px;
+    left: -1px;
+}
+
+.e-button--border-white:after
+{
+    top: -1px;
+    right: -1px;
+}
+
+.e-button--border-white:after,
+.e-button--border-white:before 
+{
+    background: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+.e-button--border-white .e-button__text:before 
+{
+    bottom: -1px;
+    left: -1px;
+}
+
+.e-button--border-white .e-button__text:after,
+.e-button--border-white .e-button__text:before 
+{
+    background: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+}
+
+.e-button--border-white .e-button__text:after {
+    bottom: -1px;
+    right: -1px;
+}
+
+.c-footer-twitter-heading:before {
+    background: #494949;
+    content: '';
+    display: block;
+    height: .0625rem;
+    margin-bottom: .9375rem;
+    width: 1.875rem;
 }
