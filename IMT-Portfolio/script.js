@@ -1,11 +1,11 @@
 const images = [
-    "/C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo3.jpg",
-    "/C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/design.png",
-    "/C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo5.jpg",
-    "/C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo-test.jpg",
-    "/C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/visual.png",
-    "/C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo8.jpg",
-    "/C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo2.jpg"
+    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo3.jpg",
+    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/design.png",
+    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo5.jpg",
+    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo-test.jpg",
+    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/visual.png",
+    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo8.jpg",
+    "//C:/Users/galla/Desktop/Rufuus06.github.io/IMT-Portfolio/img/fondo2.jpg"
 ]
 
 var main = document.getElementById("main");
