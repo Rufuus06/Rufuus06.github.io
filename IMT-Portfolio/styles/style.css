@@ -774,6 +774,11 @@ p {
     margin: 0 0.76vh 0 0;
 }
 
+.c-projects__tags-2::after {
+    content: '-';
+    margin: 0 0 0 0.76vh;
+}
+
 .c-design-link:hover .c-projects__underline,
 .c-design-link:active .c-projects__underline 
 {
@@ -1290,4 +1295,43 @@ a:hover
 {
     bottom: -1px;
     left: -1px;
+}
+
+.p-white-profile
+{
+    color: white !important;
+    text-align: center;
+}
+
+.a-game:hover
+{
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.article-contacto
+{
+    height: 36vh;
+    background-color: #1B1B1B;
+    box-shadow: 1px 1px 5px 0px white;
+}
+
+.icon-contact
+{
+    width: 13vh;
+    height: 13vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 6vh;
+}
+
+.p-contact
+{
+    text-align: center !important;
+    color: white !important;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 25vh;
 }
