@@ -81,60 +81,60 @@ function changeImage(value)
     }
 }
 
-function selectLI( value )
-{
-    var list = document.getElementsByClassName("navbar-custom-items-active");
-    list[0].classList.remove("navbar-custom-items-active");
+// function selectLI( value )
+// {
+//     var list = document.getElementsByClassName("navbar-custom-items-active");
+//     list[0].classList.remove("navbar-custom-items-active");
 
-    main.style.backgroundImage = "url('" + images[value] + "')";
-    clearInterval(interval);
+//     main.style.backgroundImage = "url('" + images[value] + "')";
+//     clearInterval(interval);
 
-    document.getElementById("li-" + value).classList.add("navbar-custom-items-active");
+//     document.getElementById("li-" + value).classList.add("navbar-custom-items-active");
 
-    switch(value)
-    {
-        case "0":
-            document.getElementById("documentacion-content").style.display = "none";
-            document.getElementById("contacto-content").style.display = "none";
-            document.getElementById("perfil-content").style.display = "none";
-            document.getElementById("home-content").style.display = "block";
-            main.style.backgroundImage = "url('" + images[6] + "')";
-            interval = setInterval(doAnimation, 7000);
-            break;
+//     switch(value)
+//     {
+//         case "0":
+//             document.getElementById("documentacion-content").style.display = "none";
+//             document.getElementById("contacto-content").style.display = "none";
+//             document.getElementById("perfil-content").style.display = "none";
+//             document.getElementById("home-content").style.display = "block";
+//             main.style.backgroundImage = "url('" + images[6] + "')";
+//             interval = setInterval(doAnimation, 7000);
+//             break;
 
-        case "2":
-            document.getElementById("documentacion-content").style.display = "block";
-            document.getElementById("perfil-content").style.display = "none";
-            document.getElementById("contacto-content").style.display = "none";
-            document.getElementById("home-content").style.display = "none";
-            break;
+//         case "2":
+//             document.getElementById("documentacion-content").style.display = "block";
+//             document.getElementById("perfil-content").style.display = "none";
+//             document.getElementById("contacto-content").style.display = "none";
+//             document.getElementById("home-content").style.display = "none";
+//             break;
 
-        case "3":
-            document.getElementById("documentacion-content").style.display = "none";
-            document.getElementById("contacto-content").style.display = "none";
-            document.getElementById("home-content").style.display = "none";
-            document.getElementById("perfil-content").style.display = "block";
-            break;
+//         case "3":
+//             document.getElementById("documentacion-content").style.display = "none";
+//             document.getElementById("contacto-content").style.display = "none";
+//             document.getElementById("home-content").style.display = "none";
+//             document.getElementById("perfil-content").style.display = "block";
+//             break;
 
-        case "4":
-            document.getElementById("documentacion-content").style.display = "none";
-            document.getElementById("perfil-content").style.display = "none";
-            document.getElementById("home-content").style.display = "none";
-            document.getElementById("contacto-content").style.display = "block";
-            break;
+//         case "4":
+//             document.getElementById("documentacion-content").style.display = "none";
+//             document.getElementById("perfil-content").style.display = "none";
+//             document.getElementById("home-content").style.display = "none";
+//             document.getElementById("contacto-content").style.display = "block";
+//             break;
 
-    }
-}
+//     }
+// }
 
-function getInput()
-{
-    var variable = window.location.search.substr(1);
+// function getInput()
+// {
+//     var variable = window.location.search.substr(1);
 
-    if ( variable != null && variable != "" )
-    {
-        var variables = variable.split("=");
+//     if ( variable != null && variable != "" )
+//     {
+//         var variables = variable.split("=");
 
-        selectLI(variables[1]);
-    }
+//         selectLI(variables[1]);
+//     }
 
-}
+// }
