@@ -170,6 +170,7 @@ html, body {
 .navbar-custom-items a:hover
 {
     color: white;
+    text-decoration: none;
 }
 
 /* MAIN */
@@ -787,7 +788,7 @@ p {
 
 .c-footer
 {
-    padding: 12vh 0;
+    padding: 4vh 0;
     display: block;
     background: #0B0B0B;
     position: relative;
@@ -822,9 +823,15 @@ p {
 
 .c-footer-twitter-heading
 {
-    font-size: 3vh;
+    font-size: 2vh;
     letter-spacing: 0.2vh;
     margin-bottom: 1.52vh;
+    text-align: center;
+}
+
+.links
+{
+    font-size: 1vh !important;
 }
 
 .c-footer-tweet
@@ -892,13 +899,13 @@ p {
     right: -0.15vh;
 }
 
-.c-footer-twitter-heading:before {
+.c-footer-twitter:before {
     background: #494949;
     content: '';
     display: block;
     height: 0.15vh;
     margin-bottom: 2.28vh;
-    width: 4.56vh;
+    width: 100%;
 }
 
 .modal-style

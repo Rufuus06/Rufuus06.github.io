@@ -1,5 +1,5 @@
 const images = [
-    "img/fondo3.jpg",
+    "img/fondo3.png",
     "img/design.png",
     "img/fondo5.jpg",
     "img/fondo-test.jpg",
@@ -98,6 +98,8 @@ function selectLI( value )
             document.getElementById("contacto-content").style.display = "none";
             document.getElementById("perfil-content").style.display = "none";
             document.getElementById("home-content").style.display = "block";
+            main.style.backgroundImage = "url('" + images[6] + "')";
+            interval = setInterval(doAnimation, 7000);
             break;
 
         case "2":
