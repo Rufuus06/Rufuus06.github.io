@@ -2,3 +2,29 @@
 [0510/104612.528:ERROR:crash_report_database_win.cc(455)] unexpected header
 [0511/102519.817:ERROR:crash_report_database_win.cc(455)] unexpected header
 [0511/115010.560:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/092521.434:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/093635.057:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/093635.057:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[0513/093635.057:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/093635.057:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/094135.046:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/095635.014:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/101134.975:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/102634.946:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/103017.684:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/104017.914:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/104017.915:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
+[0513/104017.916:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/104017.916:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/104517.929:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/110017.961:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/111517.920:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/113017.880:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/114517.873:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/120017.833:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/121517.816:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/123017.804:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/124517.802:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/130017.752:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/131517.726:ERROR:crash_report_database_win.cc(455)] unexpected header
+[0513/133017.696:ERROR:crash_report_database_win.cc(455)] unexpected header
