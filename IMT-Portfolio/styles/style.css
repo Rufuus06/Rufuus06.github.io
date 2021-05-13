@@ -1368,3 +1368,19 @@ a:hover
     position: absolute;
     top: 25vh;
 }
+
+.p-desc-exp
+{
+    color: #999;
+    margin-top: 0vh;
+    margin-left: 0vh;
+    font-size: 1.5vh;
+    padding-right: 30vh;
+}
+
+.p-fecha-exp
+{
+    margin-top: -2vh;
+    font-size: 1.5vh;
+    color: #0cf;
+}
