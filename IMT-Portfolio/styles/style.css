@@ -1054,6 +1054,16 @@ color: #0cf !important; */
     width: 75%;
 }
 
+.large-two-quarter
+{
+    width: 60%;
+}
+
+.large-1-quarter
+{
+    width: 40%;
+}
+
 .large-one-quarter
 {
     width: 25%;
