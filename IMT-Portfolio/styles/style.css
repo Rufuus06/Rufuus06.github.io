@@ -6,6 +6,8 @@
 } */
 
 html, body {
+    font-family: 'Abel' !important;
+    font-variant: normal ;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -103,7 +105,7 @@ html, body {
 
 .navbar-custom-items a 
 {
-    font-size: 1.25vh;
+    font-size: 2vh;
     /* line-height: 4.5rem; */
     padding: 0 2.25vh;
 
@@ -304,8 +306,8 @@ html, body {
     color: #999;
     display: block;
     z-index: 10;
-    top: 10vh;
-    left: 4vh;
+    top: 6vh;
+    left: 2.5vh;
 }
 
 .set-blackandwhite {
@@ -406,7 +408,7 @@ img {
     transform: rotate(-90deg);
     transform-origin: left bottom;
     width: 100%;
-    font-size: 1.5vh;
+    font-size: 2.1vh;
 }
 
 .c-hero-navigation-item:hover
@@ -442,14 +444,14 @@ img {
     font-size: 2.25vh !important;
     line-height: 1.4;
 
-    font-family: fantasy;
+    font-family: 'Abel';
 
     margin-bottom: .3125rem;
 }
 
 .b-heading 
 {
-    font-family: fantasy;
+    font-family: 'Abel';
     /* font-size: 2.0625rem; */
     line-height: 1.2;
 }
@@ -493,7 +495,7 @@ img {
 }
 
 .c-hero-article p {
-    font-size: 2vh !important;
+    font-size: 2.5vh !important;
     text-shadow: 2px 2px 2px black;
 }
 
@@ -604,7 +606,7 @@ color: #0cf !important; */
 
 .c-heading
 {
-    font-family: fantasy;
+    font-family: 'Abel';
 }
 
 .c-heading-xlarge
@@ -618,11 +620,11 @@ color: #0cf !important; */
     display: inline-block;
     margin: 0 0 0 3vh;
 
-    font-size: 1.7vh;
+    font-size: 2.1vh;
     line-height: 1.4;
     /* margin: 0 auto; */
-    max-width: 50vh;
-    color: #999;
+    max-width: 90vh;
+    color: white;
 }
 
 .c-page__select {
@@ -784,8 +786,8 @@ color: #0cf !important; */
 .c-projects__title {
     color: #fff;
     margin-bottom: 0.5vh !important;
-    font-family: fantasy;
-    font-size: 2.5vh;
+    font-family: 'Abel';
+    font-size: 3.2vh;
     letter-spacing: .1vh;
     line-height: 1.3;
     text-transform: none;
@@ -795,7 +797,7 @@ color: #0cf !important; */
 .c-projects__tags {
     color: #efc621;
     display: block;
-    font-size: 1.5vh;
+    font-size: 2vh;
     margin: 0;
     opacity: 0.7;
     list-style-type: none;
@@ -869,7 +871,7 @@ color: #0cf !important; */
 
 .links
 {
-    font-size: 1vh !important;
+    font-size: 1.5vh !important;
 }
 
 .c-footer-tweet
@@ -968,7 +970,7 @@ color: #0cf !important; */
     float: right;
     padding: 2vh;
     padding-top: 0;
-    font-size: 1.7vh;
+    font-size: 2vh;
 }
 
 .modal-header-style
@@ -997,7 +999,7 @@ color: #0cf !important; */
     color: white !important;
     background-color: #1B1B1B !important;
     border-color: #1B1B1B !important;
-    font-size: 1.25vh;
+    font-size: 1.75vh;
     letter-spacing: 0.3vh;
     text-decoration: none;
     text-transform: uppercase;
@@ -1011,7 +1013,7 @@ color: #0cf !important; */
 .nav-tabs .nav-link
 {
     color: white !important;
-    font-size: 1.25vh;
+    font-size: 1.7vh;
     letter-spacing: 0.3vh;
     text-decoration: none;
     text-transform: uppercase;
@@ -1090,7 +1092,7 @@ color: #0cf !important; */
 
 .b-heading-large
 {
-    font-family: fantasy;
+    font-family: 'Abel';
 }
 
 .b-editorial
@@ -1103,7 +1105,7 @@ color: #0cf !important; */
     line-height: 1.6;
     margin-bottom: 1.5vh;
     color: #999;
-    font-size: 1.6vh;
+    font-size: 2.3vh;
 }
 
 /* .b-editorial>:last-child 
@@ -1117,6 +1119,7 @@ color: #0cf !important; */
     height: 0;
     overflow: hidden;
     max-width: 100%;
+    margin-top: 3vh;
 }
 
 .c-blog-sidebar
@@ -1202,7 +1205,7 @@ color: #0cf !important; */
 .c-blog-article-summary
 {
     line-height: 1.75;
-    font-size: 1.5vh;
+    font-size: 2.2vh;
     margin-bottom: 2.06vh;
 }
 
@@ -1257,7 +1260,7 @@ color: #0cf !important; */
 .c-blog-detail-date {
     color: #0cf;
     display: block;
-    font-size: 1.5vh;
+    font-size: 1.9vh;
     margin-bottom: 1vh;
 }
  
@@ -1274,7 +1277,7 @@ color: #0cf !important; */
 
 .c-blog-article-title {
     color: #fff;
-    font-size: 2vh;
+    font-size: 3vh;
     margin-bottom: .1vh;
     -webkit-font-smoothing: antialiased;
 }
@@ -1384,8 +1387,8 @@ a:hover
     color: #999;
     margin-top: 0vh;
     margin-left: 0vh;
-    font-size: 1.5vh;
-    padding-right: 30vh;
+    font-size: 2vh;
+    padding-right: 20vh;
 }
 
 .p-fecha-exp
