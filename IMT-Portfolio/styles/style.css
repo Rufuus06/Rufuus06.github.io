@@ -105,7 +105,7 @@ html, body {
 
 .navbar-custom-items a 
 {
-    font-size: 2vh;
+    font-size: 1.7vh;
     /* line-height: 4.5rem; */
     padding: 0 2.25vh;
 
@@ -281,7 +281,7 @@ html, body {
     text-decoration: none;
     transform: translate3d(0, 0, 0);
     transition: all 180ms ease-in-out;
-    width: 15.5vh;
+    width: 15.8vh;
     /* filter: grayscale(1);
     -webkit-filter: grayscale(1); */
 }
@@ -497,6 +497,7 @@ img {
 .c-hero-article p {
     font-size: 2.5vh !important;
     text-shadow: 2px 2px 2px black;
+    line-height: 3vh;
 }
 
 p {
@@ -641,7 +642,7 @@ color: #0cf !important; */
     text-transform: uppercase;
     /* margin: 0; */
     position: absolute;
-    bottom: 4vh;
+    bottom: 5vh;
     right: 0;
 }
 
@@ -1393,7 +1394,7 @@ a:hover
 
 .p-fecha-exp
 {
-    margin-top: -2vh;
+    margin-top: -1.5vh;
     font-size: 1.5vh;
     color: #0cf;
 }
