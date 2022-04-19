@@ -1398,3 +1398,16 @@ a:hover
     font-size: 1.5vh;
     color: #0cf;
 }
+
+.not-active
+{
+    cursor: not-allowed; 
+}
+
+html
+{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
