@@ -1128,7 +1128,8 @@ color: #0cf !important; */
     background: #1B1B1B;
     margin-bottom: 1vh;
     background-size: 100% auto;
-    padding-bottom: 31vh;
+    /* padding-bottom: 31vh; */
+    padding-bottom: 0;
 }
 
 .c-blog-article
