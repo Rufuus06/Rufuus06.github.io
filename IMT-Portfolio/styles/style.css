@@ -18,7 +18,7 @@ html, body {
 .navbar-custom
 {
     background-color: rgba(11,11,11,0.1);
-    height: 7vh;
+    height: 70px;
 
     z-index: 1001;
     letter-spacing: -.25rem;
@@ -32,7 +32,7 @@ html, body {
 .navbar-custom-icon
 {
     height: 100%;
-    width: 7vh;
+    width: 70px;
     z-index: 100;
     background-color: white;
     color: black;
@@ -48,7 +48,7 @@ html, body {
 
 .img-logo
 {
-    width: 4vh !important;
+    width: 40px !important;
     height: auto;
 }
 
@@ -84,30 +84,14 @@ html, body {
 }
 
 .navbar-custom-items--home a {
-    
-    display: block;
-    font-size: 0;
-    height: 72px;
-    padding: 0 2.125rem;
-    position: relative;
-    line-height: 4.5rem;
-
-    text-align: left;
-    transition: all 110ms ease-in-out;
-    width: auto;
-
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    height: 100%;
+    padding: 0 20px !important;
 }
 
 .navbar-custom-items a 
 {
-    font-size: 1.7vh;
+    font-size: 18px;
     /* line-height: 4.5rem; */
-    padding: 0 2.25vh;
+    padding: 0 40px;
 
     border: none;
     display: inline-block;
@@ -117,7 +101,7 @@ html, body {
     width: auto;
 
     color: #fff;
-    letter-spacing: 0.3vh;
+    letter-spacing: 4px;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -156,12 +140,12 @@ html, body {
 
 .navbar-custom-items:hover
 {
-    box-shadow: inset 0 -5px 0 white;
+    box-shadow: inset 0 -4px 0 white;
 }
 
 .navbar-custom-items-active 
 {
-    box-shadow: inset 0 -5px 0 #0cf;
+    box-shadow: inset 0 -4px 0 #0cf;
 }
 
 .navbar-custom-items-active a
@@ -171,7 +155,8 @@ html, body {
 
 .navbar-custom-items a:hover
 {
-    color: white;
+    color: white !important;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -306,7 +291,7 @@ html, body {
     color: #999;
     display: block;
     z-index: 10;
-    top: 6vh;
+    top: 11vh;
     left: 2.5vh;
 }
 

@@ -52,7 +52,7 @@ function doAnimation()
 
 function startAnimation()
 {
-    interval = setInterval(doAnimation, 7000);
+    interval = setInterval(doAnimation, 9000);
 }
 
 function changeImage(value)
