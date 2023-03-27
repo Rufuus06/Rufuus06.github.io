@@ -619,7 +619,7 @@ color: #0cf !important; */
     text-transform: uppercase;
     position: absolute;
     right: 0;
-    bottom: 57px;
+    bottom: 42px;
     color: #999;
 }
 
@@ -647,14 +647,9 @@ color: #0cf !important; */
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: -3vh;
     letter-spacing: -0.75vh;
 }
 
-.grid--full
-{
-    margin-left: -1.52vh;
-}
 
 .grid-item
 {
@@ -805,7 +800,7 @@ color: #0cf !important; */
 
 .c-footer
 {
-    padding: 4vh 0;
+    padding: 5.64vh 0;
     display: block;
     background: #0B0B0B;
     position: relative;
@@ -1182,7 +1177,7 @@ color: #0cf !important; */
 .c-blog-article-summary
 {
     line-height: 1.5;
-    font-size: 2vh;
+    font-size: 1.5vh;
     margin-bottom: 2.06vh;
 }
 
