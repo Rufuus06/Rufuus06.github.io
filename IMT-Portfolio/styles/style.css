@@ -13,12 +13,16 @@ html, body {
     margin: 0;
 }
 
+#unity-build-title {
+    font-size: 1.5vh !important;
+}
+
 /* NAVBAR */
 
 .navbar-custom
 {
     background-color: rgba(11,11,11,0.1);
-    height: 70px;
+    height: 50px;
 
     z-index: 1001;
     letter-spacing: -.25rem;
@@ -32,7 +36,7 @@ html, body {
 .navbar-custom-icon
 {
     height: 100%;
-    width: 70px;
+    width: 50px;
     z-index: 100;
     background-color: white;
     color: black;
@@ -48,7 +52,7 @@ html, body {
 
 .img-logo
 {
-    width: 40px !important;
+    width: 20px !important;
     height: auto;
 }
 
@@ -89,9 +93,9 @@ html, body {
 
 .navbar-custom-items a 
 {
-    font-size: 18px;
+    font-size: 1.5vh;
     /* line-height: 4.5rem; */
-    padding: 0 40px;
+    padding: 0 30px;
 
     border: none;
     display: inline-block;
@@ -156,7 +160,7 @@ html, body {
 .navbar-custom-items a:hover
 {
     color: white !important;
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-decoration: none;
 }
 
