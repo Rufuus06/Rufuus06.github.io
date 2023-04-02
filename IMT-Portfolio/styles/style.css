@@ -386,7 +386,7 @@ html, body {
 {
     height: auto; 
     width: 100%;
-    left:0vh;
+    left:0vh !important;
 }
 
 .slick-slide
@@ -434,7 +434,7 @@ img {
 .c-hero-item-content
 {
     bottom: 5vh;
-    right: 3.8vh;
+    right: 30px;
     width: 60%;
     z-index: 1;
     position: absolute;
@@ -470,41 +470,55 @@ img {
     }
 
     .c-hero-article p {
-        font-size: 20px !important;
+        font-size: 18px !important;
+        line-height: 30px !important;
     }
     
     .b-heading-xlarge {
-        font-size: 4rem !important;
+        font-size: 3rem !important;
     }
 
     .c-hero-sub-heading {
-        font-size: 20px !important;
+        font-size: 16px !important;
         margin-bottom: 0.5rem !important;
     }
 
     .c-hero-navigation-item {
-        width: 170px !important;
+        width: 110px !important;
     }
     
     .c-hero-navigation-bar {
-        width: 140px !important;
+        width: 90px !important;
     }
     
     .c-hero-navigation-thumbnail {
-        width: 250px !important;
+        width: 150px !important;
     }
 
     .c-hero-navigation-item p {
-        font-size: 20px !important;
+        font-size: 14px !important;
     }
 
     .game-box {
-        width: 300px !important;
-        bottom: calc(100% - 250px) !important;
+        width: 200px !important;        
+        bottom: calc(100% - 190px) !important;
     }
 
     .text-game {
-        font-size: 14px !important;
+        font-size: 11px !important;
+        bottom: 20px !important;
+    }
+
+    .set-blackandwhite {
+        left: -30px;
+    }
+
+    .navbar-custom-items a {
+        font-size: 12px !important;
+    }
+
+    .home-icon {
+        width: 15px !important;
     }
 }
 
