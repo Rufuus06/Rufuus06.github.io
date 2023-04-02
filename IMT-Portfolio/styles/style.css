@@ -93,7 +93,7 @@ html, body {
 
 .navbar-custom-items a 
 {
-    font-size: 1.5vh;
+    font-size: 16px;
     /* line-height: 4.5rem; */
     padding: 0 30px;
 
@@ -176,6 +176,8 @@ html, body {
     width: 100%;
     height: 100%;
     transform: scale(1);
+    height: 100%; 
+    background-position-y: 50%;
 }
 
 .zoom
@@ -249,7 +251,7 @@ html, body {
     display: block;
     position: absolute;
     bottom: 5vh;
-    right: calc(100% - 19vh);
+    right: calc(100% - 245px);
     z-index: 100;
 }
 
@@ -259,18 +261,19 @@ html, body {
     left: 0;
     top: 0;
     display: block;
+    opacity: 1;
 }
 
 .c-hero-navigation-item
 {
     display: block;
-    margin: 0 0 0.15vh 0;
+    margin: 0 0 2px 0;
     /* opacity: 0; */
     position: relative;
     text-decoration: none;
     transform: translate3d(0, 0, 0);
     transition: all 180ms ease-in-out;
-    width: 15.8vh;
+    width: 205px;
     /* filter: grayscale(1);
     -webkit-filter: grayscale(1); */
 }
@@ -292,11 +295,23 @@ html, body {
 .text-game
 {
     position: absolute;
-    color: #999;
     display: block;
     z-index: 10;
-    top: 11vh;
-    left: 2.5vh;
+    bottom: 35px;
+    line-height: 1.5;
+    font-size: 18px;
+    pointer-events: none;
+    font-weight: 600; 
+    color: white; 
+    text-shadow: 2px 2px 1px black; 
+    filter: drop-shadow(2px 4px 6px black);
+    width: 100%;
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+.text-game p {
+    margin-bottom: 0px !important;
 }
 
 .set-blackandwhite {
@@ -304,6 +319,8 @@ html, body {
     -webkit-filter: grayscale(100%);
     
     transition: filter 0.3s ease-in-out;
+    left: -62px; 
+    position: relative;
 }
 
 .set-blackandwhite:hover {
@@ -355,14 +372,21 @@ html, body {
     background: transparent;
     overflow: hidden;
     position: relative;
-    width: 12.93vh;
+    width: 165px;
 }
 
 .c-hero-navigation-thumbnail
 {
     height: auto;
     /* opacity: 0; */
-    width: 23vh;
+    width: 293.45px;
+}
+
+.img-mi-juego 
+{
+    height: auto; 
+    width: 100%;
+    left:0vh;
 }
 
 .slick-slide
@@ -397,7 +421,7 @@ img {
     transform: rotate(-90deg);
     transform-origin: left bottom;
     width: 100%;
-    font-size: 2.1vh;
+    font-size: 25px;
 }
 
 .c-hero-navigation-item:hover
@@ -409,28 +433,84 @@ img {
 
 .c-hero-item-content
 {
-    /* bottom: 3.75rem;
-    padding: 0 1.875rem;
-    right: 1.125rem;
-    width: 60%;
-
-    z-index: 1;
-    position: absolute;
-    text-align: right; */
-
-    /* prueba */
     bottom: 5vh;
-    /* padding: 0 1.875rem; */
     right: 3.8vh;
-    width: 100vh;
+    width: 60%;
     z-index: 1;
     position: absolute;
     text-align: right;
 }
 
+.game-box {
+    right: 30px !important; 
+    bottom: calc(100% - 310px) !important; 
+    width: 400px; 
+    box-shadow: rgb(0 0 0 / 25%) 0px 10px 27px 10px, 
+                rgb(8 8 8 / 30%) 10px 9px 76px 10px;
+}
+
+.game-box-a {
+    width: auto !important;
+}
+
+
+@media (max-width: 1440px) {
+    .c-hero-item-content
+    {
+        bottom: 5vh;
+        right: 3.8vh;
+        width: 60%;
+        z-index: 1;
+        position: absolute;
+        text-align: right;
+    }
+
+    .e-button {
+        font-size: 12px !important;
+    }
+
+    .c-hero-article p {
+        font-size: 20px !important;
+    }
+    
+    .b-heading-xlarge {
+        font-size: 4rem !important;
+    }
+
+    .c-hero-sub-heading {
+        font-size: 20px !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .c-hero-navigation-item {
+        width: 170px !important;
+    }
+    
+    .c-hero-navigation-bar {
+        width: 140px !important;
+    }
+    
+    .c-hero-navigation-thumbnail {
+        width: 250px !important;
+    }
+
+    .c-hero-navigation-item p {
+        font-size: 20px !important;
+    }
+
+    .game-box {
+        width: 300px !important;
+        bottom: calc(100% - 250px) !important;
+    }
+
+    .text-game {
+        font-size: 14px !important;
+    }
+}
+
 .c-hero-sub-heading
 {
-    font-size: 2.25vh !important;
+    font-size: 30px;
     line-height: 1.4;
 
     font-family: 'Abel';
@@ -450,14 +530,11 @@ img {
     color: #0cf;
     letter-spacing: 0;
     text-transform: uppercase;
-
-    /* font-size: 1.25rem; */
     line-height: 1.4;
 }
 
 .c-hero-heading {
     margin-bottom: 0;
-    font-size: 8vh !important;
     text-transform: uppercase;
     line-height: 1.1;
 }
@@ -467,7 +544,7 @@ img {
     line-height: 1.1;
     margin-bottom: 1.25rem;
     
-    font-size: 2.0625rem;
+    font-size: 6rem;
     line-height: 1.2;
     color: #fff;
     font-weight: 200;
@@ -480,13 +557,13 @@ img {
     color: #fff;
     float: right;
     opacity: 0.6;
-    max-width: 60vh;
+    max-width: 900px;
 }
 
 .c-hero-article p {
-    font-size: 2vh !important;
+    font-size: 25px;
     text-shadow: 2px 2px 2px black;
-    line-height: 3vh;
+    line-height: 40px;
 }
 
 p {
@@ -521,7 +598,7 @@ p {
     display: inline-block;
     font-family: sans-serif;
     font-weight: 200;
-    font-size: 1vh;
+    font-size: 13px;
     letter-spacing: .225vh;
     line-height: 1;
     margin-right: .9375rem;
