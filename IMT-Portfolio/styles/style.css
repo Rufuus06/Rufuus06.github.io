@@ -93,7 +93,7 @@ html, body {
 
 .navbar-custom-items a 
 {
-    font-size: 16px;
+    font-size: .8rem;
     /* line-height: 4.5rem; */
     padding: 0 30px;
 
@@ -251,7 +251,7 @@ html, body {
     display: block;
     position: absolute;
     bottom: 5vh;
-    right: calc(100% - 245px);
+    right: 90%;
     z-index: 100;
 }
 
@@ -297,9 +297,9 @@ html, body {
     position: absolute;
     display: block;
     z-index: 10;
-    bottom: 35px;
+    bottom: 20px;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: .8rem;
     pointer-events: none;
     font-weight: 600; 
     color: white; 
@@ -319,20 +319,19 @@ html, body {
     -webkit-filter: grayscale(100%);
     
     transition: filter 0.3s ease-in-out;
-    left: -62px; 
     position: relative;
 }
 
 .set-blackandwhite:hover {
     filter: grayscale(0);
-    box-shadow: 3px 3px 5px 0px black;
+    box-shadow: 1px 1px 1px 0px black;
     -webkit-filter: grayscale(0%);
 }
 
 .off-blackandwhite
 {
     filter: grayscale(0) !important;
-    box-shadow: 3px 3px 5px 0px black;
+    box-shadow: 1px 1px 1px 0px black;
     -webkit-filter: grayscale(0%) !important;
 }
 
@@ -443,8 +442,8 @@ img {
 
 .game-box {
     right: 30px !important; 
-    bottom: calc(100% - 310px) !important; 
-    width: 400px; 
+    bottom: 75%;
+    width: 30vh; 
     box-shadow: rgb(0 0 0 / 25%) 0px 10px 27px 10px, 
                 rgb(8 8 8 / 30%) 10px 9px 76px 10px;
 }
@@ -479,7 +478,7 @@ img {
     }
 
     .c-hero-sub-heading {
-        font-size: 16px !important;
+        font-size: 1rem !important;
         margin-bottom: 0.5rem !important;
     }
 
@@ -509,10 +508,6 @@ img {
         bottom: 20px !important;
     }
 
-    .set-blackandwhite {
-        left: -30px;
-    }
-
     .navbar-custom-items a {
         font-size: 12px !important;
     }
@@ -524,7 +519,7 @@ img {
 
 .c-hero-sub-heading
 {
-    font-size: 30px;
+    font-size: 1rem;
     line-height: 1.4;
 
     font-family: 'Abel';
@@ -558,7 +553,7 @@ img {
     line-height: 1.1;
     margin-bottom: 1.25rem;
     
-    font-size: 6rem;
+    font-size: 4rem;
     line-height: 1.2;
     color: #fff;
     font-weight: 200;
@@ -575,7 +570,7 @@ img {
 }
 
 .c-hero-article p {
-    font-size: 25px;
+    font-size: 1rem;
     text-shadow: 2px 2px 2px black;
     line-height: 40px;
 }
@@ -612,7 +607,7 @@ p {
     display: inline-block;
     font-family: sans-serif;
     font-weight: 200;
-    font-size: 13px;
+    font-size: .8rem;
     letter-spacing: .225vh;
     line-height: 1;
     margin-right: .9375rem;
