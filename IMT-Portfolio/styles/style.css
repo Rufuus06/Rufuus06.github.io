@@ -452,6 +452,34 @@ img {
     width: auto !important;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #575757;
+  }
+
+@media (max-height: 880px)
+{    
+    @keyframes scroll {
+        from {
+        transform: translateY(0%);
+        }
+        to {
+        transform: translateY(-15%);
+        }
+    }
+    
+    .auto-scroll {
+        animation: scroll 10s linear infinite alternate;
+    }
+}
 
 @media (max-width: 1440px) {
     .c-hero-item-content
@@ -659,7 +687,7 @@ color: #0cf !important; */
 
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width: 1100px;
 }
 
 .c-design-header
@@ -722,7 +750,7 @@ color: #0cf !important; */
 {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width: 1100px;
 }
 
 .site_constraint-medium
@@ -904,7 +932,7 @@ color: #0cf !important; */
 
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width: 1100px;
 }
 
 .sites-constraint-relative
@@ -969,7 +997,6 @@ color: #0cf !important; */
 .e-button--border-white:after,
 .e-button--border-white:before 
 {
-    background: #fff;
     content: '';
     display: block;
     position: absolute;
@@ -987,7 +1014,6 @@ color: #0cf !important; */
 .e-button--border-white .e-button__text:after,
 .e-button--border-white .e-button__text:before 
 {
-    background: #fff;
     content: '';
     display: block;
     position: absolute;
@@ -1472,3 +1498,24 @@ html
     -ms-user-select: none;
     user-select: none; 
 }
+
+.menu-slide {
+    position: fixed;
+    left: -200px;
+    transition: left 0.5s ease-in-out;
+}
+
+.menu-slide-style {
+    right: unset !important; 
+    margin-left: 30px;
+    overflow: hidden;
+    max-height: 85vh;
+    scroll-behavior: smooth;
+}
+
+.menu-icon-parent {
+    position: fixed;
+    left: 0px;
+    transition: left 0.5s ease-in-out;
+}
+

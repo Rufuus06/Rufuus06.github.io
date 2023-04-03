@@ -81,6 +81,8 @@ function changeImage(value)
     }
 }
 
+
+
 // function selectLI( value )
 // {
 //     var list = document.getElementsByClassName("navbar-custom-items-active");
