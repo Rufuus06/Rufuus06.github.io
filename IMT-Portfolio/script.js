@@ -81,7 +81,10 @@ function changeImage(value)
     }
 }
 
-
+document.getElementById("reload-link").addEventListener("click", function(event) {
+    event.preventDefault();
+    location.reload();
+});
 
 // function selectLI( value )
 // {
