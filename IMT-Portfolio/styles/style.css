@@ -245,12 +245,24 @@ html, body {
     padding: 0;
 }
 
+.slider-home 
+{
+    right: unset !important;
+    margin-left: 30px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    align-items: center;
+    height: 100vh;
+    display: flex !important;
+    bottom: 0vh;
+}
+
 /* MENU LATERAL */
 
 .c-hero-navigation {
     display: block;
     position: absolute;
-    bottom: 5vh;
+    /* bottom: 5vh; */
     right: 90%;
     z-index: 100;
 }
@@ -478,6 +490,12 @@ img {
     
     .auto-scroll {
         animation: scroll 10s linear infinite alternate;
+    }    
+
+    .slider-home 
+    {
+        max-height: 85vh !important;
+        bottom: 5vh;
     }
 }
 
@@ -687,26 +705,22 @@ color: #0cf !important; */
 
     margin-left: auto;
     margin-right: auto;
-    max-width: 1100px;
+    max-width: 1000px;
 }
 
 .c-design-header
 {
-    align-items: end;
     display: flex;
     padding-bottom: 4vh;
-    text-align: left;
     padding-top: 17vh;
     position: relative;
+    align-items: flex-end;
+    flex-direction: row;
 }
 
 .c-design-page-heading
 {
-    font-size: 4vh;
-    margin-bottom: 0;
-
-    display: inline-block;
-    /* padding-top: 3.125rem; */
+    font-size: 2rem;
 }
 
 .c-heading
@@ -722,23 +736,21 @@ color: #0cf !important; */
 
 .c-page-subheading
 {
-    font-size: 1.5vh;
-    line-height: 1.4;
-    max-width: 90vh;
-    color: white;
-    position: absolute;
-    bottom: 42px;
-    left: 215px;
+    font-size: 1rem;
+    text-shadow: 1px 1px 1px black !important; 
+    color: lightgrey !important;
+    margin-bottom:.65rem;
+    margin-left: 1rem;
 }
 
 .c-page__select {
-    font-size: 1vh;
+    font-size: .8rem;
     float: right;
     text-transform: uppercase;
     position: absolute;
     right: 0;
-    bottom: 42px;
-    color: #999;
+    color: white;
+    margin-bottom: .65rem;
 }
 
 .c.design-block
@@ -750,7 +762,7 @@ color: #0cf !important; */
 {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1100px;
+    max-width: 1000px;
 }
 
 .site_constraint-medium
@@ -932,7 +944,7 @@ color: #0cf !important; */
 
     margin-left: auto;
     margin-right: auto;
-    max-width: 1100px;
+    max-width: 1000px;
 }
 
 .sites-constraint-relative
@@ -1506,10 +1518,6 @@ html
 }
 
 .menu-slide-style {
-    right: unset !important; 
-    margin-left: 30px;
-    overflow: hidden;
-    max-height: 85vh;
     scroll-behavior: smooth;
 }
 
