@@ -1172,15 +1172,13 @@ color: #0cf !important; */
 
 .c-blog-detail-copy
 {
-    padding-top: 5vh !important;
-    padding: 5vh;
-    background: #323232;
+    padding: 6vh;
+    background: #323232 !important;
 }
 
 .c-blog-detail-title
 {
     font-size: 3.75rem;
-
     color: #fff;
     font-size: 3vh;
     font-weight: 200;
