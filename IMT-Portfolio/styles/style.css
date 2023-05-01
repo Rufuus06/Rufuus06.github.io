@@ -215,6 +215,12 @@ html, body {
     position: relative;
 }
 
+.main-blocks-diseny
+{
+    padding-top: 3.1rem;
+    position: relative;
+}
+
 .title-maq {
     text-align:start;
     font-size: 3rem; 
@@ -263,7 +269,7 @@ html, body {
     font-size:1rem;letter-spacing: 1px;
 }
 
-.content-block div {
+.content-block #child-container {
     background-color: #323232 !important;
     padding: 50px;
 }
@@ -308,10 +314,6 @@ html, body {
     width: 50%;
 }
 
-.contenedor-clean {
-    padding: 0px !important;
-}
-
 .img-logo-doc {
     text-align: center;
     text-align: -webkit-center;
@@ -344,6 +346,70 @@ html, body {
     text-shadow: 1px 1px 1px black;
     margin-bottom: 0 !important;
     padding-block: 14px;
+}
+
+.map-background {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+  
+.map-background::before {
+    content: "";
+    background-image: url(../../img/photoshop/mapa.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+.map-title {
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.title-dis {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.text-dis {
+    text-align: center;
+    font-size: 1rem;
+    margin-block: 30px;
+}
+
+.title-dis-content {
+    text-align: start;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.text-dis-expl {
+    text-align: start;
+    font-size: 1rem;
+}
+
+.title-dis-red {
+    color: red;
+    text-align: center;
+}
+
+.container-full {
+    width: 100%;
+    background-color: rgba(11,11,11,0.9) ;
+    padding: 150px 230px 150px 230px;
 }
 
 /* SECTION */
