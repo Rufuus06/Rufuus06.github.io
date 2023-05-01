@@ -88,10 +88,11 @@ function startProgressBar() {
     progressBarBefore.classList.add('progress-bar-before');
     progressBar.appendChild(progressBarBefore);
 }
-
+  
 document.addEventListener('DOMContentLoaded', function() {
+    startAnimation();
     startProgressBar();
-    setInterval(startProgressBar, 5000);
+    //setInterval(startProgressBar, 6000);
 });
 
 // function selectLI( value )
