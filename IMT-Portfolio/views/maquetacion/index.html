@@ -15,108 +15,87 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
 </head>
 
-<body>
+<body style="scroll-behavior: smooth;">
 
     <div class="">
         <nav class="navbar-custom" id="top-menu"></nav>
 
-        <div id="main" class="main" style="height: 100%; background-image: url('../../img/fondo3.png');"></div>
+        <div id="main" class="main" style="height: 100%; background-image: url('../../img/backgrounds/fondo-maquetizacion-hd.png');filter: brightness(0.5);"></div>
 
         <div style="width: 90px;height: 40px;background-color: rgba(11,11,11,0.1);position: fixed;margin-top: 70px;" id="menu-icon"  class="menu-icon-parent">
             <img src="../../img/menu.png" alt="menu" style="padding: 5px;float: right;">
         </div>
         <div class="c-hero-navigation slick-slider menu-slide menu-slide-style slider-home" id="menu-slide"></div>
     
-        <main class="main-maq" style="position: relative;"> 
-            <section class="c-blog">
-                <div class="sites-constraint">
-                    <div class="grid">
-                        <div class="grid-item one-whole large-three-quarter">
-                            <article class="c-blog-detail" style="padding-right: 15px;">
-                                <div class="c-blog-detail-image-container" style="display: flex !important;">
-                                    <!-- <picture>
-                                        <img class="c-blog-detail-image" srcset="../../img/fondo5.jpg" alt="">
-                                    </picture> -->
+        <main class="main-blocks"> 
+            <div class="container" style="margin-top:2vh">
+                <div class="row">
+                    <div class="col-12" style="display: inline-flex;">
+                        <div class="col-8 title-maq">Maquetación</div>
+                        <div class="col-4 date-text date-maq"><p>08/05/2021</p></div>
+                    </div>
+                    <div class="col-12">
+                        <hr class="white-line">
+                    </div>
+                    <br><br>
+                </div>
 
-                                    <div class="grid-item one-whole small-one-half large-one-half" style="padding-left: 0 !important; padding-bottom: 0 !important;">
-                                        <article class="c-design-item" style="margin: 0 !important;">
-                                            
-                                            <div class="c-projects__imageWrapper">
-                                                <img class="c-design-image" src="../../img/photoshop/MAPEADO.png" alt="">
-                                            </div>
-                                            
-                                        </article>
-                                    </div>
+                <div class="row">
+                    <div class="col-8 img-bloq">
+                        
+                        <div class="row">
+                            <div class="col-6" style="padding-right: 0px;">
+                                <img src="../../img/photoshop/MAPEADO.png" alt="Estructura Mapa" width="100%" height="auto">
+                            </div>
 
-                                    <div class="grid-item one-whole small-one-half large-one-half" style="padding-left: 0 !important; padding-bottom: 0 !important;">
-                                        <article class="c-design-item" style="margin: 0 !important;">
-                                            
-                                            <div class="c-projects__imageWrapper">
-                                                <img class="c-design-image" src="../../img/photoshop/mapa.png" alt="">
-                                            </div>
-                                            
-                                        </article>
-                                    </div>
-                                </div>
-
-                                <div class="c-blog-detail-copy">
-                                    <header class="c-blog-detail-header">
-                                        <h2 class="c-blog-detail-title b-heading b-heading-large" style="font-size: 4vh !important;">Maquetación</h2>
-                                        <time class="c-blog-detail-date" datetime="2021-05-11">Martes 11 de Mayo</time>
-                                    </header>
-
-                                    <div class="b-editorial" style="margin-top: 2vh;">
-                                        <p>El primer paso antes de comenzar a desarrollar un juego es estructurar las bases sobre ideas que pueden surgir.</p>
-                                        <p>Por ejemplo, en la foto de arriba podemos observar como estructuré el mapa en 5 zonas:<br/>
-                                            - Verde: Zona relacionada con mi vida personal, gustos, hobbies, etc.<br/>
-                                            - Roja: Zona orientada en explicar quien soy y a que me dedico.<br/>
-                                            - Naranja: Zona enfocada en mostrar con qué códigos de programación me familiarizo.<br/>
-                                            - Amarillo: Zona enfocada en mostrar pequeños guiños a sitios donde he trabajado anteriormente.<br/>
-                                            - Gris: Zona sin enfoque, su unico objetivo es que el jugador observe los edificios y parques de la zona.<br/>
-                                            <br/>
-                                            Una vez estructurado más o menos tus ideas, tu objetivo debe ser organizar tareas, para ello yo he usado Trello, plataforma donde puedes tener listados de tareas en un formato sencillo de ver.
-                                            <br/>
-                                            Por último para conseguir la base de tu juego, deberás cumplir primero, obviamente, aquellas tareas más generales, como por ejemplo, en mi contexto, seria crear todos los edificios, para poder ubicarlos y poder poner detalles más específicos en el escenario.
-                                            <br/>
-                                            Gracias a conseguir plantear de una manera clara mis ideas sobre el juego, he conseguido hacer varias cosas que tenia planeadas en muy poco tiempo.
-                                            <br/>
-                                        </p>
-                                    </div>
-
-                                    <div class="video-container" style="display: none !important;">
-
-                                        <!-- WORK IN PROGESS -->
-                                        <!-- <iframe src="../../img/workinprogress.gif" frameborder="0" allowfullscreen=""></iframe> -->
-                                    </div>
-                                </div>                                
-                            </article>
+                            <div class="col-6" style="padding-left: 0px;">
+                                <img src="../../img/photoshop/mapa.png" alt="Mapa" width="100%" height="auto">
+                            </div>
                         </div>
 
-                        <div class="grid-item one-whole large-one-quarter">
-                            <div class="c-blog-sidebar">
+                        <div class="row">
+                            <div class="col-12 content-block">
+                                <div id="child-container">
+                                    <p>El primer paso antes de comenzar a desarrollar un juego es estructurar las bases sobre ideas que pueden surgir.</p>
+                                    <p>Por ejemplo, en la foto de arriba podemos observar como estructuré el mapa en 5 zonas:</p>
+                                    <br>
+                                    <ul>
+                                        <li style="margin-bottom: 10px;"><b>Naranja:</b> Zona enfocada en mostrar con qué códigos de programación me familiarizo.</li>
+                                        <li style="margin-bottom: 10px;"><b>Roja:</b> Zona orientada en mostrar a que me dedico y algunos de mis proyectos.</li>
+                                        <li style="margin-bottom: 10px;"><b>Amarillo:</b> Zona enfocada en mostrar pequeños guiños a sitios donde he trabajado anteriormente.</li>
+                                        <li style="margin-bottom: 10px;"><b>Verde:</b> Zona enfocada en mostrar algunos de mis gustos y pasatiempos.</li>
+                                        <li style="margin-bottom: 10px;"><b>Gris:</b> Zona sin enfoque, su unico objetivo es que el jugador observe los edificios y parques de la zona.</li>
+                                    </ul>
+                                    <br>
+                                    <p>Una vez estructurado más o menos tus ideas, tu objetivo debe ser organizar tareas, para ello yo he usado Trello, plataforma donde puedes tener listados de tareas en un formato sencillo de ver.</p>
+                                    <p>Por último para conseguir la base de tu juego, deberás cumplir primero, obviamente, aquellas tareas más generales, como por ejemplo, en mi contexto, seria crear todos los edificios, para poder ubicarlos y poder poner detalles más específicos en el escenario.</p>
+                                    <p>Gracias a conseguir plantear de una manera clara mis ideas sobre el juego, he conseguido hacer varias cosas que tenia planeadas en muy poco tiempo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-12">
                                 <article class="c-blog-article c-blog-article-inline">
                                     <a href="../game" class="c-blog-article-link">
                                         <div class="grid grid-article-full">
                                             <div class="grid-item one-whole">
                                                 <div class="c-blog-article-thumbnail">
                                                     <picture>
-                                                        <img class="c-blog-article-image" src="../../img/fondo2.jpg" alt="">
+                                                        <img class="c-blog-article-image" src="../../img/backgrounds/fondo-game.png" alt="">
                                                     </picture>
                                                 </div>
                                             </div>
         
                                             <div class="grid-item one-whole">
-                                                <div class="c-blog-article-copy">
-                                                    <header class="c-blog-article-header">
-                                                        <h2 class="c-blog-article-title b-heading b-heading-large">Juego</h2>
-                                                        <time class="c-blog-article-data" datetime="2021-05-11"></time>
-                                                    </header>
+                                                <div class="recommended-bloq">
+                                                    <p class="recommended-bloq-title">JUEGO</p>
+                                                    <p>Visita mi portfolio desde mi juego "My Life"!</p>
                                                     
-                                                    <div class="c-blog-article-summary">
-                                                        <p>Visita mi portfolio desde mi juego "My Life"!</p>
-                                                    </div>
-        
-                                                    <span class="c-blog-article-cta e-button e-button-border e-button-border-white e-button-icon-before e-button-no-margin">
+                                                    <span class="e-button e-button-border e-button-border-white e-button-icon-before e-button-no-margin recommended-bloq-button">
                                                         <span class="e-button-text">
                                                             <span class="e-icon-read"></span>
                                                             Jugar
@@ -127,30 +106,28 @@
                                         </div>
                                     </a>
                                 </article>
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-12">
                                 <article class="c-blog-article c-blog-article-inline">
-                                    <a href="#" class="c-blog-article-link">
+                                    <a href="../diseny/" class="c-blog-article-link">
                                         <div class="grid grid-article-full">
                                             <div class="grid-item one-whole">
                                                 <div class="c-blog-article-thumbnail">
                                                     <picture>
-                                                        <img class="c-blog-article-image" src="../../img/design.png" alt="">
+                                                        <img class="c-blog-article-image" src="../../img/backgrounds/fondo-diseno-hd.png" alt="">
                                                     </picture>
                                                 </div>
                                             </div>
-
+        
                                             <div class="grid-item one-whole">
-                                                <div class="c-blog-article-copy">
-                                                    <header class="c-blog-article-header">
-                                                        <h2 class="c-blog-article-title b-heading b-heading-large">Diseño</h2>
-                                                        <time class="c-blog-article-data" datetime="2021-05-11"></time>
-                                                    </header>
+                                                <div class="recommended-bloq">
+                                                    <p class="recommended-bloq-title">DISEÑO</p>
+                                                    <p>Descubre toda la información relacionada con el diseño del juego.</p>
                                                     
-                                                    <div class="c-blog-article-summary">
-                                                        <p>Descubre toda la información relacionada con el diseño del juego.</p>
-                                                    </div>
-
-                                                    <span class="c-blog-article-cta e-button e-button-border e-button-border-white e-button-icon-before e-button-no-margin">
+                                                    <span class="e-button e-button-border e-button-border-white e-button-icon-before e-button-no-margin recommended-bloq-button">
                                                         <span class="e-button-text">
                                                             <span class="e-icon-read"></span>
                                                             Leer más
@@ -161,30 +138,28 @@
                                         </div>
                                     </a>
                                 </article>
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-12">
                                 <article class="c-blog-article c-blog-article-inline">
-                                    <a href="../codigo" class="c-blog-article-link">
+                                    <a href="../codigo/" class="c-blog-article-link">
                                         <div class="grid grid-article-full">
                                             <div class="grid-item one-whole">
                                                 <div class="c-blog-article-thumbnail">
                                                     <picture>
-                                                        <img class="c-blog-article-image" src="../../img/visual.png" alt="">
+                                                        <img class="c-blog-article-image" src="../../img/backgrounds/fondo-visual.png" alt="">
                                                     </picture>
                                                 </div>
                                             </div>
-
+        
                                             <div class="grid-item one-whole">
-                                                <div class="c-blog-article-copy">
-                                                    <header class="c-blog-article-header">
-                                                        <h2 class="c-blog-article-title b-heading b-heading-large">Códigos</h2>
-                                                        <time class="c-blog-article-data" datetime="2021-05-11"></time>
-                                                    </header>
+                                                <div class="recommended-bloq">
+                                                    <p class="recommended-bloq-title">CÓDIGO</p>
+                                                    <p>El desarrollo de mi juego no habria sido posible sin los conocimientos básicos de la programación.</p>
                                                     
-                                                    <div class="c-blog-article-summary">
-                                                        <p>El desarrollo de mi juego no habria sido posible sin los conocimientos básicos de la programación.</p>
-                                                    </div>
-
-                                                    <span class="c-blog-article-cta e-button e-button-border e-button-border-white e-button-icon-before e-button-no-margin">
+                                                    <span class="e-button e-button-border e-button-border-white e-button-icon-before e-button-no-margin recommended-bloq-button">
                                                         <span class="e-button-text">
                                                             <span class="e-icon-read"></span>
                                                             Leer más
@@ -195,12 +170,11 @@
                                         </div>
                                     </a>
                                 </article>
-                                
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </main>
 
         <footer class="c-footer" style="margin-top: 6.4vh !important;" id="footer-elem"></footer>

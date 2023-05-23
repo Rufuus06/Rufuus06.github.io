@@ -1,11 +1,11 @@
 const images = [
-    "img/fondo3.png",
-    "img/design.png",
-    "img/fondo-hobbys.jpg",
-    "img/fondo-test.jpg",
-    "img/visual.png",
-    "img/fondo5.jpg",
-    "img/fondo2.jpg"
+    "img/backgrounds/fondo-maquetizacion-hd.png",
+    "img/backgrounds/fondo-diseno-hd.png",
+    "img/backgrounds/fondo-hobby.jpg",
+    "img/backgrounds/fondo-proyectos.png",
+    "img/backgrounds/fondo-visual.png",
+    "img/backgrounds/fondo-experiencia.png",
+    "img/backgrounds/fondo-game.png"
 ]
 
 var main = document.getElementById("main");
@@ -52,7 +52,7 @@ function doAnimation()
 
 function startAnimation()
 {
-    interval = setInterval(doAnimation, 9000);
+    interval = setInterval(doAnimation, 6000);
 }
 
 function changeImage(value)
@@ -81,9 +81,18 @@ function changeImage(value)
     }
 }
 
-document.getElementById("reload-link").addEventListener("click", function(event) {
-    event.preventDefault();
-    location.reload();
+function startProgressBar() {
+    var progressBar = document.querySelector('.progress-bar');
+    progressBar.innerHTML = '';
+    var progressBarBefore = document.createElement('div');
+    progressBarBefore.classList.add('progress-bar-before');
+    progressBar.appendChild(progressBarBefore);
+}
+  
+document.addEventListener('DOMContentLoaded', function() {
+    startAnimation();
+    startProgressBar();
+    //setInterval(startProgressBar, 6000);
 });
 
 // function selectLI( value )
