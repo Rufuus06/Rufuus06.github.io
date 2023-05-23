@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portfolio</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+  
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="home">
+  <!-- Barra de navegación -->
+  <div id="mainNavigation">
+    <nav role="navigation">
+      <div class="py-3 text-center border-bottom">
+        <img src="img/logo-example.png" alt="" class="invert" width="100" height="auto">
+      </div>
+    </nav>
+    <div class="navbar-expand-md">
+      <div class="navbar-dark text-center my-2">
+        <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> <span class="align-middle">Menu</span>
+        </button>
+      </div>
+      <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto ">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#projects">Proyectos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#experience">Experiencia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Company
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Blog</a></li>
+              <li><a class="dropdown-item" href="#">About Us</a></li>
+              <li><a class="dropdown-item" href="#">Contact us</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sección de inicio -->
+  <section id="inicio" class="text-center">
+    <div class="container">
+        <div class="profile-image">
+            <img src="img/profile-background.png" alt="Imagen de perfil">
+        </div>
+        <h1 class="display-4">Bienvenido a mi Portfolio</h1>
+        <p class="lead" id="skills">Aquí puedes conocer mi perfil y ver mis proyectos</p>
+    </div>
+  </section>
+
+  <!-- Sección de habilidades (Skills) -->
+<section id="skills-css" class="">
+    <div class="container">
+      <h2 class="text-center skills-title">Skills</h2>
+      
+      <!-- Logos de lenguajes de programación -->
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="logo-wrapper">
+            <img src="img/skills-icons/html-white.png" alt="HTML">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="logo-wrapper">
+            <img src="img/skills-icons/css-white.png" alt="CSS">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="logo-wrapper">
+            <img src="img/skills-icons/js-white.png" alt="JavaScript">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="logo-wrapper">
+            <img src="img/skills-icons/pithon-white.png" alt="Python">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4" style="margin-top: 50px;">
+          <div class="logo-wrapper">
+            <img src="img/skills-icons/java-white.png" alt="Java">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4" style="margin-top: 50px;">
+          <div class="logo-wrapper">
+            <img src="img/skills-icons/csharp-white.png" alt="C#">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4" style="margin-top: 50px;">
+          <div class="logo-wrapper">
+            <img id="projects" src="img/skills-icons/php-white.png" alt="PHP">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Sección de proyectos -->
+  <section id="projects-css" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5 title-projects">Proyectos</h2>
+      
+      <!-- Aquí puedes agregar tus proyectos -->
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card card-shadow">
+            <img src="img/profile-background.png" class="card-img-top" alt="Proyecto 1">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 1</h5>
+              <p class="card-text">Descripción del proyecto.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <div class="card card-shadow">
+            <img src="img/profile-background.png" class="card-img-top" alt="Proyecto 2">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 2</h5>
+              <p class="card-text">Descripción del proyecto.</p>
+              <a href="#" class="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <div class="card card-shadow">
+            <img src="img/profile-background.png" class="card-img-top" alt="Proyecto 3">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto 3</h5>
+              <p class="card-text">Descripción del proyecto.</p>
+              <a href="#" class="btn btn-primary" id="experience">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección de experiencia -->
+  <section id="experience-css" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5 title-experience">Experiencia</h2>
+      
+      <!-- Aquí puedes agregar tu experiencia -->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="empresa">
+            <img src="img/white.png" alt="Logo de la Empresa 1">
+          </div>
+          <p class="empresa-text">Descripción del trabajo realizado.</p>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="empresa">
+            <img src="img/white.png" alt="Logo de la Empresa 2">
+          </div>
+          <p class="empresa-text">Descripción del trabajo realizado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección de contacto -->
+  <section id="contact-css" class="py-5 bg-light">
+    <div id="contact" class="container">
+      <h2 class="text-center mb-5 contact-title">Contacto</h2>
+      
+      <!-- Formulario de contacto -->
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="text-center text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <img src="img/footer/linkedin.png" alt="Logo de LinkedIn" width="30" height="auto">
+          </a>
+        </div>
+        <div class="col-2">
+          <a href="mailto:correo@example.com">
+            <img src="img/footer/email.png" alt="Logo de correo" width="30" height="auto">
+          </a>
+        </div>
+        <div class="col-2">
+          <a href="tel:+123456789">
+            <img src="img/footer/ring-phone.png" alt="Logo de teléfono" width="30" height="auto">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- JavaScript personalizado -->
+  <script src="script.js"></script>
+</body>
+</html>

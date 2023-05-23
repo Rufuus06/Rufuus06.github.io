@@ -1,0 +1,162 @@
+body {
+  background-image: url("img/profile-background.png");
+}
+
+/* Estilos personalizados para el portfolio */
+#mainNavigation a {
+  font-family: 'Cabin', sans-serif;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.4)
+}
+
+.dropdown-menu {
+  background:#03727d
+}
+a.dropdown-toggle {
+  color:#dfdfdf !important
+}
+a.dropdown-item:hover {
+  color:#03727d !important
+}
+.nav-item a{
+  color:#dfdfdf;
+}
+.nav-item a:hover {
+  color:#fff
+}
+.nav-item{
+  min-width:12vw;
+}
+#mainNavigation {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:123;
+  padding-bottom:120px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+#navbarNavDropdown.collapsing .navbar-nav,
+#navbarNavDropdown.show .navbar-nav{
+  background:#037582;
+  padding:12px;
+}
+
+
+/* Estilo de la sección de inicio */
+#inicio { 
+  /*background-image: url("img/profile-background.png");*/
+  background: transparent;
+  background-size: cover;
+  color: #fff;
+  padding: 200px;
+}
+
+/* Estilo para la imagen de perfil */
+.profile-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Estilos para los logos de habilidades (Skills) */
+
+#skills-css {
+  padding: 100px;
+  background: linear-gradient(to top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+}
+
+.skills-title {
+  color:white;
+  font-weight: 100;
+  margin-bottom: 65px;
+}
+
+.logo-wrapper {
+  text-align: center;
+}
+
+.logo-wrapper img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+
+/* Estilo de la sección de proyectos */
+#projects-css {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title-projects {
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.card-shadow {
+  box-shadow: 0px 2px 20px 0px black;
+}
+
+.card {
+  border: none !important;
+}
+
+/* Estilo de la sección de experiencia */
+#experience-css {
+  background-color: #000000cc;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.title-experience {
+  font-weight: 100;
+  color:white;  
+}
+
+.empresa {
+  text-align: center;
+}
+
+.empresa img {
+  width: 100%;
+  height: 300px;
+}
+
+.empresa-text {
+  color:white;
+  padding-top: 25px;
+}
+
+/* Estilo de la sección de contacto */
+#contact-css {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contact-title {
+  font-weight: 100;
+} 
+
+/* Estilo para el footer */
+footer {
+  padding-block: 30px;
+  background-color: rgb(20, 20, 20);
+}
+
+footer > .container > .row {
+  place-content: center;
+}
