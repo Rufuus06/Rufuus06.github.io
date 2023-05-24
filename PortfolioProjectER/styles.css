@@ -1,53 +1,172 @@
 body {
-  background-image: url("img/profile-background.png");
+  background-color: #000030;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #181818;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 9999;
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+}
+
+#scrollToTopBtn .arrow-up {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(-45deg);
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -27px;
+  transition: transform 0.3s;
+}
+
+#scrollToTopBtn:hover .arrow-up {
+  transform: rotate(-45deg) translateY(-2px);
+}
+
 
 /* Estilos personalizados para el portfolio */
 #mainNavigation a {
-  font-family: 'Cabin', sans-serif;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  text-shadow:1px 1px 2px rgba(0,0,0,0.4)
+      font-family: 'Cabin', sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+    
+    .dropdown-menu {
+      background: #03727d;
+    }
+    
+    a.dropdown-toggle {
+      color: #dfdfdf !important;
+    }
+    
+    a.dropdown-item:hover {
+      color: #03727d !important;
+    }
+    
+    .nav-item a {
+      color: #dfdfdf;
+    }
+    
+    .nav-item a:hover {
+      color: #fff;
+    }
+    
+    .nav-item {
+      min-width: 12vw;
+    }
+    
+    #mainNavigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 123;
+      padding-bottom: 120px;
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+    }
+    
+    #navbarNavDropdown.show .navbar-nav {
+      background: #037582;
+      padding: 12px;
+    }
+
+.button-48 {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Clarkson,Helvetica,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 1.5em 2.2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  border: 1px solid grey;
+  float: right;
 }
 
-.dropdown-menu {
-  background:#03727d
-}
-a.dropdown-toggle {
-  color:#dfdfdf !important
-}
-a.dropdown-item:hover {
-  color:#03727d !important
-}
-.nav-item a{
-  color:#dfdfdf;
-}
-.nav-item a:hover {
-  color:#fff
-}
-.nav-item{
-  min-width:12vw;
-}
-#mainNavigation {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:123;
-  padding-bottom:120px;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
-background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-}
-#navbarNavDropdown.collapsing .navbar-nav,
-#navbarNavDropdown.show .navbar-nav{
-  background:#037582;
-  padding:12px;
+.button-48:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #EBEBEB;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
 }
 
+.button-48:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+  background-color: #FFFFFF;
+}
+
+.button-48 span {
+  z-index: 1;
+  position: relative;
+}
 
 /* Estilo de la sección de inicio */
 #inicio { 
@@ -55,7 +174,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   background: transparent;
   background-size: cover;
   color: #fff;
-  padding: 200px;
+  padding: 250px 100px 80px 100px;
 }
 
 /* Estilo para la imagen de perfil */
@@ -75,7 +194,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 /* Estilos para los logos de habilidades (Skills) */
 
 #skills-css {
-  padding: 100px;
+  padding: 110px 100px 190px 100px;
   background: linear-gradient(to top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
 }
 
@@ -98,8 +217,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 /* Estilo de la sección de proyectos */
 #projects-css {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-block: 200px;
+  background-color: white;
 }
 
 .title-projects {
@@ -115,18 +234,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
   border: none !important;
 }
 
+.card-shadow {
+  transition: transform 0.3s;
+}
+
+.card-shadow:hover {
+  transform: scale(1.1);
+}
+
+.card-img-top {
+  transition: filter 0.3s;
+  filter: grayscale(100%);
+}
+
+.card-img-top:hover {
+  filter: grayscale(0%);
+}
+
 /* Estilo de la sección de experiencia */
 #experience-css {
-  background-color: #000000cc;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  background: linear-gradient(to top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  padding-block: 200px;
 }
 
 .title-experience {
   font-weight: 100;
   color:white;  
 }
-
+/* 
 .empresa {
   text-align: center;
 }
@@ -139,12 +274,90 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 .empresa-text {
   color:white;
   padding-top: 25px;
+} */
+
+.timeline {
+  position: relative;
+  overflow: hidden;
 }
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 0;
+  background-color: #fff;
+  transform: translateX(-50%);
+  transition: height 0.5s;
+  z-index: 1;
+}
+
+.timeline-items {
+  color: white;
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item .timeline-content {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.timeline-item.animate .timeline-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  text-align: right;
+}
+
+.timeline-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.timeline-date {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .line {
+    width: 1px;
+  }
+  
+  .timeline-item {
+    padding-left: 70px;
+  }
+}
+
+.timeline-item.left .timeline-content {
+  text-align: right;
+}
+
+.timeline-item.right .timeline-content {
+  text-align: left;
+}
+
 
 /* Estilo de la sección de contacto */
 #contact-css {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  background: white;
+  padding-block: 200px;
 }
 
 .contact-title {
@@ -153,7 +366,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 /* Estilo para el footer */
 footer {
-  padding-block: 30px;
+  padding-block: 50px;
   background-color: rgb(20, 20, 20);
 }
 
