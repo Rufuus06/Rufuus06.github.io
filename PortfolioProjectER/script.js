@@ -1,3 +1,4 @@
+// Project Cards - Animation //
 function expandCard(card) {
   card.style.transform = "scale(1.1)";
   card.style.zIndex = "1";
@@ -12,6 +13,8 @@ function resetCards(card) {
   card.querySelectorAll(".card-img-top")[0].style.filter = "grayscale(100%)";
 }
 
+
+// Project Cards - Color change //
 function changeToColor(image) {
   image.style.filter = "grayscale(0%)";
 }
@@ -19,7 +22,9 @@ function changeToColor(image) {
 function changeToBW(image) {
   image.style.filter = "grayscale(100%)";
 }
-  
+
+
+// Back Top Button
 window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction() {
@@ -38,6 +43,8 @@ function scrollToTop() {
   });
 }
 
+
+// Experience - Animation //
 var lastScrollPosition = 0;
 
 var lastScrollPosition = 0;
