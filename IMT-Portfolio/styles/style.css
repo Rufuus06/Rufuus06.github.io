@@ -385,7 +385,7 @@ html, body {
   
 .map-background::before {
     content: "";
-    background-image: url(../../img/photoshop/mapa.png);
+    background-image: url(../img/photoshop/mapa.png);
     background-size: cover;
     background-position: center;
     filter: blur(5px) brightness(0.3);
