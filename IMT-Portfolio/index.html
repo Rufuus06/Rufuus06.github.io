@@ -14,24 +14,36 @@
 </head>
 <body>
     <div class="">
-        <nav class="navbar-custom">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container-fluid container-fluid-no-padding height-inherit">
+                <a href="#" onclick="location.reload()" class="navbar-custom-icon navbar-brand">
+                    <img class="img-logo" src="img/Logo-Rufuus.png">
+                </a>
+                
+                <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse height-inherit" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto w-100">
+                    </ul>
 
-            <a href="#" onclick="location.reload()" class="navbar-custom-icon">
-                <img class="img-logo" src="img/Logo-Rufuus.png">
-            </a>
-
-            <ul id="Navigation" class="navbar-custom-options">
-                <li id="li-0" class="navbar-custom-items navbar-custom-items--home navbar-custom-items-active">
-                    <a href="#" onclick="location.reload()" aria-current="page">
-                        <img class="home-icon home-icon-active" src="img/casa.png" alt="" style="margin-inline: 10px; width: 25% !important; height: auto !important;">
-                    </a>
-                </li>
-                <li id="li-1" class="navbar-custom-items"><a href="views/game">Juego</a></li>
-                <li id="li-2" class="navbar-custom-items"><a href="views/documentacion">Documentación</a></li>
-                <li id="li-3" class="navbar-custom-items"><a href="views/perfil">Perfil</a></li>
-                <li id="li-4" class="navbar-custom-items"><a href="views/contacto">Contacto</a></li>
-            </ul>
-            
+                    <ul id="Navigation" class="navbar-nav me-auto mb-2 mb-lg-0 navbar-custom-options">
+                        <li id="li-0" class="nav-items navbar-custom-items navbar-custom-items--home navbar-custom-items-active">
+                            <a class="home-icon-a" href="#" onclick="location.reload()" aria-current="page">
+                                <img class="home-icon home-icon-active" src="img/casa.png" alt="Inicio">
+                            </a>
+                            <a class="home-text-a" href="#" onclick="location.reload()" aria-current="page">
+                                Inicio
+                            </a>
+                        </li>
+                        <li id="li-1" class="nav-item navbar-custom-items game-tab"><a href="views/game">Juego</a></li>
+                        <li id="li-2" class="nav-item navbar-custom-items"><a href="views/documentacion">Documentación</a></li>
+                        <li id="li-3" class="nav-item navbar-custom-items"><a href="views/perfil">Perfil</a></li>
+                        <li id="li-4" class="nav-item navbar-custom-items"><a href="views/contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
         <div id="main" class="main"></div>
@@ -40,7 +52,7 @@
             <section class="c-hero">
                 
                 <!-- MI JUEGO -->
-                <div id="d-6" class="c-hero-item-content show" style="visibility:hidden;">
+                <div id="d-6" class="c-hero-item-content show-elem" style="visibility:hidden;">
             
                     <h3 class="c-hero-sub-heading b-heading b-heading-sub">08/05/2021</h3>
                     <h2 class="c-hero-heading b-heading b-heading-xlarge">Mi juego</h2>
@@ -53,7 +65,7 @@
                 </div>
 
                 <!-- MAQUETACIÓN -->
-                <div id="d-0" class="c-hero-item-content hide" style="visibility: hidden">
+                <div id="d-0" class="c-hero-item-content hide-elem" style="visibility: hidden">
             
                     <h3 class="c-hero-sub-heading b-heading b-heading-sub">08/05/2021</h3>
                     <h2 class="c-hero-heading b-heading b-heading-xlarge">Maquetación</h2>
@@ -66,7 +78,7 @@
                 </div>
 
                 <!-- DISEÑO -->
-                <div id="d-1" class="c-hero-item-content hide" style="visibility: hidden">
+                <div id="d-1" class="c-hero-item-content hide-elem" style="visibility: hidden">
             
                     <h3 class="c-hero-sub-heading b-heading b-heading-sub">10/05/2021</h3>
                     <h2 class="c-hero-heading b-heading b-heading-xlarge">Diseño</h2>
@@ -78,7 +90,7 @@
                 </div>
 
                 <!-- HOBBIES -->
-                <div id="d-2" class="c-hero-item-content hide" style="visibility: hidden">
+                <div id="d-2" class="c-hero-item-content hide-elem" style="visibility: hidden">
             
                     <h3 class="c-hero-sub-heading b-heading b-heading-sub">08/05/2021</h3>
                     <h2 class="c-hero-heading b-heading b-heading-xlarge">Hobbies</h2>
@@ -89,7 +101,7 @@
                 </div>
 
                 <!-- PROYECTOS -->
-                <div id="d-3" class="c-hero-item-content hide" style="visibility: hidden">
+                <div id="d-3" class="c-hero-item-content hide-elem" style="visibility: hidden">
             
                     <h3 class="c-hero-sub-heading b-heading b-heading-sub">08/05/2021</h3>
                     <h2 class="c-hero-heading b-heading b-heading-xlarge">Proyectos</h2>
@@ -100,7 +112,7 @@
                 </div>
 
                 <!-- CÓDIGO -->
-                <div id="d-4" class="c-hero-item-content hide" style="visibility: hidden">
+                <div id="d-4" class="c-hero-item-content hide-elem" style="visibility: hidden">
             
                     <h3 class="c-hero-sub-heading b-heading b-heading-sub">08/05/2021</h3>
                     <h2 class="c-hero-heading b-heading b-heading-xlarge">Código</h2>
@@ -111,7 +123,7 @@
                 </div>
 
                 <!-- EXPERIENCIA -->
-                <div id="d-5" class="c-hero-item-content hide" style="visibility: hidden">
+                <div id="d-5" class="c-hero-item-content hide-elem" style="visibility: hidden">
             
                     <h3 class="c-hero-sub-heading b-heading b-heading-sub">08/05/2021</h3>
                     <h2 class="c-hero-heading b-heading b-heading-xlarge">Experiencia</h2>
@@ -177,6 +189,7 @@
                     </div>
                 </div>
 
+                <!-- CAJA FLOTANTE [game-box] -->
                 <div class="c-hero-navigation slick-slider btn-game game-box" id="reset-button">
                     <div class="slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10"> <!--onmouseover="showImage(5)" onmouseout="hideImage(5)">-->
                         <a class="c-hero-navigation-item2 game-box-a"  tabindex="0" onclick="changeImage(6)">

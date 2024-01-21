@@ -34,12 +34,12 @@ function doAnimation()
         
         document.getElementById(i).classList.add("off-blackandwhite");
 
-        var text = document.getElementsByClassName("show");
-        text[0].classList.add("hide");
-        text[0].classList.remove("show");
+        var text = document.getElementsByClassName("show-elem");
+        text[0].classList.add("hide-elem");
+        text[0].classList.remove("show-elem");
 
-        document.getElementById("d-" + i).classList.remove("hide");
-        document.getElementById("d-" + i).classList.add("show");
+        document.getElementById("d-" + i).classList.remove("hide-elem");
+        document.getElementById("d-" + i).classList.add("show-elem");
     }
     
     if (main != null)
@@ -71,12 +71,12 @@ function changeImage(value)
             
             document.getElementById(value).classList.add("off-blackandwhite");
 
-            var text = document.getElementsByClassName("show");
-            text[0].classList.add("hide");
-            text[0].classList.remove("show");
+            var text = document.getElementsByClassName("show-elem");
+            text[0].classList.add("hide-elem");
+            text[0].classList.remove("show-elem");
 
-            document.getElementById("d-" + i).classList.remove("hide");
-            document.getElementById("d-" + i).classList.add("show");
+            document.getElementById("d-" + i).classList.remove("hide-elem");
+            document.getElementById("d-" + i).classList.add("show-elem");
         }
     }
 }
