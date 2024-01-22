@@ -1,4 +1,13 @@
-const images = [
+// Indica si la web se esta ejecutando en un dispositivo movil o no.
+// Mobil -> false | Escritorio -> true
+function CheckPlatform() {
+    return !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+var isDesktop = CheckPlatform();
+console.log("Desktop: " + isDesktop);
+
+var images = [
     "img/backgrounds/fondo-maquetizacion-hd.png",
     "img/backgrounds/fondo-diseno-hd.png",
     "img/backgrounds/fondo-hobby.jpg",
@@ -8,14 +17,37 @@ const images = [
     "img/backgrounds/fondo-game.png"
 ]
 
+if (!isDesktop)
+{
+    // Hide all from Mi Juego
+    images.pop();
+    document.getElementById("d-6").remove();
+    document.getElementsByClassName("game-box")[0].remove();
+
+    // Show all content from Maquetacion
+    document.getElementById("d-0").classList.remove("hide-elem");
+    document.getElementById("d-0").classList.add("show-elem");
+
+    document.getElementById("0").classList.add("off-blackandwhite");
+    
+}
+
 var main = document.getElementById("main");
 if (main != null)
 {
-    main.style.backgroundImage =  "url('" + images[6] + "')";
+    if (isDesktop)
+    { 
+        main.style.backgroundImage =  "url('" + images[images.length - 1] + "')";
+    }
+    else 
+    {
+        main.style.backgroundImage = "url('" + images[0] + "')";
+    }
 }
 
-
 var i = 0;
+if (!isDesktop) i++;
+
 var value_aux = -1;
 
 var interval = null;
@@ -44,10 +76,10 @@ function doAnimation()
     
     if (main != null)
     {
-        main.style.backgroundImage = 'url(' + images[i++] + ')';
+        main.style.backgroundImage = 'url(' + images[i] + ')';
     }
     // main.style.transform = "scale(1)";
-    
+    i++;
 }
 
 function startAnimation()
@@ -83,10 +115,14 @@ function changeImage(value)
 
 function startProgressBar() {
     var progressBar = document.querySelector('.progress-bar');
-    progressBar.innerHTML = '';
-    var progressBarBefore = document.createElement('div');
-    progressBarBefore.classList.add('progress-bar-before');
-    progressBar.appendChild(progressBarBefore);
+    
+    if (progressBar != null)
+    {
+        progressBar.innerHTML = '';
+        var progressBarBefore = document.createElement('div');
+        progressBarBefore.classList.add('progress-bar-before');
+        progressBar.appendChild(progressBarBefore);
+    }
 }
   
 document.addEventListener('DOMContentLoaded', function() {

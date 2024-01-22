@@ -780,6 +780,21 @@ img {
     .game-box {
         display: none;
     } */
+
+    /* .menu-lateral-home
+    {
+        height: 70px;
+    }
+
+    .menu-lateral-home div 
+    {
+        width: 70px;
+    }
+
+    .menu-lateral-home-text
+    {
+        font-size: .7rem;
+    } */
 }
 
 @media (max-height: 880px)
