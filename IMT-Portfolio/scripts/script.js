@@ -60,11 +60,23 @@ function doAnimation()
             i = 0;
         }
 
-        var box = document.getElementsByClassName("off-blackandwhite");
-        box[0].classList.add("set-blackandwhite");
-        box[0].classList.remove("off-blackandwhite");
-        
-        document.getElementById(i).classList.add("off-blackandwhite");
+        if (isDesktop)
+        {
+            var box = document.getElementsByClassName("off-blackandwhite");
+            box[0].classList.add("set-blackandwhite");
+            box[0].classList.remove("off-blackandwhite");
+            
+            document.getElementById(i).classList.add("off-blackandwhite");
+        }
+        else 
+        {
+            var siderbarBoxes = document.getElementsByClassName("menu-sidebar-box");
+            var box2 = document.getElementsByClassName("off-blackandwhite-phone");
+            box2[0].classList.add("set-blackandwhite-phone");
+            box2[0].classList.remove("off-blackandwhite-phone");
+            
+            siderbarBoxes[i].classList.add("off-blackandwhite-phone");
+        }
 
         var text = document.getElementsByClassName("show-elem");
         text[0].classList.add("hide-elem");
@@ -97,11 +109,23 @@ function changeImage(value)
 
             i = value;
 
-            var box = document.getElementsByClassName("off-blackandwhite");
-            box[0].classList.add("set-blackandwhite");
-            box[0].classList.remove("off-blackandwhite");
-            
-            document.getElementById(value).classList.add("off-blackandwhite");
+            if (isDesktop)
+            {
+                var box = document.getElementsByClassName("off-blackandwhite");
+                box[0].classList.add("set-blackandwhite");
+                box[0].classList.remove("off-blackandwhite");
+                
+                document.getElementById(value).classList.add("off-blackandwhite");
+            }
+            else 
+            {
+                var siderbarBoxes = document.getElementsByClassName("menu-sidebar-box");
+                var box2 = document.getElementsByClassName("off-blackandwhite-phone");
+                box2[0].classList.add("set-blackandwhite-phone");
+                box2[0].classList.remove("off-blackandwhite-phone");
+                
+                siderbarBoxes[i].classList.add("off-blackandwhite-phone");
+            }
 
             var text = document.getElementsByClassName("show-elem");
             text[0].classList.add("hide-elem");

@@ -48,7 +48,7 @@
 
         <div id="main" class="main"></div>
 
-        <main id="home-content" class="main--flush">
+        <main id="home-content" class="main--flush" onclick="closeSidebar()">
             <section class="c-hero">
                 
                 <!-- MI JUEGO -->
@@ -189,6 +189,34 @@
                     </div>
                 </div>
 
+                <!-- MENÚ LATERAL MOVILES -->
+                <div class="container siderbar-mobile" style="height: 100vh; position:relative;">
+                    <div class="menu-sidebar" id="sidebar" onclick="event.stopPropagation();">
+                        <button id="openButton" onclick="toggleSidebar()" style="border-color: rgba(255,255,255,.1);border: 1px solid transparent;">
+                            <img src="/img/arrow-right.png" alt="open" width="15px" height="15px" style="opacity: .6;"/>
+                        </button>
+
+                        <div id="0" class="menu-sidebar-box off-blackandwhite-phone" onclick="changeImage(0)">
+                            <p class="menu-lateral-home-text" style="transform: rotate(-90deg) translateX(5px) translateY(40px) !important; font-size:small !important;">Maquetación</p>
+                        </div>
+                        <div id="1" class="menu-sidebar-box set-blackandwhite-phone" onclick="changeImage(1)">
+                            <p class="menu-lateral-home-text" style="transform: rotate(-90deg) translateX(-5px) translateY(55px) !important; font-size:small !important;">Diseño</p>
+                        </div>
+                        <div id="2" class="menu-sidebar-box set-blackandwhite-phone" onclick="changeImage(2)">
+                            <p class="menu-lateral-home-text" style="transform: rotate(-90deg) translateX(-7px) translateY(52px) !important; font-size:small !important;">Hobbies</p>
+                        </div>
+                        <div id="3" class="menu-sidebar-box set-blackandwhite-phone" onclick="changeImage(3)">
+                            <p class="menu-lateral-home-text" style="transform: rotate(-90deg) translateX(0px) translateY(47px) !important; font-size:small !important;">Proyectos</p>
+                        </div>
+                        <div id="4" class="menu-sidebar-box set-blackandwhite-phone" onclick="changeImage(4)">
+                            <p class="menu-lateral-home-text" style="transform: rotate(-90deg) translateX(-8px) translateY(55px) !important; font-size:small !important;">Código</p>
+                        </div>
+                        <div id="5" class="menu-sidebar-box set-blackandwhite-phone" onclick="changeImage(5)">
+                            <p class="menu-lateral-home-text" style="transform: rotate(-90deg) translateX(0px) translateY(43px) !important; font-size:small !important;">Experiencia</p>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- CAJA FLOTANTE [game-box] -->
                 <div class="c-hero-navigation slick-slider btn-game game-box" id="reset-button">
                     <div class="slick-slide slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide10"> <!--onmouseover="showImage(5)" onmouseout="hideImage(5)">-->
@@ -217,5 +245,21 @@
 
 <script src="scripts/script.js"></script>
 <script src="scripts/close-navbar-collapse-outside.js"></script>
+
+<script>
+    function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const openButton = document.getElementById('openButton');
+            sidebar.style.left = sidebar.style.left === '0vw' ? '-25vw' : '0vw';
+            openButton.style.display = 'none';
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const openButton = document.getElementById('openButton');
+            sidebar.style.left = '-25vw';
+            openButton.style.display = 'block';
+        }
+</script>
 
 </html>
